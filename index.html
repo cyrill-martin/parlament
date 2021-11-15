@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parliament</title>
+  <style>
+    #tooltip {
+      display: none;
+      position: fixed;
+    }
+  </style>
+</head>
+<body>
+  <div id="parliament">
+    <div id="tooltip">
+      <div class="name"></div>
+      <div class="info"></div>
+    </div>
+  </div>
+  <div>
+    <label for="arrangement">Sitzordnung gemäss:</label>
+    <select name="arrangement" id="arrangement">
+      <option value="names">Name</option>
+      <option value="fractions">Fraktion</option>
+      <option value="parties">Partei</option>
+      <option value="cantons">Kanton</option>
+      <option value="genders">Geschlecht</option>
+      <option value="ageGroups">Alter</option>
+      <option value="languages">Sprache</option>
+      <option value="workingLanguages">Arbeitssprache</option>
+      <option value="occupationalFields">Berufsfeld</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="order">Sortiert nach:</label>
+    <select name="order" id="order">
+      <option value="names">Name</option>
+      <option value="fractions">Fraktion</option>
+      <option value="parties">Partei</option>
+      <option value="cantons">Kanton</option>
+      <option value="genders">Geschlecht</option>
+      <option value="ageGroups">Alter</option>
+      <option value="languages">Sprache</option>
+      <option value="workingLanguages">Arbeitssprache</option>
+      <option value="occupationalFields">Berufsfeld</option>
+    </select>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="parliament2.js"></script>
+</body>
+</html>

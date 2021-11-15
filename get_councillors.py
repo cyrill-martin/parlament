@@ -43,6 +43,8 @@ def get_councillors(council):
         else:
           print(f"Requesting councillor {c['id']} didn't work")
     
+    members = sorted(members, key=lambda d: d["firstName"])
+
     with open(f"{council}_council.json", "w", encoding="utf-8") as file:
       json.dump(
         members, 
