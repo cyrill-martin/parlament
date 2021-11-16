@@ -109,7 +109,7 @@ const arrangements = {
       en: "Lega",
     },
     SVP: {
-      color: "#65b292",
+      color: "#2f880e",
       de: "SVP",
       fr: "UDC",
       it: "UDC",
@@ -159,7 +159,7 @@ const arrangements = {
       en: "The Centre Group",
     },
     V: {
-      color: "#65b292",
+      color: "#2f880e",
       de: "SVP",
       fr: "UDC",
       it: "UDC",
@@ -468,13 +468,13 @@ const arrangements = {
       rm: "Rechtswesen",
       en: "Rechtswesen",
     },
-    Schuhe: {
+    Schuhwirtschaft: {
       color: "#ff3399",
-      de: "Schuhe",
-      fr: "Schuhe",
-      it: "Schuhe",
-      rm: "Schuhe",
-      en: "Schuhe",
+      de: "Schuhwirtschaft",
+      fr: "Schuhwirtschaft",
+      it: "Schuhwirtschaft",
+      rm: "Schuhwirtschaft",
+      en: "Schuhwirtschaft",
     },
     Transportwesen: {
       color: "#595959",
@@ -509,6 +509,64 @@ const arrangements = {
       en: "Versicherungswesen",
     },
   },
+  nrOfCommittees: {
+    0: {
+      color: "#DEE2E6",
+      de: "0",
+      fr: "0",
+      it: "0",
+      rm: "0",
+      en: "0",
+    },
+    1: {
+      color: "#CED4DA",
+      de: "1",
+      fr: "1",
+      it: "1",
+      rm: "1",
+      en: "1",
+    },
+    2: {
+      color: "#ADB5BD",
+      de: "2",
+      fr: "2",
+      it: "2",
+      rm: "2",
+      en: "2",
+    },
+    3: {
+      color: "#6C757D",
+      de: "3",
+      fr: "3",
+      it: "3",
+      rm: "3",
+      en: "3",
+    },
+    4: {
+      color: "#495057",
+      de: "4",
+      fr: "4",
+      it: "4",
+      rm: "4",
+      en: "4",
+    },
+    5: {
+      color: "#343A40",
+      de: "5",
+      fr: "5",
+      it: "5",
+      rm: "5",
+      en: "5",
+    },
+    6: {
+      color: "#212529",
+      de: "6",
+      fr: "6",
+      it: "6",
+      rm: "6",
+      en: "6",
+    },
+  },
 };
 
 const dataKeys = {
@@ -521,6 +579,7 @@ const dataKeys = {
   languages: "language",
   workingLanguages: "workLanguage",
   occupationalFields: "occupationalField",
+  nrOfCommittees: "nrOfCommittees",
 };
 
 const drawParliament = async () => {
@@ -529,10 +588,10 @@ const drawParliament = async () => {
 
   const occupationalFields = await d3.json("occupationalFields.json");
 
-  // Add age group and occupational field to each councillor
+  // Add additional data fields to each councillor
   const today = new Date();
   dataset.forEach((councillor) => {
-    // Age group
+    // Add age group
     const birthDate = new Date(councillor.birthDate);
     let age = today.getFullYear() - birthDate.getFullYear();
     let m = today.getMonth() - birthDate.getMonth();
@@ -545,13 +604,33 @@ const drawParliament = async () => {
         councillor.ageGroup = group;
       }
     });
-    // Occupational field
+    // Add occupational field
     councillor.occupationalField = occupationalFields[councillor.id];
+
+    // Add number of (active) committee memberships
+    let nr = 0;
+    councillor.committeeMemberships.forEach((ms) => {
+      if (!ms.leavingDate) {
+        nr++;
+      }
+    });
+    councillor.nrOfCommittees = nr;
   });
 
-  // const langs = dataset.map((c) => c.occupationalField);
-  // const uLangs = [...new Set(langs)];
-  // console.log(uLangs);
+  const cmts = [];
+  dataset.forEach((councillor) => {
+    let nr = 0;
+    councillor.committeeMemberships.forEach((ms) => {
+      if (!ms.leavingDate) {
+        nr++;
+        // cmts.push(`${ms.committee.code} @@@ ${ms.committee.name}`);
+      }
+    })
+    cmts.push(nr);
+  })
+
+  const UCmts = [...new Set(cmts)];
+  console.log(UCmts);
 
   // Prepare the SVG
   ///////////////////////////////////////////////
@@ -592,14 +671,6 @@ const drawParliament = async () => {
       `translate(${dimensions.margins.left}, ${dimensions.margins.top})`
     );
 
-  // Add inner legend container to SVG
-  const legend = svg
-    .append("g")
-    .attr(
-      "transform",
-      `translate(${dimensions.ctrWidth}, ${dimensions.margins.top})`
-    );
-      
   // Set the max number of seats per seating row
   const maxSeatsPerRow = 30;
 
@@ -649,13 +720,14 @@ const drawParliament = async () => {
       .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
       .call(xAxis);
 
-    if (arrangement === "occupationalFields") {
+    if (arrangement === "occupationalFields" || arrangement === "committee") {
       xAxisLine
         .selectAll("text")
         .transition()
         .duration(2000)
         .style("text-anchor", "start")
-        .attr("dy", "-1em")
+        .attr("dy", "-.05em")
+        .attr("dx", "-1em")
         .attr("transform", "rotate(-90)");
     }
 
@@ -673,7 +745,7 @@ const drawParliament = async () => {
         if (arrangement === "names") {
           return `translate(${+xScaleOuter("")}, 0)`;
         } else {
-          const dataKey = dataKeys[arrangement]; // faction
+          const dataKey = dataKeys[arrangement]; // e.g. faction
           const thisArrangement = d[dataKey]; // arrangement value of current counsillor
           const domainKey =
             arrangements[arrangement][thisArrangement][language]; // Needed key
@@ -709,34 +781,81 @@ const drawParliament = async () => {
         }
       })
       .on("mouseover", (_, datum) => {
-          tooltip.style("display", "block");
-          onmousemove = (e) => {
-            tooltip
-              .style("left", e.pageX + 25 + "px")
-              .style("top", e.pageY - 50 + "px");
-          };
-          tooltip.select(".name").text(`${datum.firstName} ${datum.lastName}`);
-          tooltip.select(".info").text(() => {
-            if (order !== "names") {
-              return `${arrangements[order][datum[dataKeys[order]]][language]}`;
-            } else {
-              return `${arrangements.parties[datum.party][language]}`;
-            }
-          });
+        tooltip.style("display", "block");
+        onmousemove = (e) => {
+          tooltip
+            .style("left", e.pageX + 25 + "px")
+            .style("top", e.pageY - 50 + "px");
+        };
+        tooltip.select(".name").text(`${datum.firstName} ${datum.lastName}`);
+        tooltip.select(".info").text(() => {
+          if (order !== "names") {
+            return `${arrangements[order][datum[dataKeys[order]]][language]}`;
+          } else {
+            return `${arrangements.parties[datum.party][language]}`;
+          }
+        });
       })
       .on("mouseout", () => {
         tooltip.style("display", "none");
       });
 
-     
+    // Add legend
+    ///////////////////////////////////////////////
 
-    legend
-      .selectAll(".legendItem")
-      .data(arrangements[order])
-      .join("g")
-      .class("legendItem")
-      .append("circle")
-    
+    const createLegend = (thisOrder) => {
+      d3.selectAll(".legend").remove();
+      // Create legend keys
+      legendKeys = Object.keys(arrangements[thisOrder]).map((key) => key);
+
+      const spacingVertical = 12;
+      const circleRadius = 4;
+      const spacingHorizontal2 = 7;
+
+      // Add legend group
+      const legendGroup = svg
+        .append("g")
+        .attr("class", "legend")
+        .style("font-size", "8px")
+        .attr(
+          "transform",
+          `translate(${dimensions.ctrWidth + 100}, ${dimensions.margins.top})`
+        );
+
+      // Add <g> for each legend item
+      const legendItems = legendGroup
+        .selectAll("g")
+        .data(d3.sort(legendKeys))
+        .join("g")
+        .attr("transform", (_, i) => `translate(0, ${i * spacingVertical})`);
+
+      // Draw the legend circles for selected legend keys
+      legendItems
+        .append("circle")
+        .transition()
+        .duration(1000)
+        .attr("cx", 0)
+        .attr("cy", 0)
+        .attr("r", circleRadius)
+        .attr("fill", (d) => arrangements[thisOrder][d].color);
+
+      // Write the legend keys next to the legend circles
+      legendItems
+        .append("text")
+        .attr("opacity", 0)
+        .transition()
+        .duration(1000)
+        .attr("opacity", 1)
+        .attr("x", spacingHorizontal2)
+        .attr("y", circleRadius / 2)
+        .text((d) => arrangements[thisOrder][d][language]);
+    }
+
+    if (order !== "names") {
+      createLegend(order);
+    } else {
+      d3.selectAll(".legend").remove();
+    }
 
     // Update general seat arrangement
     ///////////////////////////////////////////////
@@ -750,7 +869,6 @@ const drawParliament = async () => {
       newXInner,
       newYDomain
     ) => {
-
       const newOuterXScale = xScaleOuter.domain(newXOuter);
 
       const newInnerXScale = xScaleInner
@@ -766,12 +884,16 @@ const drawParliament = async () => {
       // Remove the horizontal x-axis line
       x.call((axis) => axis.select(".domain").remove());
 
-      if (newArrangement === "occupationalFields") {
+      if (
+        newArrangement === "occupationalFields" ||
+        arrangement === "committee"
+      ) {
         x.selectAll("text")
           .transition()
           .duration(2000)
           .style("text-anchor", "start")
-          .attr("dy", "-1em")
+          .attr("dy", "-.05em")
+          .attr("dx", "-1em")
           .attr("transform", "rotate(-90)");
       }
 
@@ -791,8 +913,7 @@ const drawParliament = async () => {
           }
         }); // Position along the main x-axis
 
-      d3
-        .selectAll(".councillor")
+      d3.selectAll(".councillor")
         .on("mouseover", (_, datum) => {
           tooltip.style("display", "block");
           onmousemove = (e) => {
@@ -801,15 +922,15 @@ const drawParliament = async () => {
               .style("top", e.pageY - 50 + "px");
           };
           tooltip.select(".name").text(`${datum.firstName} ${datum.lastName}`);
-          tooltip
-            .select(".info")
-            .text(() => {
-              if (newOrder !== "names") {
-                return `${arrangements[newOrder][datum[dataKeys[newOrder]]][language]}`
-              } else {
-                return `${arrangements.parties[datum.party][language]}`;
-              }
-            });
+          tooltip.select(".info").text(() => {
+            if (newOrder !== "names") {
+              return `${
+                arrangements[newOrder][datum[dataKeys[newOrder]]][language]
+              }`;
+            } else {
+              return `${arrangements.parties[datum.party][language]}`;
+            }
+          });
         })
         .on("mouseout", () => {
           tooltip.style("display", "none");
@@ -840,8 +961,13 @@ const drawParliament = async () => {
             const thisArrangement = d[dataKey]; // arrangement value of current counsillor
             return arrangements[newOrder][thisArrangement].color;
           }
-        })
+        });
 
+        if (newOrder !== "names") {
+          createLegend(newOrder);
+        } else {
+          d3.selectAll(".legend").remove();
+        }
     };
 
     // Listen to changes on the seat arrangement
@@ -904,7 +1030,7 @@ const drawParliament = async () => {
     let xInnerDomain;
     // The inner scale is given by the maxSeatsPerRow divided by number of outer groups
     xInnerDomain = Array.from(
-      Array(Math.floor(maxSeatsPerRow / nrOfOuterGroups)).keys()
+      Array(Math.ceil(maxSeatsPerRow / nrOfOuterGroups)).keys()
     );
     return xInnerDomain;
   };
@@ -943,7 +1069,7 @@ const drawParliament = async () => {
           return d3.ascending(a[dataKeys[order]], b[dataKeys[order]]);
         });
 
-        // Add innerIdx to get positioning right
+        // Add innerIdx to get positioning right later
         group[1].forEach((item, index) => {
           const datasetItem = dataset.find(({ id }) => id === item.id);
           datasetItem.innerIdx = index;
