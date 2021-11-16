@@ -1,0 +1,12 @@
+{
+  "fractions": "faction",
+  "genders": "gender",
+  "names": "firstName",
+  "parties": "party",
+  "ageGroups": "ageGroup",
+  "cantons": "cantonName",
+  "languages": "language",
+  "workingLanguages": "workLanguage",
+  "occupationalFields": "occupationalField",
+  "nrOfCommittees": "nrOfCommittees"
+}
