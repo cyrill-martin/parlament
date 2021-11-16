@@ -49,8 +49,7 @@ const drawParliament = async () => {
     cmts.push(nr);
   })
 
-  const UCmts = [...new Set(cmts)];
-  console.log(UCmts);
+  // const UCmts = [...new Set(cmts)];
 
   // Prepare the SVG
   ///////////////////////////////////////////////
