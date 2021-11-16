@@ -207,7 +207,18 @@ const drawParliament = async () => {
             .style("top", e.pageY - 50 + "px");
         };
         tooltip.select(".name").text(`${datum.firstName} ${datum.lastName}`);
-        tooltip.select(".info").text(() => {
+
+        tooltip.select(".arrangement").text(() => {
+          if (arrangement !== "names") {
+            return `${
+              arrangements[arrangement][datum[dataKeys[arrangement]]][language]
+            }`;
+          } else {
+            return `${arrangements.parties[datum.party][language]}`;
+          }
+        });
+
+        tooltip.select(".order").text(() => {
           if (order !== "names") {
             return `${arrangements[order][datum[dataKeys[order]]][language]}`;
           } else {
@@ -341,7 +352,20 @@ const drawParliament = async () => {
               .style("top", e.pageY - 50 + "px");
           };
           tooltip.select(".name").text(`${datum.firstName} ${datum.lastName}`);
-          tooltip.select(".info").text(() => {
+
+          tooltip.select(".arrangement").text(() => {
+            if (newArrangement !== "names") {
+              return `${
+                arrangements[newArrangement][datum[dataKeys[newArrangement]]][
+                  language
+                ]
+              }`;
+            } else {
+              return `${arrangements.parties[datum.party][language]}`;
+            }
+          });
+
+          tooltip.select(".order").text(() => {
             if (newOrder !== "names") {
               return `${
                 arrangements[newOrder][datum[dataKeys[newOrder]]][language]

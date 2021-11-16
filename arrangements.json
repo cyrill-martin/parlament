@@ -166,7 +166,7 @@
   "genders": {
     "f": {
       "color": "#DEE2E6",
-      "de": "Frauen",
+      "de": "Frau",
       "fr": "Femme",
       "it": "Donna",
       "rm": "Dunna",
@@ -174,7 +174,7 @@
     },
     "m": {
       "color": "#495057",
-      "de": "Männer",
+      "de": "Mann",
       "fr": "Femme",
       "it": "Donna",
       "rm": "Dunna",
