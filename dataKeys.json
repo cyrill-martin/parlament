@@ -8,5 +8,9 @@
   "languages": "language",
   "workingLanguages": "workLanguage",
   "occupationalFields": "occupationalField",
-  "nrOfCommittees": "nrOfCommittees"
+  "nrOfCommittees": "nrOfCommittees",
+  "nrOfCouncilMemberships": "nrOfCouncilMemberships",
+  "nrOfConcerns": "nrOfConcerns",
+  "nrOfPaidConcerns": "nrOfPaidConcerns",
+  "nrOfVoluntaryConcerns": "nrOfVoluntaryConcerns"
 }

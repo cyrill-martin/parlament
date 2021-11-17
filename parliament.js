@@ -5,6 +5,7 @@ const drawParliament = async () => {
   // Load the data
   let dataset = await d3.json("N_council.json");
   const occupationalFields = await d3.json("occupationalFields.json");
+  const paidConcerns = await d3.json("paidConcerns.json");
   const arrangements = await d3.json("arrangements.json");
   const dataKeys = await d3.json("dataKeys.json");
 
@@ -35,21 +36,23 @@ const drawParliament = async () => {
       }
     });
     councillor.nrOfCommittees = nr;
+
+    // Add total number of council memberships
+    councillor.nrOfCouncilMemberships = councillor.councilMemberships.length;
+
+    // Add total number of concerns
+    councillor.nrOfConcerns = councillor.concerns.length;
+
+    // Add number of paid concerns
+    councillor.nrOfPaidConcerns = paidConcerns[councillor.id];
+
+    // Add number of voluntary concerns
+    councillor.nrOfVoluntaryConcerns = councillor.nrOfConcerns - councillor.nrOfPaidConcerns;
   });
 
-  const cmts = [];
-  dataset.forEach((councillor) => {
-    let nr = 0;
-    councillor.committeeMemberships.forEach((ms) => {
-      if (!ms.leavingDate) {
-        nr++;
-        // cmts.push(`${ms.committee.code} @@@ ${ms.committee.name}`);
-      }
-    })
-    cmts.push(nr);
-  })
-
-  // const UCmts = [...new Set(cmts)];
+  // const nrOfConcerns = dataset.map((c) => c.nrOfConcerns);
+  // const uMshps = [...new Set(nrOfConcerns)];
+  // console.log(uMshps);
 
   // Prepare the SVG
   ///////////////////////////////////////////////
@@ -135,18 +138,18 @@ const drawParliament = async () => {
     const xAxisLine = ctr
       .append("g")
       .attr("id", "x-axis")
-      .style("font-size", "8px")
+      // .style("font-size", "8px")
       .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
       .call(xAxis);
 
-    if (arrangement === "occupationalFields" || arrangement === "committee") {
+    if (arrangement === "occupationalFields" || arrangement === "parties") {
       xAxisLine
         .selectAll("text")
         .transition()
         .duration(2000)
         .style("text-anchor", "start")
         .attr("dy", "-.05em")
-        .attr("dx", "-1em")
+        .attr("dx", "-2em")
         .attr("transform", "rotate(-90)");
     }
 
@@ -218,13 +221,17 @@ const drawParliament = async () => {
           }
         });
 
-        tooltip.select(".order").text(() => {
-          if (order !== "names") {
-            return `${arrangements[order][datum[dataKeys[order]]][language]}`;
-          } else {
-            return `${arrangements.parties[datum.party][language]}`;
-          }
-        });
+        if (arrangement !== order) {
+          tooltip.select(".order").text(() => {
+            if (order !== "names") {
+              return `${arrangements[order][datum[dataKeys[order]]][language]}`;
+            } else {
+              return `${arrangements.parties[datum.party][language]}`;
+            }
+          });
+        } else {
+          tooltip.select(".order").text("");
+        }
       })
       .on("mouseout", () => {
         tooltip.style("display", "none");
@@ -237,16 +244,27 @@ const drawParliament = async () => {
       d3.selectAll(".legend").remove();
       // Create legend keys
       legendKeys = Object.keys(arrangements[thisOrder]).map((key) => key);
+      
+      if (!isNaN(legendKeys[0])) {
+        legendKeys = legendKeys.map((number) => parseInt(number));
+        legendKeys.sort();
+      }
 
-      const spacingVertical = 12;
-      const circleRadius = 4;
-      const spacingHorizontal2 = 7;
+      let fct = 1;
+
+      if (thisOrder === "nrOfConcerns") {
+        fct = 0.65;
+      }
+
+      const spacingVertical = 15 * fct;
+      const circleRadius = spacingVertical / 3;
+      const spacingHorizontal = spacingVertical / 2;
 
       // Add legend group
       const legendGroup = svg
         .append("g")
         .attr("class", "legend")
-        .style("font-size", "8px")
+        .style("font-size", `${circleRadius * 2}px`)
         .attr(
           "transform",
           `translate(${dimensions.ctrWidth + 100}, ${dimensions.margins.top})`
@@ -276,8 +294,8 @@ const drawParliament = async () => {
         .transition()
         .duration(1000)
         .attr("opacity", 1)
-        .attr("x", spacingHorizontal2)
-        .attr("y", circleRadius / 2)
+        .attr("x", spacingHorizontal)
+        .attr("y", (circleRadius / 2) + 1)
         .text((d) => arrangements[thisOrder][d][language]);
     }
 
@@ -315,9 +333,8 @@ const drawParliament = async () => {
       x.call((axis) => axis.select(".domain").remove());
 
       if (
-        newArrangement === "occupationalFields" ||
-        arrangement === "committee"
-      ) {
+        newArrangement === "occupationalFields"
+        ) {
         x.selectAll("text")
           .transition()
           .duration(2000)
@@ -365,15 +382,19 @@ const drawParliament = async () => {
             }
           });
 
-          tooltip.select(".order").text(() => {
-            if (newOrder !== "names") {
-              return `${
-                arrangements[newOrder][datum[dataKeys[newOrder]]][language]
-              }`;
-            } else {
-              return `${arrangements.parties[datum.party][language]}`;
-            }
-          });
+          if (newArrangement !== newOrder) {
+            tooltip.select(".order").text(() => {
+              if (newOrder !== "names") {
+                return `${
+                  arrangements[newOrder][datum[dataKeys[newOrder]]][language]
+                }`;
+              } else {
+                return `${arrangements.parties[datum.party][language]}`;
+              }
+            });
+          } else {
+            tooltip.select(".order").text("");
+          }
         })
         .on("mouseout", () => {
           tooltip.style("display", "none");
