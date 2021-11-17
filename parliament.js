@@ -46,7 +46,8 @@ const drawParliament = async () => {
     councillor.nrOfPaidConcerns = paidConcerns[councillor.id];
 
     // Add number of voluntary concerns
-    councillor.nrOfVoluntaryConcerns = councillor.nrOfConcerns - councillor.nrOfPaidConcerns;
+    councillor.nrOfVoluntaryConcerns =
+      councillor.nrOfConcerns - councillor.nrOfPaidConcerns;
   });
 
   // const nrOfConcerns = dataset.map((c) => c.nrOfConcerns);
@@ -106,7 +107,8 @@ const drawParliament = async () => {
     arrangement,
     outerXDomain,
     innerXDomain,
-    yDomain
+    yDomain,
+    colorScale
   ) => {
     // Create the actual outer x-scale
     const xScaleOuter = d3
@@ -163,12 +165,18 @@ const drawParliament = async () => {
       .join("g")
       .attr("class", "seat")
       .attr("transform", (d) => {
-        if (arrangement === "names") {
-          return `translate(${+xScaleOuter("")}, 0)`;
+        if (!arrangements[arrangement] && arrangement !== "firstName") {
+          // It's numerical
+          return `translate(${+xScaleOuter(d[arrangement])}, 0)`;
         } else {
-          return `translate(${+xScaleOuter(
-            arrangements[arrangement][d[arrangement]][language]
-          )}, 0)`;
+          if (arrangement === "firstName") {
+            return `translate(${+xScaleOuter("")}, 0)`;
+          } else {
+            console.log("Or here ???");
+            return `translate(${+xScaleOuter(
+              arrangements[arrangement][d[arrangement]][language]
+            )}, 0)`;
+          }
         }
       }) // Position along the main x-axis
       .attr("id", (d) => d.id)
@@ -191,10 +199,14 @@ const drawParliament = async () => {
         return r;
       })
       .attr("fill", (d) => {
-        if (order === "names") {
-          return arrangements.party[d.party].color;
+        if (!arrangements[order] && order !== "firstName") {
+          return colorScale(d[order]);
         } else {
-          return arrangements[order][d[order]].color;
+          if (order === "firstName") {
+            return arrangements.party[d.party].color;
+          } else {
+            return arrangements[order][d[order]].color;
+          }
         }
       })
       .on("mouseover", (_, datum) => {
@@ -207,21 +219,27 @@ const drawParliament = async () => {
         tooltip.select(".name").text(`${datum.firstName} ${datum.lastName}`);
 
         tooltip.select(".arrangement").text(() => {
-          if (arrangement !== "names") {
-            return `${
-              arrangements[arrangement][datum[arrangement]][language]
-            }`;
+          if (!arrangements[arrangement] && arrangement !== "firstName") {
+            return `${datum[arrangement]}`;
           } else {
-            return `${arrangements.party[datum.party][language]}`;
+            if (arrangement !== "firstName") {
+              return `${arrangements[arrangement][datum[arrangement]][language]}`;
+            } else {
+              return `${arrangements.party[datum.party][language]}`;
+            }
           }
         });
 
         if (arrangement !== order) {
           tooltip.select(".order").text(() => {
-            if (order !== "names") {
-              return `${arrangements[order][datum[order]][language]}`;
+            if (!arrangements[order] && oder !== "firstName") {
+              return `${datum[order]}`;
             } else {
-              return `${arrangements.party[datum.party][language]}`;
+              if (order !== "firstName") {
+                return `${arrangements[order][datum[order]][language]}`;
+              } else {
+                return `${arrangements.party[datum.party][language]}`;
+              }
             }
           });
         } else {
@@ -235,14 +253,21 @@ const drawParliament = async () => {
     // Add legend
     ///////////////////////////////////////////////
 
-    const createLegend = (thisOrder) => {
+    const createLegend = (thisOrder, thisColorScale) => {
       d3.selectAll(".legend").remove();
-      // Create legend keys
-      legendKeys = Object.keys(arrangements[thisOrder]).map((key) => key);
-      
-      if (!isNaN(legendKeys[0])) {
-        legendKeys = legendKeys.map((number) => parseInt(number));
-        legendKeys.sort();
+
+      let legendKeys;
+
+      if (!arrangements[thisOrder] && thisOrder !== "firstName") {
+        const max = d3.max(dataset, (councillor) => councillor[thisOrder]);
+        legendKeys = Array.from(Array(max + 1).keys());
+      } else {
+        // Create legend keys
+        legendKeys = Object.keys(arrangements[thisOrder]).map((key) => key);
+        // if (!isNaN(legendKeys[0])) {
+        //   legendKeys = legendKeys.map((number) => parseInt(number));
+        //   legendKeys.sort();
+        // }
       }
 
       let fct = 1;
@@ -268,7 +293,7 @@ const drawParliament = async () => {
       // Add <g> for each legend item
       const legendItems = legendGroup
         .selectAll("g")
-        .data(d3.sort(legendKeys))
+        .data(legendKeys)
         .join("g")
         .attr("transform", (_, i) => `translate(0, ${i * spacingVertical})`);
 
@@ -280,7 +305,13 @@ const drawParliament = async () => {
         .attr("cx", 0)
         .attr("cy", 0)
         .attr("r", circleRadius)
-        .attr("fill", (d) => arrangements[thisOrder][d].color);
+        .attr("fill", (d) => {
+          if (thisColorScale) {
+            return thisColorScale(d);
+          } else {
+            return arrangements[thisOrder][d].color;
+          }
+        });
 
       // Write the legend keys next to the legend circles
       legendItems
@@ -290,14 +321,20 @@ const drawParliament = async () => {
         .duration(1000)
         .attr("opacity", 1)
         .attr("x", spacingHorizontal)
-        .attr("y", (circleRadius / 2) + 1)
-        .text((d) => arrangements[thisOrder][d][language]);
-    }
+        .attr("y", circleRadius / 2 + 1)
+        .text((d) => {
+          if (thisColorScale) {
+            return d;
+          } else {
+            return arrangements[thisOrder][d][language];
+          };
+          })
+    };
 
-    if (order !== "names") {
-      createLegend(order);
+    if (order !== "firstName") {
+      createLegend(order, colorScale);
     } else {
-      d3.selectAll(".legend").remove();
+      createLegend("party", colorScale);
     }
 
     // Update general seat arrangement
@@ -310,7 +347,8 @@ const drawParliament = async () => {
       newOrder,
       newXOuter,
       newXInner,
-      newYDomain
+      newYDomain,
+      newColorScale,
     ) => {
       const newOuterXScale = xScaleOuter.domain(newXOuter);
 
@@ -328,8 +366,9 @@ const drawParliament = async () => {
       x.call((axis) => axis.select(".domain").remove());
 
       if (
-        newArrangement === "occupationalField" || newArrangement === "party"
-        ) {
+        newArrangement === "occupationalField" ||
+        newArrangement === "party"
+      ) {
         x.selectAll("text")
           .transition()
           .duration(2000)
@@ -344,12 +383,17 @@ const drawParliament = async () => {
         .transition()
         .duration(2000)
         .attr("transform", (d) => {
-          if (newArrangement === "names") {
-            return `translate(${+newOuterXScale("")}, 0)`;
+          if (!arrangements[newArrangement] && newArrangement !== "firstName") {
+            // It's numerical
+            return `translate(${+newOuterXScale(d[newArrangement])}, 0)`;
           } else {
-            return `translate(${+newOuterXScale(
-              arrangements[newArrangement][d[newArrangement]][language]
-            )}, 0)`;
+            if (newArrangement === "firstName") {
+              return `translate(${+newOuterXScale("")}, 0)`;
+            } else {
+              return `translate(${+newOuterXScale(
+                arrangements[newArrangement][d[newArrangement]][language]
+              )}, 0)`;
+            }
           }
         }); // Position along the main x-axis
 
@@ -364,25 +408,30 @@ const drawParliament = async () => {
           tooltip.select(".name").text(`${datum.firstName} ${datum.lastName}`);
 
           tooltip.select(".arrangement").text(() => {
-            if (newArrangement !== "names") {
-              return `${
-                arrangements[newArrangement][datum[newArrangement]][
-                  language
-                ]
-              }`;
+
+            if (!arrangements[newArrangement] && newArrangement !== "firstName") {
+                return `${datum[newArrangement]}`;
             } else {
-              return `${arrangements.party[datum.party][language]}`;
+              if (newArrangement !== "firstName") {
+                return `${
+                  arrangements[newArrangement][datum[newArrangement]][language]
+                }`;
+              } else {
+                return `${arrangements.party[datum.party][language]}`;
+              }
             }
           });
 
           if (newArrangement !== newOrder) {
             tooltip.select(".order").text(() => {
-              if (newOrder !== "names") {
-                return `${
-                  arrangements[newOrder][datum[newOrder]][language]
-                }`;
+              if (!arrangements[newOrder] && newOrder !== "firstName") {
+                return `${datum[newOrder]}`;
               } else {
-                return `${arrangements.party[datum.party][language]}`;
+                if (newOrder !== "firstName") {
+                  return `${arrangements[newOrder][datum[newOrder]][language]}`;
+                } else {
+                  return `${arrangements.party[datum.party][language]}`;
+                }
               }
             });
           } else {
@@ -411,18 +460,23 @@ const drawParliament = async () => {
           return r;
         })
         .attr("fill", (d) => {
-          if (newOrder === "names") {
-            return arrangements.party[d.party].color;
+          if (!arrangements[newOrder] && newOrder !== "firstName") {
+            return newColorScale(d[newOrder]);
           } else {
-            return arrangements[newOrder][d[newOrder]].color;
+            if (newOrder === "firstName") {
+              return arrangements.party[d.party].color;
+            } else {
+              return arrangements[newOrder][d[newOrder]].color;
+            }
           }
         });
 
-        if (newOrder !== "names") {
-          createLegend(newOrder);
-        } else {
-          d3.selectAll(".legend").remove();
-        }
+      if (newOrder !== "firstName") {
+        createLegend(newOrder, newColorScale);
+      } else {
+        createLegend("party", newColorScale);
+        // d3.selectAll(".legend").remove();
+      }
     };
 
     // Listen to changes on the seat arrangement
@@ -430,6 +484,8 @@ const drawParliament = async () => {
       event.preventDefault();
       const newArrangement = event.target.value;
       const newOrder = d3.select("#order").node().value;
+
+      const newColorScale = getColorScale(newOrder);
       const newXOuter = getOuterXDomain(newArrangement);
       const newXInner = getInnerXDomain(newXOuter.length);
       const newYDomain = getYDomain(newArrangement, newOrder, newXInner.length);
@@ -438,7 +494,8 @@ const drawParliament = async () => {
         newOrder,
         newXOuter,
         newXInner,
-        newYDomain
+        newYDomain,
+        newColorScale,
       );
     });
 
@@ -447,6 +504,8 @@ const drawParliament = async () => {
       event.preventDefault();
       const newOrder = event.target.value;
       const newArrangement = d3.select("#arrangement").node().value;
+
+      const newColorScale = getColorScale(newOrder);
       const newXOuter = getOuterXDomain(newArrangement);
       const newXInner = getInnerXDomain(newXOuter.length);
       const newYDomain = getYDomain(newArrangement, newOrder, newXInner.length);
@@ -455,28 +514,38 @@ const drawParliament = async () => {
         newOrder,
         newXOuter,
         newXInner,
-        newYDomain
+        newYDomain,
+        newColorScale,
       );
     });
   };
 
   // Function to get the get outer x-scale items and domain
-  const getOuterXDomain = (arrangement) => {
+  const getOuterXDomain = (arrangement) => {  
     // Outer x-Scale - depends on the arrangement
     let xOuterItems, xOuterDomain;
 
     // Set the outer x-scale domain
-    if (arrangement === "names") {
-      // If arranged by name, all councillors belong to the same group
-      xOuterItems = [""];
-      xOuterDomain = [""];
+
+    if (!arrangements[arrangement] && arrangement !== "firstName") {
+      // It's numerical
+      // Get the max of all councillors
+      const max = d3.max(dataset, (councillor) => councillor[arrangement]);
+      xOuterDomain = Array.from(Array(max + 1).keys());
     } else {
-      // Else, the councillors are grouped by the selected arrangement
-      xOuterItems = Object.keys(arrangements[arrangement]);
-      xOuterDomain = xOuterItems.map(
-        (item) => arrangements[arrangement][item][language]
-      );
-    }
+      if (arrangement === "firstName") {
+        // If arranged by name, all councillors belong to the same group
+        xOuterItems = [""];
+        xOuterDomain = [""];
+      } else {
+        // Else, the councillors are grouped by the selected arrangement
+        xOuterItems = Object.keys(arrangements[arrangement]);
+        xOuterDomain = xOuterItems.map(
+          (item) => arrangements[arrangement][item][language]
+        );
+      }
+    } 
+
     return xOuterDomain;
   };
 
@@ -496,7 +565,7 @@ const drawParliament = async () => {
     // y-Scale - depends on largest group: Number of members / xInnerDomain
     let yScaleDomain;
 
-    if (arrangement === "names") {
+    if (arrangement === "firstName") {
       yScaleDomain = Array.from(
         Array(Math.ceil(dataset.length / maxSeatsPerRow)).keys()
       );
@@ -545,16 +614,49 @@ const drawParliament = async () => {
     return yScaleDomain;
   };
 
+  // Function to get a possible linear color scale
+  const getColorScale = (thisOrder) => {
+    let colorScale;
+    if (!arrangements[thisOrder] && thisOrder !== "firstName") {
+      // It's numerical
+
+      // Get the max of all councillors
+      const max = d3.max(dataset, (councillor) => councillor[thisOrder]);
+
+      colorScale = d3
+        .scaleLinear()
+        .domain([0, max])
+        .range(["lightgrey", "black"]);
+    }
+    console.log("colorScale", colorScale);
+    return colorScale;
+  };
+
   // Get the arrangement and order
+  ///////////////////////////////////////////
   const arrangement = d3.select("#arrangement").node().value;
   const order = d3.select("#order").node().value;
+
+  // Get the color scale (it's undefined or not)
+  ///////////////////////////////////////////
+  const colorScale = getColorScale(order);
+
   // Get the actual outer x-scale domain
+  ///////////////////////////////////////////
   const outerXDomain = getOuterXDomain(arrangement);
+
   // Get the actual inner x-scale domain
+  ///////////////////////////////////////////
   const innerXDomain = getInnerXDomain(outerXDomain.length);
+
   // Get the actual y-scale domain
+  ///////////////////////////////////////////
   const yDomain = getYDomain(arrangement, order, innerXDomain.length);
-  drawArrangement(arrangement, outerXDomain, innerXDomain, yDomain);
+
+  // Draw the parliament
+  ///////////////////////////////////////////
+
+  drawArrangement(arrangement, outerXDomain, innerXDomain, yDomain, colorScale);
 };
 
 drawParliament();
