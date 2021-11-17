@@ -7,7 +7,6 @@ const drawParliament = async () => {
   const occupationalFields = await d3.json("occupationalFields.json");
   const paidConcerns = await d3.json("paidConcerns.json");
   const arrangements = await d3.json("arrangements.json");
-  const dataKeys = await d3.json("dataKeys.json");
 
   // Add additional data fields to each councillor
   const today = new Date();
@@ -20,7 +19,7 @@ const drawParliament = async () => {
       age--;
     }
     const tens = age.toString()[0];
-    Object.keys(arrangements.ageGroups).forEach((group) => {
+    Object.keys(arrangements.ageGroup).forEach((group) => {
       if (group.startsWith(tens)) {
         councillor.ageGroup = group;
       }
@@ -142,7 +141,7 @@ const drawParliament = async () => {
       .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
       .call(xAxis);
 
-    if (arrangement === "occupationalFields" || arrangement === "parties") {
+    if (arrangement === "occupationalField" || arrangement === "party") {
       xAxisLine
         .selectAll("text")
         .transition()
@@ -167,11 +166,9 @@ const drawParliament = async () => {
         if (arrangement === "names") {
           return `translate(${+xScaleOuter("")}, 0)`;
         } else {
-          const dataKey = dataKeys[arrangement]; // e.g. faction
-          const thisArrangement = d[dataKey]; // arrangement value of current counsillor
-          const domainKey =
-            arrangements[arrangement][thisArrangement][language]; // Needed key
-          return `translate(${+xScaleOuter(domainKey)}, 0)`;
+          return `translate(${+xScaleOuter(
+            arrangements[arrangement][d[arrangement]][language]
+          )}, 0)`;
         }
       }) // Position along the main x-axis
       .attr("id", (d) => d.id)
@@ -195,11 +192,9 @@ const drawParliament = async () => {
       })
       .attr("fill", (d) => {
         if (order === "names") {
-          return arrangements.parties[d.party].color;
+          return arrangements.party[d.party].color;
         } else {
-          const dataKey = dataKeys[order]; // faction
-          const thisArrangement = d[dataKey]; // arrangement value of current counsillor
-          return arrangements[order][thisArrangement].color;
+          return arrangements[order][d[order]].color;
         }
       })
       .on("mouseover", (_, datum) => {
@@ -214,19 +209,19 @@ const drawParliament = async () => {
         tooltip.select(".arrangement").text(() => {
           if (arrangement !== "names") {
             return `${
-              arrangements[arrangement][datum[dataKeys[arrangement]]][language]
+              arrangements[arrangement][datum[arrangement]][language]
             }`;
           } else {
-            return `${arrangements.parties[datum.party][language]}`;
+            return `${arrangements.party[datum.party][language]}`;
           }
         });
 
         if (arrangement !== order) {
           tooltip.select(".order").text(() => {
             if (order !== "names") {
-              return `${arrangements[order][datum[dataKeys[order]]][language]}`;
+              return `${arrangements[order][datum[order]][language]}`;
             } else {
-              return `${arrangements.parties[datum.party][language]}`;
+              return `${arrangements.party[datum.party][language]}`;
             }
           });
         } else {
@@ -333,7 +328,7 @@ const drawParliament = async () => {
       x.call((axis) => axis.select(".domain").remove());
 
       if (
-        newArrangement === "occupationalFields"
+        newArrangement === "occupationalField" || newArrangement === "party"
         ) {
         x.selectAll("text")
           .transition()
@@ -352,11 +347,9 @@ const drawParliament = async () => {
           if (newArrangement === "names") {
             return `translate(${+newOuterXScale("")}, 0)`;
           } else {
-            const dataKey = dataKeys[newArrangement]; // faction
-            const thisArrangement = d[dataKey]; // arrangement value of current counsillor
-            const domainKey =
-              arrangements[newArrangement][thisArrangement][language]; // Needed key
-            return `translate(${+newOuterXScale(domainKey)}, 0)`;
+            return `translate(${+newOuterXScale(
+              arrangements[newArrangement][d[newArrangement]][language]
+            )}, 0)`;
           }
         }); // Position along the main x-axis
 
@@ -373,12 +366,12 @@ const drawParliament = async () => {
           tooltip.select(".arrangement").text(() => {
             if (newArrangement !== "names") {
               return `${
-                arrangements[newArrangement][datum[dataKeys[newArrangement]]][
+                arrangements[newArrangement][datum[newArrangement]][
                   language
                 ]
               }`;
             } else {
-              return `${arrangements.parties[datum.party][language]}`;
+              return `${arrangements.party[datum.party][language]}`;
             }
           });
 
@@ -386,10 +379,10 @@ const drawParliament = async () => {
             tooltip.select(".order").text(() => {
               if (newOrder !== "names") {
                 return `${
-                  arrangements[newOrder][datum[dataKeys[newOrder]]][language]
+                  arrangements[newOrder][datum[newOrder]][language]
                 }`;
               } else {
-                return `${arrangements.parties[datum.party][language]}`;
+                return `${arrangements.party[datum.party][language]}`;
               }
             });
           } else {
@@ -419,11 +412,9 @@ const drawParliament = async () => {
         })
         .attr("fill", (d) => {
           if (newOrder === "names") {
-            return arrangements.parties[d.party].color;
+            return arrangements.party[d.party].color;
           } else {
-            const dataKey = dataKeys[newOrder]; // faction
-            const thisArrangement = d[dataKey]; // arrangement value of current counsillor
-            return arrangements[newOrder][thisArrangement].color;
+            return arrangements[newOrder][d[newOrder]].color;
           }
         });
 
@@ -511,7 +502,7 @@ const drawParliament = async () => {
       );
 
       dataset.sort((a, b) => {
-        return d3.ascending(a[dataKeys[order]], b[dataKeys[order]]);
+        return d3.ascending(a[order], b[order]);
       });
 
       // Add innerIdx
@@ -520,7 +511,7 @@ const drawParliament = async () => {
       });
     } else {
       // Group the dataset by the selected arrangement
-      groupedDataset = d3.groups(dataset, (d) => d[dataKeys[arrangement]]);
+      groupedDataset = d3.groups(dataset, (d) => d[arrangement]);
       // E.g. dataset = [
       //   [ "VS", [...] ],
       //   [ "S", [...] ],
@@ -530,7 +521,7 @@ const drawParliament = async () => {
       groupedDataset.forEach((group) => {
         // Sort group according to order
         group[1].sort((a, b) => {
-          return d3.ascending(a[dataKeys[order]], b[dataKeys[order]]);
+          return d3.ascending(a[order], b[order]);
         });
 
         // Add innerIdx to get positioning right later

@@ -1,5 +1,5 @@
 {
-  "parties": {
+  "party": {
     "BastA": {
       "color": "#e6007e",
       "de": "BastA",
@@ -113,7 +113,7 @@
       "en": "Swiss People's Party"
     }
   },
-  "fractions": {
+  "faction": {
     "S": {
       "color": "#e4022d",
       "de": "SP",
@@ -163,7 +163,7 @@
       "en": "Swiss People's Party"
     }
   },
-  "genders": {
+  "gender": {
     "f": {
       "color": "#DEE2E6",
       "de": "Frau",
@@ -181,7 +181,7 @@
       "en": "Man"
     }
   },
-  "ageGroups": {
+  "ageGroup": {
     "18-19": {
       "color": "#F8F9FA",
       "de": "18-20",
@@ -255,7 +255,7 @@
       "en": "90-99"
     }
   },
-  "cantons": {
+  "cantonName": {
     "AG": {
       "color": "#666666",
       "de": "AG",
@@ -465,7 +465,7 @@
       "en": "ZH"
     }
   },
-  "languages": {
+  "language": {
     "de": {
       "color": "#495057",
       "de": "Deutsch",
@@ -515,7 +515,7 @@
       "en": "tr"
     }
   },
-  "workingLanguages": {
+  "workLanguage": {
     "de": {
       "color": "#495057",
       "de": "Deutsch",
@@ -533,7 +533,7 @@
       "en": "fr"
     }
   },
-  "occupationalFields": {
+  "occupationalField": {
     "Bankenwesen": {
       "color": "#0059b3",
       "de": "Bankenwesen",
