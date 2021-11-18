@@ -70,11 +70,11 @@
     "en": "Number of terms of office"
   },
   "nrOfCommittees": {
-    "de": "Anzahl Komissionen",
-    "fr": "Nombre de commissions",
-    "it": "Numero di commissione",
-    "rm": "Cumissiuns (dumber)",
-    "en": "Number of committees"
+    "de": "Anzahl Parlamentsmandate",
+    "fr": "Nombre de mandats parlementaires",
+    "it": "Numero dei mandati parlamentari",
+    "rm": "Mandats dal parlament (dumber)",
+    "en": "Number of parliamentary mandates"
   },
   "nrOfConcerns": {
     "de": "Anzahl Interessenbindungen",
