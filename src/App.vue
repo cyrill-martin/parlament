@@ -203,6 +203,7 @@ export default {
 
 header {
   height: 4rem;
+  padding-top: 1rem;
 }
 
 .languages {
@@ -217,10 +218,6 @@ header {
 
 .isSelected {
   font-weight: bold;
-}
-
-.logo {
-  padding-top: 1rem;
 }
 
 img {
