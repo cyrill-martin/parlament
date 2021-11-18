@@ -26,11 +26,8 @@ body {
 }
 
 a {
-  text-decoration: underline;
-}
-
-a:hover {
   color: #4C81AF;
+  text-decoration: none;
 }
 
 h1 {

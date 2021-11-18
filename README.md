@@ -1,6 +1,6 @@
 # Der Nationalrat
 
-This repository contains the files for the Swiss National Council visualization available at [nationalrat.kmapper.com](http://nationalrat.kmapper.com/).
+This repository contains the files for the Swiss National Council visualization available and described at [nationalrat.kmapper.com](http://nationalrat.kmapper.com/).
 
 ## Dependencies
 
