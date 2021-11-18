@@ -1,0 +1,15 @@
+{
+  "arrangement": {
+    "de": "Sitzordung"
+  },
+  "order": {
+    "de": "Reihenfolge"
+  },
+  "council": {
+    "de": "Der Nationalrat",
+    "fr": "Le Conseil National",
+    "it": "Il Consiglio Nazionale",
+    "rm": "Il Cussegl Naziunal",
+    "en": "The National Council"
+  }
+}

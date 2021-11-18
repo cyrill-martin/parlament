@@ -1,14 +1,24 @@
-# parliament
+# nationalrat
 
-Beruf: 
+## Project setup
+```
+npm install
+```
 
-Beruf auf parlament.ch geht gegen nutzlos!
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Arbeitgeber auf parlament.ch?
---> Nein --> Politik
---> Ja --> Branche? (Verbände, etc. --> Politik)
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Wird das allen gerecht? Nein? Politiker, die noch in einer Praxis arbeiten? --> Sind dann halt Politiker
-Bitte mit Begründung ÖFFENTLICH melden (Issues), wenn jemand fälschlicherweise als Berufspolitiker eingeteilt ist. 
-Ebenso melden, wenn jemand fälschlicherweise durch die Angaben aus der Berufspolitikerhaut geschlüpft ist.
-Politisch bestimmt vorteilhaft, wenn man nicht als Berufspolitiker erkannt wird. 
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,0 +1,16 @@
+{
+  "firstName": { "de": "Name" },
+  "faction": { "de": "Fraktion" },
+  "party": { "de": "Partei" },
+  "cantonName": { "de": "Kanton" },
+  "gender": { "de": "Geschlecht" },
+  "ageGroup": { "de": "Alter" },
+  "language": { "de": "Sprache" },
+  "workLanguage": { "de": "Arbeitssprache" },
+  "occupationalField": { "de": "Berufsfeld" },
+  "nrOfCouncilMemberships": { "de": "Anzahl Amtszeiten" },
+  "nrOfCommittees": { "de": "Anzahl Komissionen" },
+  "nrOfConcerns": { "de": "Anzahl Interessenbindungen" },
+  "nrOfPaidConcerns": { "de": "Anzahl bezahlte Interessenbindungen" },
+  "nrOfVoluntaryConcerns": { "de": "Anzahl ehrenamtliche Interessenbindungen" }
+}
