@@ -76,15 +76,14 @@
               href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/get_councillors.py"
               target="_blank"
               >Script</a
-            >).
-          </p>
-          <p>
-            Daten und Code sind auf <a 
+            >). Daten und Code sind auf <a 
               href="https://github.com/cyrill-martin/nationalrat" 
               target="_blank"
               >GitHub</a> verfügbar.
           </p>
-          <p>Zwei der Werte bedürfen einer Erklärung:</p>
+          <p>
+            Zwei der Werte bedürfen einer Erklärung:
+          </p>
           <h3>Berufsfeld</h3>
           <p>
             Ich bin nicht der erste, der Schwierigkeiten hatte, die einzelnen
