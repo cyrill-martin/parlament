@@ -35,10 +35,12 @@ export default {
   watch: {
     lang(newLanguage) {
       this.language = newLanguage;
+      this.drawParliament();
     }
   },
   methods: {
     drawParliament() {
+      d3.select("svg").remove();
       // Add additional data fields to each councillor
       const today = new Date();
       this.dataset.forEach((councillor) => {
