@@ -324,6 +324,10 @@ export default {
               (councillor) => councillor[thisOrder]
             );
             legendKeys = Array.from(Array(max + 1).keys());
+
+            if (thisOrder === "nrOfCouncilMemberships") {
+              legendKeys.shift();
+            }
           } else {
             // Create legend keys
             legendKeys = Object.keys(this.arrangements[thisOrder]).map(
@@ -577,6 +581,9 @@ export default {
             (councillor) => councillor[arrangement]
           );
           xOuterDomain = Array.from(Array(max + 1).keys());
+          if (arrangement === "nrOfCouncilMemberships") {
+            xOuterDomain.shift();
+          }
         } else {
           if (arrangement === "firstName") {
             // If arranged by name, all councillors belong to the same group
