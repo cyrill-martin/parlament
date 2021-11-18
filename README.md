@@ -1,24 +1,26 @@
-# nationalrat
+# Der Nationalrat
 
-## Project setup
-```
-npm install
-```
+This repository contains the files for the Swiss National Council visualization on [nationalrat.kmapper.com](http://nationalrat.kmapper.com).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Dependencies
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- npm
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Serve and Develop Locally
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Clone repository
+2. `cd` into repository
+3. Run `npm install` to get the needed npm packages
+4. Run `npm run serve` to serve on http://localhost:8080
+
+## Build production files
+
+Run `npm run build` to build files in a `dist` directory.
+
+## Deploy to GitHub Pages
+
+Run `npm run deploy` to build production files and push them to the gh-pages branch on GitHub. 
+
+## License
+
+MIT
