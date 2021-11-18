@@ -175,9 +175,9 @@
     "m": {
       "color": "#495057",
       "de": "Mann",
-      "fr": "Femme",
-      "it": "Donna",
-      "rm": "Dunna",
+      "fr": "Homme",
+      "it": "Uomo",
+      "rm": "Um",
       "en": "Man"
     }
   },
@@ -469,221 +469,221 @@
     "de": {
       "color": "#495057",
       "de": "Deutsch",
-      "fr": "de",
-      "it": "de",
-      "rm": "de",
-      "en": "de"
+      "fr": "Allemand ",
+      "it": "Tedesco",
+      "rm": "Tudestg",
+      "en": "German"
     },
     "fr": {
       "color": "#DEE2E6",
       "de": "Französisch",
-      "fr": "fr",
-      "it": "fr",
-      "rm": "fr",
-      "en": "fr"
+      "fr": "Français",
+      "it": "Francese ",
+      "rm": "Franzos",
+      "en": "French"
     },
     "it": {
       "color": "#ADB5BD",
       "de": "Italienisch",
-      "fr": "it",
-      "it": "it",
-      "rm": "it",
-      "en": "it"
+      "fr": "Italien ",
+      "it": "Italiano",
+      "rm": "Talian",
+      "en": "Italian"
     },
     "rm": {
       "color": "#12873f",
       "de": "Rätoromanisch",
-      "fr": "rm",
-      "it": "rm",
-      "rm": "rm",
-      "en": "rm"
+      "fr": "Rhéto-roman,",
+      "it": "Romanico",
+      "rm": "Rumantsch",
+      "en": "Romansh"
     },
     "sk": {
       "color": "#17b554",
       "de": "Slowakisch",
-      "fr": "sk",
-      "it": "sk",
-      "rm": "sk",
-      "en": "sk"
+      "fr": "Slovaque",
+      "it": "Slovacco",
+      "rm": "Slovac",
+      "en": "Slovak"
     },
     "tr": {
       "color": "#34e578",
       "de": "Türkisch",
-      "fr": "tr",
-      "it": "tr",
-      "rm": "tr",
-      "en": "tr"
+      "fr": "Turc",
+      "it": "Turco",
+      "rm": "Tirc",
+      "en": "Turkish"
     }
   },
   "workLanguage": {
     "de": {
       "color": "#495057",
       "de": "Deutsch",
-      "fr": "de",
-      "it": "de",
-      "rm": "de",
-      "en": "de"
+      "fr": "Allemand ",
+      "it": "Tedesco",
+      "rm": "Tudestg",
+      "en": "German"
     },
     "fr": {
       "color": "#DEE2E6",
       "de": "Französisch",
-      "fr": "fr",
-      "it": "fr",
-      "rm": "fr",
-      "en": "fr"
+      "fr": "Français",
+      "it": "Francese ",
+      "rm": "Franzos",
+      "en": "French"
     }
   },
   "occupationalField": {
     "Bankenwesen": {
       "color": "#0059b3",
-      "de": "Bankenwesen",
-      "fr": "Bankenwesen",
-      "it": "Bankenwesen",
-      "rm": "Bankenwesen",
-      "en": "Bankenwesen"
+      "de": "Bankwesen",
+      "fr": "Système bancaire",
+      "it": "Sistema bancario",
+      "rm": "Bancas",
+      "en": "Banking"
     },
     "Bauwesen": {
       "color": "#808080",
       "de": "Bauwesen",
-      "fr": "Bauwesen",
-      "it": "Bauwesen",
-      "rm": "Bauwesen",
-      "en": "Bauwesen"
+      "fr": "Bâtiment ",
+      "it": "Edilizia ",
+      "rm": "Sectur da construcziun",
+      "en": "Building industry"
     },
     "Beratungswesen": {
       "color": "#99ccff",
-      "de": "Beratungswesen",
-      "fr": "Beratungswesen",
-      "it": "Beratungswesen",
-      "rm": "Beratungswesen",
-      "en": "Beratungswesen"
+      "de": "Beratung",
+      "fr": "Guidance",
+      "it": "Consulenza",
+      "rm": "Cussegliaziun",
+      "en": "Consulting"
     },
     "Bildungswesen": {
       "color": "#ff7733",
       "de": "Bildungswesen",
-      "fr": "Bildungswesen",
-      "it": "Bildungswesen",
-      "rm": "Bildungswesen",
-      "en": "Bildungswesen"
+      "fr": "Système éducatif",
+      "it": "Istruzione",
+      "rm": "Furmaziun",
+      "en": "Education"
     },
     "Elektroinstallationen": {
       "color": "#404040",
       "de": "Elektroinstallationen",
-      "fr": "Elektroinstallationen",
-      "it": "Elektroinstallationen",
-      "rm": "Elektroinstallationen",
-      "en": "Elektroinstallationen"
+      "fr": "Installation électrique",
+      "it": "Installazione elettronica",
+      "rm": "Installaziuns electricas",
+      "en": "Electric installations"
     },
     "Energiewesen": {
       "color": "#e6e600",
       "de": "Energiewesen",
-      "fr": "Energiewesen",
-      "it": "Energiewesen",
-      "rm": "Energiewesen",
-      "en": "Energiewesen"
+      "fr": "Énergie",
+      "it": "Energia",
+      "rm": "Energia",
+      "en": "Energy"
     },
     "Funktechnik": {
       "color": "#a6a6a6",
       "de": "Funktechnik",
-      "fr": "Funktechnik",
-      "it": "Funktechnik",
-      "rm": "Funktechnik",
-      "en": "Funktechnik"
+      "fr": "Radiotechnique",
+      "it": "Radiotecnica",
+      "rm": "Tecnologia radiofonic",
+      "en": "Radio technology"
     },
     "Gartenbau": {
       "color": "#248f24",
       "de": "Gartenbau",
-      "fr": "Gartenbau",
-      "it": "Gartenbau",
-      "rm": "Gartenbau",
-      "en": "Gartenbau"
+      "fr": "Horticulture ",
+      "it": "Orticultura ",
+      "rm": "Orticultura",
+      "en": "Horticulture"
     },
     "Gesundheitswesen": {
       "color": "#ff0000",
       "de": "Gesundheitswesen",
-      "fr": "Gesundheitswesen",
-      "it": "Gesundheitswesen",
-      "rm": "Gesundheitswesen",
-      "en": "Gesundheitswesen"
+      "fr": "Système de santé publique ",
+      "it": "Sistema sanitario",
+      "rm": "Sectur da la sanadad",
+      "en": "Healthcare"
     },
     "Ingenieurwesen": {
       "color": "#d9d9d9",
       "de": "Ingenieurwesen",
-      "fr": "Ingenieurwesen",
-      "it": "Ingenieurwesen",
-      "rm": "Ingenieurwesen",
-      "en": "Ingenieurwesen"
+      "fr": "Ingénierie",
+      "it": "Ingegneria ",
+      "rm": "Inschigneria",
+      "en": "Engineering"
     },
     "Landwirtschaftswesen": {
       "color": "#33cc33",
-      "de": "Landwirtschaftswesen",
-      "fr": "Landwirtschaftswesen",
-      "it": "Landwirtschaftswesen",
-      "rm": "Landwirtschaftswesen",
-      "en": "Landwirtschaftswesen"
+      "de": "Landwirtschaft",
+      "fr": "Agriculture",
+      "it": "Agricoltura",
+      "rm": "Agricultura",
+      "en": "Agriculture"
     },
     "Naturwissenschaften": {
       "color": "#85e085",
       "de": "Naturwissenschaften",
-      "fr": "Naturwissenschaften",
-      "it": "Naturwissenschaften",
-      "rm": "Naturwissenschaften",
-      "en": "Naturwissenschaften"
+      "fr": "Sciences naturelles",
+      "it": "Scienze naturali ",
+      "rm": "Scienzas natiralas",
+      "en": "Science"
     },
     "Politik": {
       "color": "#ff9999",
       "de": "Politik",
-      "fr": "Politik",
-      "it": "Politik",
-      "rm": "Politik",
-      "en": "Politik"
+      "fr": "Politique",
+      "it": "Politica",
+      "rm": "Politica",
+      "en": "Politics"
     },
     "Rechtswesen": {
       "color": "#bf8040",
       "de": "Rechtswesen",
-      "fr": "Rechtswesen",
-      "it": "Rechtswesen",
-      "rm": "Rechtswesen",
-      "en": "Rechtswesen"
+      "fr": "Droit",
+      "it": "Legge",
+      "rm": "Dretg",
+      "en": "Legal system"
     },
     "Schuhwirtschaft": {
       "color": "#ff3399",
       "de": "Schuhwirtschaft",
-      "fr": "Schuhwirtschaft",
-      "it": "Schuhwirtschaft",
-      "rm": "Schuhwirtschaft",
-      "en": "Schuhwirtschaft"
+      "fr": "Chaussures",
+      "it": "Calzature",
+      "rm": "Chalzers",
+      "en": "Shoe industry"
     },
     "Transportwesen": {
       "color": "#595959",
       "de": "Transportwesen",
-      "fr": "Transportwesen",
-      "it": "Transportwesen",
-      "rm": "Transportwesen",
-      "en": "Transportwesen"
+      "fr": "Secteur des transports",
+      "it": "Settore dei trasporti",
+      "rm": "Sectur da transport",
+      "en": "Transportation"
     },
     "Veranstaltungswesen": {
       "color": "#ff66cc",
       "de": "Veranstaltungswesen",
-      "fr": "Veranstaltungswesen",
-      "it": "Veranstaltungswesen",
-      "rm": "Veranstaltungswesen",
-      "en": "Veranstaltungswesen"
+      "fr": "Évènements",
+      "it": "Eventi",
+      "rm": "Occurrenzas",
+      "en": "Event management"
     },
     "Verlagswesen": {
       "color": "#cc33ff",
       "de": "Verlagswesen",
-      "fr": "Verlagswesen",
-      "it": "Verlagswesen",
-      "rm": "Verlagswesen",
-      "en": "Verlagswesen"
+      "fr": "Édition",
+      "it": "Editoria",
+      "rm": "Ediziuns",
+      "en": "Publishing"
     },
     "Versicherungswesen": {
       "color": "#3399ff",
       "de": "Versicherungswesen",
-      "fr": "Versicherungswesen",
-      "it": "Versicherungswesen",
-      "rm": "Versicherungswesen",
+      "fr": "Assurances",
+      "it": "Assicurazioni",
+      "rm": "Assicuranzas",
       "en": "Versicherungswesen"
     }
   }

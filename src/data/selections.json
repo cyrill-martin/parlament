@@ -1,16 +1,100 @@
 {
-  "firstName": { "de": "Name" },
-  "faction": { "de": "Fraktion" },
-  "party": { "de": "Partei" },
-  "cantonName": { "de": "Kanton" },
-  "gender": { "de": "Geschlecht" },
-  "ageGroup": { "de": "Alter" },
-  "language": { "de": "Sprache" },
-  "workLanguage": { "de": "Arbeitssprache" },
-  "occupationalField": { "de": "Berufsfeld" },
-  "nrOfCouncilMemberships": { "de": "Anzahl Amtszeiten" },
-  "nrOfCommittees": { "de": "Anzahl Komissionen" },
-  "nrOfConcerns": { "de": "Anzahl Interessenbindungen" },
-  "nrOfPaidConcerns": { "de": "Anzahl bezahlte Interessenbindungen" },
-  "nrOfVoluntaryConcerns": { "de": "Anzahl ehrenamtliche Interessenbindungen" }
+  "firstName": {
+    "de": "Name",
+    "fr": "Nom",
+    "it": "Nome",
+    "rm": "Num",
+    "en": "Name"
+  },
+  "faction": {
+    "de": "Fraktion",
+    "fr": "Groupe",
+    "it": "Gruppo",
+    "rm": "Fracziun",
+    "en": "Group"
+  },
+  "party": {
+    "de": "Partei",
+    "fr": "Parti",
+    "it": "Partito",
+    "rm": "Partida",
+    "en": "Party"
+  },
+  "cantonName": {
+    "de": "Kanton",
+    "fr": "Canton",
+    "it": "Cantone",
+    "rm": "Chantun",
+    "en": "Canton"
+  },
+  "gender": {
+    "de": "Geschlecht",
+    "fr": "Sexe",
+    "it": "Sesso",
+    "rm": "Schlattaina",
+    "en": "Gender"
+  },
+  "ageGroup": {
+    "de": "Alter",
+    "fr": "Âge",
+    "it": "Età",
+    "rm": "Vegliadetgna",
+    "en": "Age"
+  },
+  "language": {
+    "de": "Sprache",
+    "fr": "Langue",
+    "it": "Lingua",
+    "rm": "Lingua",
+    "en": "Language"
+  },
+  "workLanguage": {
+    "de": "Arbeitssprache",
+    "fr": "Langue (travail)",
+    "it": "Lingua (lavoro)",
+    "rm": "Lingua (lavur)",
+    "en": "Working language"
+  },
+  "occupationalField": {
+    "de": "Berufsfeld",
+    "fr": "Secteur d'activité",
+    "it": "Settore occupazionale",
+    "rm": "Champ professiunal",
+    "en": "Working language"
+  },
+  "nrOfCouncilMemberships": {
+    "de": "Anzahl Amtszeiten",
+    "fr": "Nombre de mandats",
+    "it": "Numero dei mandati",
+    "rm": "Dumber temp d'uffizi",
+    "en": "Number of terms of office"
+  },
+  "nrOfCommittees": {
+    "de": "Anzahl Komissionen",
+    "fr": "Nombre de commissions",
+    "it": "Numero di commissione",
+    "rm": "Cumissiuns (dumber)",
+    "en": "Number of committees"
+  },
+  "nrOfConcerns": {
+    "de": "Anzahl Interessenbindungen",
+    "fr": "Nombre des liens d'intérêts",
+    "it": "Numero dei relazioni d'interesse",
+    "rm": "Uffizis politics (dumber)",
+    "en": "Number of interests"
+  },
+  "nrOfPaidConcerns": {
+    "de": "Anzahl bezahlte Interessenbindungen",
+    "fr": "Nombre des liens d'intérêts (payé)",
+    "it": "Numero dei relazioni d'interesse (pagato)",
+    "rm": "Uffizis politics (pajà) (dumber)",
+    "en": "Number of paid interests"
+  },
+  "nrOfVoluntaryConcerns": {
+    "de": "Anzahl ehrenamtliche Interessenbindungen",
+    "fr": "Nombre des liens d'intérêts (bénévole)",
+    "it": "Numero dei relazioni d'interesse (onorario)",
+    "rm": "Uffizis politics (onurar) (dumber)",
+    "en": "Number of voluntary interests"
+  }
 }

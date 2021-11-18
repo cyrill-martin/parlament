@@ -13,7 +13,7 @@
           :key="index"
         >
           <span v-if="type === 'arrangement' && selection === 'firstName'"
-            >keine</span
+            >{{ labels.none[language] }}</span
           >
           <span v-else>{{ selections[selection][language] }}</span>
         </option>

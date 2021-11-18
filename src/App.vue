@@ -1,11 +1,20 @@
 <template>
   <div class="container page">
     <header class="row">
-      <div class="col-12">
+      <div class="col-8">
         <div class="logo">
           <a href="https://kmapper.com" target="_blank"
             ><img :src="logo" alt="The kmapper logo"
           /></a>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="languages">
+          <span :class="{isSelected: language === 'de' }" @click="setLanguage('de')">DE</span>
+          <span :class="{isSelected: language === 'fr' }" @click="setLanguage('fr')">FR</span>
+          <span :class="{isSelected: language === 'it' }" @click="setLanguage('it')">IT</span>
+          <span :class="{isSelected: language === 'rm' }" @click="setLanguage('rm')">RM</span>
+          <span :class="{isSelected: language === 'en' }" @click="setLanguage('en')">EN</span>
         </div>
       </div>
     </header>
@@ -13,22 +22,25 @@
     <main class="row" id="nationalrat">
       <section class="title row">
         <div class="col-12">
-          <h1>{{ labels.council["de"] }} <a href="#about">*</a></h1>
+          <h1>{{ labels.council[language] }} <a href="#about">*</a></h1>
         </div>
       </section>
 
       <section class="row" id="chart">
         <div class="col-12">
-          <the-parliament :language="'de'"></the-parliament>
+          <the-parliament :language="language"></the-parliament>
         </div>
       </section>
 
       <section class="row" id="dropdowns">
         <div class="col-6">
-          <the-dropdown :type="'arrangement'" :language="'de'"></the-dropdown>
+          <the-dropdown
+            :type="'arrangement'"
+            :language="language"
+          ></the-dropdown>
         </div>
         <div class="col-6">
-          <the-dropdown :type="'order'" :language="'de'"></the-dropdown>
+          <the-dropdown :type="'order'" :language="language"></the-dropdown>
         </div>
       </section>
 
@@ -111,6 +123,7 @@ export default {
   data() {
     return {
       labels,
+      language: "de",
     };
   },
   computed: {
@@ -118,6 +131,11 @@ export default {
       return require("./assets/images/kmapper_k_3b.png");
     },
   },
+  methods: {
+    setLanguage(lang) {
+      this.language = lang;
+    }
+  }
 };
 </script>
 
@@ -133,6 +151,20 @@ a {
 
 header {
   height: 4rem;
+}
+
+.languages {
+  font-size: 0.8rem;
+  float: right;
+}
+
+.languages span {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.isSelected {
+  font-weight: bold;
 }
 
 .logo {

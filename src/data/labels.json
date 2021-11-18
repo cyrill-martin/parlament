@@ -1,9 +1,17 @@
 {
   "arrangement": {
-    "de": "Sitzordung"
+    "de": "Sitzordung",
+    "fr": "Répartition des places",
+    "it": "Disposizione dei posti",
+    "rm": "Urden da seser",
+    "en": "Seating arrangements"
   },
   "order": {
-    "de": "Reihenfolge"
+    "de": "Reihenfolge",
+    "fr": "Ordre",
+    "it": "Ordine",
+    "rm": "Successiun",
+    "en": "Order"
   },
   "council": {
     "de": "Der Nationalrat",
@@ -11,5 +19,12 @@
     "it": "Il Consiglio Nazionale",
     "rm": "Il Cussegl Naziunal",
     "en": "The National Council"
+  },
+  "none": {
+    "de": "keine",
+    "fr": "aucune",
+    "it": "alcuna ",
+    "rm": "nagin",
+    "en": "none"
   }
 }
