@@ -28,7 +28,7 @@
 
       <section class="row" id="chart">
         <div class="col-12">
-          <the-parliament :language="language"></the-parliament>
+          <the-parliament :lang="language"></the-parliament>
         </div>
       </section>
 
@@ -36,11 +36,11 @@
         <div class="col-6">
           <the-dropdown
             :type="'arrangement'"
-            :language="language"
+            :lang="language"
           ></the-dropdown>
         </div>
         <div class="col-6">
-          <the-dropdown :type="'order'" :language="language"></the-dropdown>
+          <the-dropdown :type="'order'" :lang="language"></the-dropdown>
         </div>
       </section>
 

@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import * as d3 from "d3";
+// import * as d3 from "d3";
+import d3 from "../d3-importer.js";
 // Load the data
 import dataset from "../data/N_council.json";
 import occupationalFields from "../data/occupationalFields.json";
@@ -17,9 +18,10 @@ import paidConcerns from "../data/paidConcerns.json";
 import arrangements from "../data/arrangements.json";
 
 export default {
-  props: ["language"],
+  props: ["lang"],
   mounted() {
     this.drawParliament();
+    this.language = this.lang;
   },
   data() {
     return {
@@ -27,7 +29,13 @@ export default {
       occupationalFields,
       paidConcerns,
       arrangements,
+      language: "de",
     };
+  },
+  watch: {
+    lang(newLanguage) {
+      this.language = newLanguage;
+    }
   },
   methods: {
     drawParliament() {
@@ -241,7 +249,8 @@ export default {
             }
           })
           .attr("cursor", "pointer")
-          .on("mouseover", (_, datum) => {
+          .on("mouseover", (eee, datum) => {
+            console.log(eee)
             addMouseover(arrangement, order, datum);
           })
           .on("mouseout", () => {
@@ -253,8 +262,8 @@ export default {
 
           onmousemove = (e) => {
             tooltip
-              .style("left", e.pageX + 25 + "px")
-              .style("top", e.pageY - 50 + "px");
+              .style("left", e.clientX + 25 + "px")
+              .style("top", e.clientY - 50 + "px");
           };
 
           tooltip.select(".name").text(`${data.firstName} ${data.lastName}`);

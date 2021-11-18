@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-12 label">
-      <label :for="type">{{ labels[type][language] }}</label>
+      <label :for="type">{{ labels[type][lang] }}</label>
     </div>
   </div>
   <div class="row">
@@ -13,9 +13,9 @@
           :key="index"
         >
           <span v-if="type === 'arrangement' && selection === 'firstName'"
-            >{{ labels.none[language] }}</span
+            >{{ labels.none[lang] }}</span
           >
-          <span v-else>{{ selections[selection][language] }}</span>
+          <span v-else>{{ selections[selection][lang] }}</span>
         </option>
       </select>
     </div>
@@ -27,7 +27,7 @@ import labels from "../data/labels.json";
 import selections from "../data/selections.json";
 
 export default {
-  props: ["type", "language"],
+  props: ["type", "lang"],
   data() {
     return {
       labels: labels,
