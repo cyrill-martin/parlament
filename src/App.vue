@@ -15,35 +15,40 @@
         <button
           :class="{ isSelected: language === 'de' }"
           @click="setLanguage('de')"
-          >DE</button
         >
+          DE
+        </button>
         <button
           :class="{ isSelected: language === 'fr' }"
           @click="setLanguage('fr')"
-          >FR</button
         >
+          FR
+        </button>
         <button
           :class="{ isSelected: language === 'it' }"
           @click="setLanguage('it')"
-          >IT</button
         >
+          IT
+        </button>
         <button
           :class="{ isSelected: language === 'rm' }"
           @click="setLanguage('rm')"
-          >RM</button
         >
+          RM
+        </button>
         <button
           :class="{ isSelected: language === 'en' }"
           @click="setLanguage('en')"
-          >EN</button
         >
+          EN
+        </button>
       </div>
-
     </header>
     <main class="row" id="nationalrat">
       <section class="title row">
         <div class="col-12">
-          <h1>{{ labels.council[language] }} <a href="#about">*</a></h1>
+          <h1>{{ labels.council[language] }}</h1>
+          <p v-html="labels.intro[language]"></p>
         </div>
       </section>
       <section class="row" id="chart">
@@ -63,12 +68,8 @@
         <div class="col-12">
           <h2>* {{ labels.data[language] }}:</h2>
           <p>
-            Die Visualisierung zeigt die 200 Mitglieder des Schweizer
-            Nationalrats - Stand November 2021.
-          </p>
-          <p>
-            Alle Angaben ohne Gewähr. Der Grossteil der angezeigten Daten wurde
-            Mitte November 2021 direkt über die
+            Der Grossteil der angezeigten Daten wurde Mitte November 2021 direkt
+            über die
             <a href="http://ws-old.parlament.ch" target="_blank"
               >offene Schnittstelle</a
             >
@@ -78,18 +79,18 @@
               href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/get_councillors.py"
               target="_blank"
               >Script</a
-            >). Daten und Code sind auf <a 
-              href="https://github.com/cyrill-martin/nationalrat" 
+            >). Daten und Code sind auf
+            <a
+              href="https://github.com/cyrill-martin/nationalrat"
               target="_blank"
-              >GitHub</a> verfügbar.
-          </p>
-          <p>
-            Zwei der Werte bedürfen einer Erklärung:
+              >GitHub</a
+            >
+            verfügbar.
           </p>
           <h3>{{ selections.occupationalField[language] }}</h3>
           <p>
-            Ich bin nicht der erste, der Schwierigkeiten hatte, die einzelnen
-            Parlamentarier in Berufsgruppen einzuteilen (<a
+            Es ist schwierig, die einzelnen Parlamentarier:innen in
+            Berufsgruppen einzuteilen (<a
               href="https://www.srf.ch/news/schweiz/die-jobs-der-neugewaehlten-im-neuen-nationalrat-sitzen-noch-mehr-berufspolitiker"
               target="_blank"
               >srf.ch</a
@@ -98,50 +99,28 @@
               href="https://www.nau.ch/politik/bundeshaus/diese-berufe-dominieren-im-neuen-nationalrat-65602824"
               target="_blank"
               >nau.ch</a
-            >). Die Berufsangaben auf parlament.ch gehen gegen nutzlos und so musste isch schlussendlich pragmatisch vorgehen.
-          </p>
-          <p>
-            <ul>
-              <li>
-                Alle Parlamentarier ohne Angaben zum Arbeitgeber wurden 
-                direkt als Berufspolitiker eingeordnet.</li>
-            </ul>
-          </p>
-          <p>
-            Dadurch wurden auch Parlamentarier zu Berufspolitikern, die gemäss 
-            Berufsangaben Inhaber oder CEO eines Unternehmens sind, dieses 
-            Unternehmen aber nicht als Arbeitgeber angegeben haben.
-          </p>
-          <p>
-            <ul>
-              <li>
-                War der angegebene Arbeitgeber ein Wirtschaftsverband oder eine 
-                andere Interessengemeinschaft, dann fiel das ebenfalls 
-                unter die Kategorie Berufspolitik.
-              </li>
-            </ul>
-          </p>
-          <p>
-            <ul>
-              <li>
-                Bei der Angabe anderer Arbeitgeber habe ich versucht Arbeitgeber 
-                und Tätigkeit einem groben Berufsfeld zuzuweisen.
-              </li>
-            </ul>
+            >). Die Berufsangaben auf parlament.ch sind ungenau, deshalb wurden
+            alle Parlamentarier:innen ohne Angaben zur Arbeitsstelle als
+            Berufspolitiker:innen eingeordnet. Auch solche, die gemäss
+            Berufsangaben Inhaber:in oder CEO eines Unternehmens sind, dieses
+            Unternehmen aber nicht als Arbeitsstelle angegeben haben. Ebenfalls
+            als Berufspolitiker:innen eingeordnet wurden Parlamentarier:innen
+            mit einer Anstellung bei einem Wirtschaftsverband oder einer anderen
+            Interessengemeinschaft.<br />
+            Alle anderen Tätigkeit wurden einem übergreifenden Berufsfeld
+            zugewiesen.
           </p>
           <h3>{{ selections.nrOfPaidConcerns[language] }}</h3>
           <p>
-            Die über die Schnittstelle bezogenen Daten enthalten zwar die
-            Interessenbindungen der Parlamentarier, aber anders als auf
-            parlament.ch ist nicht vermerkt, ob es sich jeweils um ein bezahltes
-            oder ehrenamtliches Mandat handelt. Deshalb wurden die Daten
-            basierend auf
-            <a
+            Die über die Schnittstelle bezogenen Daten enthalten die
+            Interessenbindungen der Parlamentarier, aber es ist nicht vermerkt,
+            ob es sich um ein bezahltes oder ehrenamtliches Mandat handelt. Die
+            Daten wurden mit den Angaben im Register der Interssenbindungen des
+            Nationalrats manuell ergänzt (<a
               href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/interessen-nr.pdf"
               target="_blank"
-              >diesem Dokument</a
-            >
-            entsprechend manuell ergänzt.
+              >Dokument</a
+            >).
           </p>
           <p>
             <br />
@@ -212,7 +191,7 @@ header {
 .languages {
   font-size: 0.8rem;
   position: absolute;
-  top: 0.8rem; 
+  top: 0.8rem;
   right: 0.8rem;
   z-index: 10;
 }
@@ -247,6 +226,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+  font-size: 0.9rem;
 }
 
 footer {
@@ -279,7 +259,5 @@ footer {
     margin-right: auto;
     width: 95%;
   }
-
-
 }
 </style>

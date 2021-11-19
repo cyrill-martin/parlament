@@ -31,13 +31,13 @@ a {
 }
 
 h1 {
-  font-size: 2.rem;
+  font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 0.5;
   margin-bottom: 0;
 }
@@ -87,11 +87,11 @@ footer {
   /* 720px */
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .col-1 {

@@ -252,8 +252,7 @@ export default {
             }
           })
           .attr("cursor", "pointer")
-          .on("mouseover touchstart", (eee, datum) => {
-            console.log(eee)
+          .on("mouseover touchstart", (_, datum) => {
             addMouseover(arrangement, order, datum);
           })
           .on("mouseout touchend", () => {
