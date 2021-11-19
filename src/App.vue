@@ -48,7 +48,7 @@
       <section class="title row">
         <div class="col-12">
           <h1>{{ labels.council[language] }}</h1>
-          <p v-html="labels.intro[language]"></p>
+          <p>{{ labels.intro[language] }}<a href='#about'>*</a></p>
         </div>
       </section>
       <section class="row" id="chart">
@@ -66,7 +66,7 @@
       </section>
       <section class="row" id="about">
         <div class="col-12">
-          <h2>* {{ labels.data[language] }}:</h2>
+          <h3>* {{ labels.data[language] }}:</h3>
           <p>
             Der Grossteil der angezeigten Daten wurde Mitte November 2021 direkt
             über die
@@ -87,9 +87,8 @@
             >
             verfügbar.
           </p>
-          <h3>{{ selections.occupationalField[language] }}</h3>
           <p>
-            Es ist schwierig, die einzelnen Parlamentarier:innen in
+            <b>{{ selections.occupationalField[language] }}</b>: Es ist schwierig, die einzelnen Parlamentarier:innen in
             Berufsgruppen einzuteilen (<a
               href="https://www.srf.ch/news/schweiz/die-jobs-der-neugewaehlten-im-neuen-nationalrat-sitzen-noch-mehr-berufspolitiker"
               target="_blank"
@@ -110,9 +109,8 @@
             Alle anderen Tätigkeit wurden einem übergreifenden Berufsfeld
             zugewiesen.
           </p>
-          <h3>{{ selections.nrOfPaidConcerns[language] }}</h3>
           <p>
-            Die über die Schnittstelle bezogenen Daten enthalten die
+            <b>{{ selections.nrOfPaidConcerns[language] }}</b>: Die über die Schnittstelle bezogenen Daten enthalten die
             Interessenbindungen der Parlamentarier, aber es ist nicht vermerkt,
             ob es sich um ein bezahltes oder ehrenamtliches Mandat handelt. Die
             Daten wurden mit den Angaben im Register der Interssenbindungen des

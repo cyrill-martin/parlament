@@ -44,19 +44,19 @@ export default {
 
 <style scoped>
 .label {
-  text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
-.select {
+/* .select {
   text-align: center;
-}
+} */
 select {
-  width: 60%;
+  width: 100%;
   border-radius: 4px;
-  padding: 10px;
+  padding: 8px;
   border: none;
   font-size: 0.9rem;
   cursor: pointer;
+  background: #d2dfeb;
 }
 </style>

@@ -35,10 +35,10 @@
     "en": "Data (in German)"
   },
   "intro": {
-    "de": "Die dynamische Visualisierung zeigt die Sitzverteilung der 200 Mitglieder des Nationalrats in Relation zu einem zusätzlich wählbaren Merkmal.<br>Stand November 2021<a href='#about'>*</a>",
-    "fr": "La visualisation dynamique montre la répartition des sièges pour les 200 membres du Conseil National par rapport à une caractéristique supplémentaire.<br>En novembre 2021<a href='#about'>*</a>",
-    "it": "La visualizzazione dinamica mostra la distribuzione dei seggi per i 200 membri del Consiglio Nazionale in relazione a una caratteristica aggiuntiva.<br>A partire da novembre 2021<a href='#about'>*</a>",
-    "rm": "Visualisaziun dinamica: Ils 200 commembers dal Cussegl Naziunal.<br>November 2021<a href='#about'>*</a>",
-    "en": "The dynamic visualization shows the distribution of seats for the 200 members of the National Council in relation to an additional feature.<br>As of November 2021<a href='#about'>*</a>" 
+    "de": "Die dynamische Visualisierung zeigt die Sitzverteilung der 200 Mitglieder des Nationalrats in Relation zu einem zusätzlich wählbaren Merkmal. Stand November 2021",
+    "fr": "La visualisation dynamique montre la répartition des sièges pour les 200 membres du Conseil National par rapport à une caractéristique supplémentaire. En novembre 2021",
+    "it": "La visualizzazione dinamica mostra la distribuzione dei seggi per i 200 membri del Consiglio Nazionale in relazione a una caratteristica aggiuntiva. A partire da novembre 2021",
+    "rm": "Visualisaziun dinamica: Ils 200 commembers dal Cussegl Naziunal. November 2021",
+    "en": "The dynamic visualization shows the distribution of seats for the 200 members of the National Council in relation to an additional feature. As of November 2021" 
   }
 }
