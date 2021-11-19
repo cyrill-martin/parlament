@@ -1,42 +1,44 @@
 <template>
   <div class="container page">
-    <header class="row">
-      <div class="col-8">
-        <div class="logo">
-          <a href="https://kmapper.com" target="_blank"
-            ><img :src="logo" alt="The kmapper logo"
-          /></a>
+    <header>
+      <div class="row">
+        <div class="col-12">
+          <div class="logo">
+            <a href="https://kmapper.com" target="_blank"
+              ><img :src="logo" alt="The kmapper logo"
+            /></a>
+          </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="languages">
-          <span
-            :class="{ isSelected: language === 'de' }"
-            @click="setLanguage('de')"
-            >DE</span
-          >
-          <span
-            :class="{ isSelected: language === 'fr' }"
-            @click="setLanguage('fr')"
-            >FR</span
-          >
-          <span
-            :class="{ isSelected: language === 'it' }"
-            @click="setLanguage('it')"
-            >IT</span
-          >
-          <span
-            :class="{ isSelected: language === 'rm' }"
-            @click="setLanguage('rm')"
-            >RM</span
-          >
-          <span
-            :class="{ isSelected: language === 'en' }"
-            @click="setLanguage('en')"
-            >EN</span
-          >
-        </div>
+
+      <div class="languages">
+        <button
+          :class="{ isSelected: language === 'de' }"
+          @click="setLanguage('de')"
+          >DE</button
+        >
+        <button
+          :class="{ isSelected: language === 'fr' }"
+          @click="setLanguage('fr')"
+          >FR</button
+        >
+        <button
+          :class="{ isSelected: language === 'it' }"
+          @click="setLanguage('it')"
+          >IT</button
+        >
+        <button
+          :class="{ isSelected: language === 'rm' }"
+          @click="setLanguage('rm')"
+          >RM</button
+        >
+        <button
+          :class="{ isSelected: language === 'en' }"
+          @click="setLanguage('en')"
+          >EN</button
+        >
       </div>
+
     </header>
     <main class="row" id="nationalrat">
       <section class="title row">
@@ -96,8 +98,7 @@
               href="https://www.nau.ch/politik/bundeshaus/diese-berufe-dominieren-im-neuen-nationalrat-65602824"
               target="_blank"
               >nau.ch</a
-            >). Die Berufsangaben auf parlament.ch gehen gegen nutzlos.
-            Schlussendlich musste ich pragmatisch vorgehen.
+            >). Die Berufsangaben auf parlament.ch gehen gegen nutzlos und so musste isch schlussendlich pragmatisch vorgehen.
           </p>
           <p>
             <ul>
@@ -114,8 +115,8 @@
           <p>
             <ul>
               <li>
-                War der angegebene Arbeitgeber ein Wirtschaftsverband, eine 
-                andere Interessengemeinschaft, etc. fiel das ebenfalls 
+                War der angegebene Arbeitgeber ein Wirtschaftsverband oder eine 
+                andere Interessengemeinschaft, dann fiel das ebenfalls 
                 unter die Kategorie Berufspolitik.
               </li>
             </ul>
@@ -123,7 +124,7 @@
           <p>
             <ul>
               <li>
-                Bei Angabe anderer Arbeitgeber habe ich versucht Arbeitgeber 
+                Bei der Angabe anderer Arbeitgeber habe ich versucht Arbeitgeber 
                 und Tätigkeit einem groben Berufsfeld zuzuweisen.
               </li>
             </ul>
@@ -208,12 +209,17 @@ header {
 
 .languages {
   font-size: 0.8rem;
-  float: right;
+  position: fixed;
+  top: 0.8rem; 
+  right: 0.8rem;
+  z-index: 10;
 }
 
-.languages span {
-  margin-right: 0.5rem;
+.languages button {
+  margin-left: 0.25rem;
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 .isSelected {
@@ -246,9 +252,14 @@ footer {
   height: 3rem;
 }
 
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 65em) {
   header {
     height: 0;
+    padding-top: 0;
+  }
+
+  img {
+    width: 90px;
   }
 
   .page {

@@ -175,6 +175,7 @@ export default {
           .append("g")
           .attr("id", "x-axis")
           // .style("font-size", "12px")
+          .attr("font-size-adjust", "0.58")
           .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
           .call(xAxis);
 
@@ -251,11 +252,11 @@ export default {
             }
           })
           .attr("cursor", "pointer")
-          .on("mouseover", (eee, datum) => {
+          .on("mouseover touchstart", (eee, datum) => {
             console.log(eee)
             addMouseover(arrangement, order, datum);
           })
-          .on("mouseout", () => {
+          .on("mouseout touchend", () => {
             tooltip.style("display", "none");
           });
 
@@ -474,10 +475,10 @@ export default {
 
           d3.selectAll(".councillor")
             .attr("cursor", "pointer")
-            .on("mouseover", (_, datum) => {
+            .on("mouseover touchstart", (_, datum) => {
               addMouseover(newArrangement, newOrder, datum);
             })
-            .on("mouseout", () => {
+            .on("mouseout touchend", () => {
               tooltip.style("display", "none");
             })
             .transition()
