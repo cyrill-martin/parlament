@@ -26,5 +26,12 @@
     "it": "alcuna ",
     "rm": "nagin",
     "en": "none"
+  },
+  "data": {
+    "de": "Daten",
+    "fr": "Données (en allemand)",
+    "it": "Dati (in tedesco)", 
+    "rm": "Datas (en tudestg)",
+    "en": "Data (in German)"
   }
 }

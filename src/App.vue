@@ -61,7 +61,7 @@
       </section>
       <section class="row" id="about">
         <div class="col-12">
-          <h2>* Daten:</h2>
+          <h2>* {{ labels.data[language] }}:</h2>
           <p>
             Die Visualisierung zeigt die 200 Mitglieder des Schweizer
             Nationalrats - Stand November 2021.
@@ -86,7 +86,7 @@
           <p>
             Zwei der Werte bedürfen einer Erklärung:
           </p>
-          <h3>Berufsfeld</h3>
+          <h3>{{ selections.occupationalField[language] }}</h3>
           <p>
             Ich bin nicht der erste, der Schwierigkeiten hatte, die einzelnen
             Parlamentarier in Berufsgruppen einzuteilen (<a
@@ -129,7 +129,7 @@
               </li>
             </ul>
           </p>
-          <h3>Anzahl bezahlte Interessenbindungen</h3>
+          <h3>{{ selections.nrOfPaidConcerns[language] }}</h3>
           <p>
             Die über die Schnittstelle bezogenen Daten enthalten zwar die
             Interessenbindungen der Parlamentarier, aber anders als auf
@@ -169,6 +169,7 @@
 import TheParliament from "./components/TheParliament.vue";
 import TheDropdown from "./components/TheDropdown.vue";
 import labels from "./data/labels.json";
+import selections from "./data/selections.json";
 
 export default {
   name: "App",
@@ -179,6 +180,7 @@ export default {
   data() {
     return {
       labels,
+      selections,
       language: "de",
     };
   },
@@ -209,7 +211,7 @@ header {
 
 .languages {
   font-size: 0.8rem;
-  position: fixed;
+  position: absolute;
   top: 0.8rem; 
   right: 0.8rem;
   z-index: 10;
