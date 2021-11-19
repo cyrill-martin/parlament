@@ -47,9 +47,6 @@ export default {
   font-size: 1.1rem;
   font-weight: bold;
 }
-/* .select {
-  text-align: center;
-} */
 select {
   width: 100%;
   border-radius: 4px;

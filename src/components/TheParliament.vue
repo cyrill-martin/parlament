@@ -186,7 +186,7 @@ export default {
             .transition()
             .duration(2000)
             .style("text-anchor", "start")
-            .attr("dy", "-.05em")
+            .attr("dy", "-.01em")
             .attr("dx", "-2em")
             .attr("transform", "rotate(-90)");
         }
@@ -517,28 +517,31 @@ export default {
           }
         };
 
-        // Listen to changes on the seat arrangement
-        d3.select("#arrangement").on("change", (event) => {
-          event.preventDefault();
-          const newArrangement = event.target.value;
-          const newOrder = d3.select("#order").node().value;
-
-          const newColorScale = getColorScale(newOrder);
-          const newXOuter = getOuterXDomain(newArrangement);
+        const callUpdateFunction = (arrangement, order) => {
+          const newColorScale = getColorScale(order);
+          const newXOuter = getOuterXDomain(arrangement);
           const newXInner = getInnerXDomain(newXOuter.length);
           const newYDomain = getYDomain(
-            newArrangement,
-            newOrder,
+            arrangement,
+            order,
             newXInner.length
           );
           updateSeatArrangement(
-            newArrangement,
-            newOrder,
+            arrangement,
+            order,
             newXOuter,
             newXInner,
             newYDomain,
             newColorScale
           );
+        };
+
+        // Listen to changes on the seat arrangement
+        d3.select("#arrangement").on("change", (event) => {
+          event.preventDefault();
+          const newArrangement = event.target.value;
+          const newOrder = d3.select("#order").node().value;
+          callUpdateFunction(newArrangement, newOrder);
         });
 
         // Listen to changes on group order
@@ -546,23 +549,7 @@ export default {
           event.preventDefault();
           const newOrder = event.target.value;
           const newArrangement = d3.select("#arrangement").node().value;
-
-          const newColorScale = getColorScale(newOrder);
-          const newXOuter = getOuterXDomain(newArrangement);
-          const newXInner = getInnerXDomain(newXOuter.length);
-          const newYDomain = getYDomain(
-            newArrangement,
-            newOrder,
-            newXInner.length
-          );
-          updateSeatArrangement(
-            newArrangement,
-            newOrder,
-            newXOuter,
-            newXInner,
-            newYDomain,
-            newColorScale
-          );
+          callUpdateFunction(newArrangement, newOrder);
         });
       };
 
