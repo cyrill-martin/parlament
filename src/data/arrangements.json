@@ -534,7 +534,7 @@
     }
   },
   "occupationalField": {
-    "Bankenwesen": {
+    "Bankwesen": {
       "color": "#0059b3",
       "de": "Bankwesen",
       "fr": "Système bancaire",
@@ -550,7 +550,7 @@
       "rm": "Sectur da construcziun",
       "en": "Building industry"
     },
-    "Beratungswesen": {
+    "Beratung": {
       "color": "#99ccff",
       "de": "Beratung",
       "fr": "Guidance",
@@ -614,7 +614,7 @@
       "rm": "Inschigneria",
       "en": "Engineering"
     },
-    "Landwirtschaftswesen": {
+    "Landwirtschaft": {
       "color": "#33cc33",
       "de": "Landwirtschaft",
       "fr": "Agriculture",
