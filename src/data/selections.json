@@ -34,12 +34,19 @@
     "rm": "Schlattaina",
     "en": "Gender"
   },
-  "ageGroup": {
+  "age": {
     "de": "Alter",
     "fr": "Âge",
     "it": "Età",
     "rm": "Vegliadetgna",
     "en": "Age"
+  },
+  "ageGroup": {
+    "de": "Altersgruppe",
+    "fr": "Tranche d'âge",
+    "it": "Fascia di età",
+    "rm": "Gruppa da vegliadetgna",
+    "en": "Age group"
   },
   "language": {
     "de": "Sprache",

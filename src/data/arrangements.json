@@ -110,7 +110,7 @@
       "fr": "UDC",
       "it": "UDC",
       "rm": "PPS",
-      "en": "Swiss People's Party"
+      "en": "SPP"
     }
   },
   "faction": {
@@ -160,7 +160,7 @@
       "fr": "UDC",
       "it": "UDC",
       "rm": "PPS",
-      "en": "Swiss People's Party"
+      "en": "SPP"
     }
   },
   "gender": {
@@ -684,7 +684,7 @@
       "fr": "Assurances",
       "it": "Assicurazioni",
       "rm": "Assicuranzas",
-      "en": "Versicherungswesen"
+      "en": "Insurance"
     }
   }
 }

@@ -106,7 +106,7 @@
             als Berufspolitiker:innen eingeordnet wurden Parlamentarier:innen
             mit einer Anstellung bei einem Wirtschaftsverband oder einer anderen
             Interessengemeinschaft.<br />
-            Alle anderen Tätigkeit wurden einem übergreifenden Berufsfeld
+            Alle anderen Tätigkeiten wurden einem übergreifenden Berufsfeld
             zugewiesen.
           </p>
           <p>

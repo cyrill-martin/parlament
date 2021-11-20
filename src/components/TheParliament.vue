@@ -36,7 +36,7 @@ export default {
     lang(newLanguage) {
       this.language = newLanguage;
       this.drawParliament();
-    }
+    },
   },
   methods: {
     drawParliament() {
@@ -44,13 +44,18 @@ export default {
       // Add additional data fields to each councillor
       const today = new Date();
       this.dataset.forEach((councillor) => {
-        // Add age group
+        // Get age
         const birthDate = new Date(councillor.birthDate);
         let age = today.getFullYear() - birthDate.getFullYear();
         let m = today.getMonth() - birthDate.getMonth();
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
           age--;
         }
+        
+        // Add age
+        councillor.age = age;
+
+        // Add age group
         const tens = age.toString()[0];
         Object.keys(this.arrangements.ageGroup).forEach((group) => {
           if (group.startsWith(tens)) {
@@ -220,7 +225,11 @@ export default {
           }) // Position along the main x-axis
           .attr("id", (d) => d.id)
           .append("a")
-          .attr("xlink:href", (d) => `https://www.parlament.ch/${this.language}/biografie/${d.firstName}-${d.lastName}/${d.id}`)
+          .attr(
+            "xlink:href",
+            (d) =>
+              `https://www.parlament.ch/${this.language}/biografie/${d.firstName}-${d.lastName}/${d.id}`
+          )
           .attr("target", "_blank")
           .append("circle")
           .attr("class", "councillor")
@@ -312,13 +321,13 @@ export default {
 
         // Add legend
         ///////////////////////////////////////////////
-
         const createLegend = (thisOrder, thisColorScale) => {
           d3.selectAll(".legend").remove();
 
           let legendKeys;
 
-          if (!this.arrangements[thisOrder] && thisOrder !== "firstName") {
+          if (!this.arrangements[thisOrder] && thisOrder !== "firstName" && thisOrder !== "age") {
+            // It's numerical
             const max = d3.max(
               this.dataset,
               (councillor) => councillor[thisOrder]
@@ -329,6 +338,9 @@ export default {
               legendKeys.shift();
             }
           } else {
+            if (thisOrder === "age") {
+              thisOrder = "ageGroup"
+            }
             // Create legend keys
             legendKeys = Object.keys(this.arrangements[thisOrder]).map(
               (key) => key
@@ -446,6 +458,14 @@ export default {
               .attr("dy", "-.05em")
               .attr("dx", "-1.5em")
               .attr("transform", "rotate(-90)");
+          } else if (newArrangement === "faction") {
+            x.selectAll("text")
+              .transition()
+              .duration(2000)
+              .style("text-anchor", "middle")
+              .attr("dy", "0")
+              .attr("dx", "0")
+              .attr("transform", "rotate(0)");
           }
 
           // Update the position of the seats
@@ -499,12 +519,15 @@ export default {
               return r;
             })
             .attr("fill", (d) => {
-              if (!this.arrangements[newOrder] && newOrder !== "firstName") {
+              if (!this.arrangements[newOrder] && newOrder !== "firstName" && newOrder !== "age") {
                 return newColorScale(d[newOrder]);
               } else {
                 if (newOrder === "firstName") {
                   return this.arrangements.party[d.party].color;
-                } else {
+                } else if (newOrder === "age") {
+                  return this.arrangements.ageGroup[d.ageGroup].color;
+                }
+                else {
                   return this.arrangements[newOrder][d[newOrder]].color;
                 }
               }
@@ -521,11 +544,7 @@ export default {
           const newColorScale = getColorScale(order);
           const newXOuter = getOuterXDomain(arrangement);
           const newXInner = getInnerXDomain(newXOuter.length);
-          const newYDomain = getYDomain(
-            arrangement,
-            order,
-            newXInner.length
-          );
+          const newYDomain = getYDomain(arrangement, order, newXInner.length);
           updateSeatArrangement(
             arrangement,
             order,
@@ -567,9 +586,14 @@ export default {
             this.dataset,
             (councillor) => councillor[arrangement]
           );
-          xOuterDomain = Array.from(Array(max + 1).keys());
-          if (arrangement === "nrOfCouncilMemberships") {
-            xOuterDomain.shift();
+          if (arrangement === "age") {
+            const min = d3.min(this.dataset, (councillor) => councillor.age);
+            xOuterDomain = Array.from({length: max - min + 1}, (_, i) => i + min);
+          } else {
+            xOuterDomain = Array.from(Array(max + 1).keys());
+            if (arrangement === "nrOfCouncilMemberships") {
+              xOuterDomain.shift();
+            }
           }
         } else {
           if (arrangement === "firstName") {
@@ -584,7 +608,6 @@ export default {
             );
           }
         }
-
         return xOuterDomain;
       };
 
@@ -656,7 +679,7 @@ export default {
       // Function to get a possible linear color scale
       const getColorScale = (thisOrder) => {
         let colorScale;
-        if (!this.arrangements[thisOrder] && thisOrder !== "firstName") {
+        if (!this.arrangements[thisOrder] && thisOrder !== "firstName" && thisOrder !== "age") {
           // It's numerical
 
           // Get the max of all councillors
@@ -669,7 +692,7 @@ export default {
             .scaleLinear()
             .domain([0, max])
             .range(["lightgrey", "black"]);
-        }
+        } 
         return colorScale;
       };
 
