@@ -104,7 +104,7 @@ export default {
         height: 380,
         margins: {
           top: 40,
-          right: 165,
+          right: 170,
           bottom: 30,
           left: 15,
         },
@@ -392,7 +392,7 @@ export default {
             .style("font-size", `${circleRadius * 2}px`)
             .attr(
               "transform",
-              `translate(${dimensions.ctrWidth + 15}, ${
+              `translate(${dimensions.ctrWidth + 22}, ${
                 dimensions.margins.top
               })`
             );
