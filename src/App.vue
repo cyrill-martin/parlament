@@ -8,47 +8,46 @@
               ><img :src="logo" alt="The kmapper logo"
             /></a>
           </div>
+          <div class="languages">
+            <button
+              :class="{ isSelected: language === 'de' }"
+              @click="setLanguage('de')"
+            >
+              DE
+            </button>
+            <button
+              :class="{ isSelected: language === 'fr' }"
+              @click="setLanguage('fr')"
+            >
+              FR
+            </button>
+            <button
+              :class="{ isSelected: language === 'it' }"
+              @click="setLanguage('it')"
+            >
+              IT
+            </button>
+            <button
+              :class="{ isSelected: language === 'rm' }"
+              @click="setLanguage('rm')"
+            >
+              RM
+            </button>
+            <button
+              :class="{ isSelected: language === 'en' }"
+              @click="setLanguage('en')"
+            >
+              EN
+            </button>
+          </div>
         </div>
-      </div>
-
-      <div class="languages">
-        <button
-          :class="{ isSelected: language === 'de' }"
-          @click="setLanguage('de')"
-        >
-          DE
-        </button>
-        <button
-          :class="{ isSelected: language === 'fr' }"
-          @click="setLanguage('fr')"
-        >
-          FR
-        </button>
-        <button
-          :class="{ isSelected: language === 'it' }"
-          @click="setLanguage('it')"
-        >
-          IT
-        </button>
-        <button
-          :class="{ isSelected: language === 'rm' }"
-          @click="setLanguage('rm')"
-        >
-          RM
-        </button>
-        <button
-          :class="{ isSelected: language === 'en' }"
-          @click="setLanguage('en')"
-        >
-          EN
-        </button>
       </div>
     </header>
     <main class="row" id="nationalrat">
       <section class="title row">
         <div class="col-12">
           <h1>{{ labels.council[language] }}</h1>
-          <p>{{ labels.intro[language] }}<a href='#about'>*</a></p>
+          <p>{{ labels.intro[language] }}<a href="#about">*</a></p>
         </div>
       </section>
       <section class="row" id="chart">
@@ -88,7 +87,8 @@
             verfügbar.
           </p>
           <p>
-            <b>{{ selections.occupationalField[language] }}</b>: Es ist schwierig, die einzelnen Parlamentarier:innen in
+            <b>{{ selections.occupationalField[language] }}</b
+            >: Es ist schwierig, die einzelnen Parlamentarier:innen in
             Berufsgruppen einzuteilen (<a
               href="https://www.srf.ch/news/schweiz/die-jobs-der-neugewaehlten-im-neuen-nationalrat-sitzen-noch-mehr-berufspolitiker"
               target="_blank"
@@ -110,7 +110,8 @@
             zugewiesen.
           </p>
           <p>
-            <b>{{ selections.nrOfPaidConcerns[language] }}</b>: Die über die Schnittstelle bezogenen Daten enthalten die
+            <b>{{ selections.nrOfPaidConcerns[language] }}</b
+            >: Die über die Schnittstelle bezogenen Daten enthalten die
             Interessenbindungen der Parlamentarier, aber es ist nicht vermerkt,
             ob es sich um ein bezahltes oder ehrenamtliches Mandat handelt. Die
             Daten wurden mit den Angaben im Register der Interssenbindungen des
@@ -234,7 +235,6 @@ footer {
 
 @media only screen and (max-width: 65em) {
   header {
-    height: 0;
     padding-top: 0;
   }
 
