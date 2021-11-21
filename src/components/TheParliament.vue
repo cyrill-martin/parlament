@@ -16,6 +16,7 @@ import dataset from "../data/N_council.json";
 import occupationalFields from "../data/occupationalFields.json";
 import paidConcerns from "../data/paidConcerns.json";
 import arrangements from "../data/arrangements.json";
+import selections from "../data/selections.json";
 
 export default {
   props: ["lang"],
@@ -29,6 +30,7 @@ export default {
       occupationalFields,
       paidConcerns,
       arrangements,
+      selections,
       language: "de",
     };
   },
@@ -51,7 +53,7 @@ export default {
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
           age--;
         }
-        
+
         // Add age
         councillor.age = age;
 
@@ -102,8 +104,8 @@ export default {
         height: 380,
         margins: {
           top: 40,
-          right: 150,
-          bottom: 25,
+          right: 165,
+          bottom: 30,
           left: 15,
         },
         ctrWidth: null,
@@ -179,8 +181,6 @@ export default {
         const xAxisLine = ctr
           .append("g")
           .attr("id", "x-axis")
-          // .style("font-size", "12px")
-          .attr("font-size-adjust", "0.58")
           .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
           .call(xAxis);
 
@@ -198,6 +198,28 @@ export default {
 
         // Remove the horizontal x-axis line
         xAxisLine.call((axis) => axis.select(".domain").remove());
+
+        // Add x-axis label
+        ctr
+          .append("g")
+          .attr(
+            "transform",
+            `translate(${dimensions.ctrWidth / 2}, ${
+              dimensions.ctrHeight + 28
+            })`
+          )
+          .attr("id", "x-axis-label")
+          .append("text")
+          .style("font-size", "10px")
+          .style("font-weight", "bold")
+          .attr("text-anchor", "middle")
+          .text(() => {
+            if (arrangement !== "firstName") {
+              return selections[arrangement][this.language]
+            } else {
+              return ""; 
+            }
+          });
 
         const seatsGroup = ctr.append("g").attr("class", "seats");
 
@@ -326,7 +348,11 @@ export default {
 
           let legendKeys;
 
-          if (!this.arrangements[thisOrder] && thisOrder !== "firstName" && thisOrder !== "age") {
+          if (
+            !this.arrangements[thisOrder] &&
+            thisOrder !== "firstName" &&
+            thisOrder !== "age"
+          ) {
             // It's numerical
             const max = d3.max(
               this.dataset,
@@ -339,7 +365,7 @@ export default {
             }
           } else {
             if (thisOrder === "age") {
-              thisOrder = "ageGroup"
+              thisOrder = "ageGroup";
             }
             // Create legend keys
             legendKeys = Object.keys(this.arrangements[thisOrder]).map(
@@ -350,7 +376,9 @@ export default {
           let fct = 1;
 
           if (thisOrder === "nrOfConcerns") {
-            fct = 0.65;
+            fct = 0.7;
+          } else if (thisOrder === "cantonName") {
+            fct = 0.85;
           }
 
           const spacingVertical = 15 * fct;
@@ -364,19 +392,42 @@ export default {
             .style("font-size", `${circleRadius * 2}px`)
             .attr(
               "transform",
-              `translate(${
-                dimensions.ctrWidth + dimensions.margins.right / 4
-              }, ${dimensions.margins.top})`
+              `translate(${dimensions.ctrWidth + 15}, ${
+                dimensions.margins.top
+              })`
             );
+
+          // Add legend title
+          legendGroup
+            .append("g")
+            .append("text")
+            .style("font-weight", "bold")
+            .text(() => {
+              if (thisOrder !== "firstName") {
+                if (selections[thisOrder][this.language].startsWith("Anzahl")) {
+                  let str = selections[thisOrder][this.language].replace("Anzahl ","");
+                  str = str[0].toUpperCase() + str.slice(1);
+                  return str;
+                } else {
+                  return selections[thisOrder][this.language];
+                }
+              } else {
+                return selections.party[this.language];
+              }
+            });
 
           // Add <g> for each legend item
           const legendItems = legendGroup
-            .selectAll("g")
+            .selectAll(".legend-item")
             .data(legendKeys)
             .join("g")
+            .attr("class", "legend-item")
             .attr(
               "transform",
-              (_, i) => `translate(0, ${i * spacingVertical})`
+              (_, i) =>
+                `translate(${circleRadius}, ${
+                  spacingVertical + i * spacingVertical
+                })`
             );
 
           // Draw the legend circles for selected legend keys
@@ -468,6 +519,18 @@ export default {
               .attr("transform", "rotate(0)");
           }
 
+          const xLabel = d3.select("#x-axis-label");
+          xLabel.select("text")
+            .transition()
+            .duration(2000)
+            .text(() => {
+              if (newArrangement !== "firstName") {
+                return selections[newArrangement][this.language];
+              } else {
+                return "";
+              }
+            })
+
           // Update the position of the seats
           d3.selectAll(".seat")
             .transition()
@@ -519,15 +582,18 @@ export default {
               return r;
             })
             .attr("fill", (d) => {
-              if (!this.arrangements[newOrder] && newOrder !== "firstName" && newOrder !== "age") {
+              if (
+                !this.arrangements[newOrder] &&
+                newOrder !== "firstName" &&
+                newOrder !== "age"
+              ) {
                 return newColorScale(d[newOrder]);
               } else {
                 if (newOrder === "firstName") {
                   return this.arrangements.party[d.party].color;
                 } else if (newOrder === "age") {
                   return this.arrangements.ageGroup[d.ageGroup].color;
-                }
-                else {
+                } else {
                   return this.arrangements[newOrder][d[newOrder]].color;
                 }
               }
@@ -588,7 +654,10 @@ export default {
           );
           if (arrangement === "age") {
             const min = d3.min(this.dataset, (councillor) => councillor.age);
-            xOuterDomain = Array.from({length: max - min + 1}, (_, i) => i + min);
+            xOuterDomain = Array.from(
+              { length: max - min + 1 },
+              (_, i) => i + min
+            );
           } else {
             xOuterDomain = Array.from(Array(max + 1).keys());
             if (arrangement === "nrOfCouncilMemberships") {
@@ -679,7 +748,11 @@ export default {
       // Function to get a possible linear color scale
       const getColorScale = (thisOrder) => {
         let colorScale;
-        if (!this.arrangements[thisOrder] && thisOrder !== "firstName" && thisOrder !== "age") {
+        if (
+          !this.arrangements[thisOrder] &&
+          thisOrder !== "firstName" &&
+          thisOrder !== "age"
+        ) {
           // It's numerical
 
           // Get the max of all councillors
@@ -692,7 +765,7 @@ export default {
             .scaleLinear()
             .domain([0, max])
             .range(["lightgrey", "black"]);
-        } 
+        }
         return colorScale;
       };
 
