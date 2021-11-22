@@ -215,9 +215,9 @@ export default {
           .attr("text-anchor", "middle")
           .text(() => {
             if (arrangement !== "firstName") {
-              return selections[arrangement][this.language]
+              return selections[arrangement][this.language];
             } else {
-              return ""; 
+              return "";
             }
           });
 
@@ -377,7 +377,11 @@ export default {
 
           if (thisOrder === "nrOfConcerns") {
             fct = 0.7;
-          } else if (thisOrder === "cantonName") {
+          } else if (
+            thisOrder === "cantonName" ||
+            thisOrder === "nrOfPaidConcerns" ||
+            thisOrder === "nrOfVoluntaryConcerns"
+          ) {
             fct = 0.85;
           }
 
@@ -405,7 +409,10 @@ export default {
             .text(() => {
               if (thisOrder !== "firstName") {
                 if (selections[thisOrder][this.language].startsWith("Anzahl")) {
-                  let str = selections[thisOrder][this.language].replace("Anzahl ","");
+                  let str = selections[thisOrder][this.language].replace(
+                    "Anzahl ",
+                    ""
+                  );
                   str = str[0].toUpperCase() + str.slice(1);
                   return str;
                 } else {
@@ -520,7 +527,8 @@ export default {
           }
 
           const xLabel = d3.select("#x-axis-label");
-          xLabel.select("text")
+          xLabel
+            .select("text")
             .transition()
             .duration(2000)
             .text(() => {
@@ -529,7 +537,7 @@ export default {
               } else {
                 return "";
               }
-            })
+            });
 
           // Update the position of the seats
           d3.selectAll(".seat")
