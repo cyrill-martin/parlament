@@ -4,9 +4,7 @@
       <div class="row">
         <div class="col-12">
           <div class="logo">
-            <a href="https://kmapper.com" target="_blank"
-              ><img :src="logo" alt="The kmapper logo"
-            /></a>
+            <a href="/"><img :src="logo" alt="The kmapper logo" /></a>
           </div>
           <div class="languages">
             <button
@@ -134,7 +132,8 @@
     </main>
     <footer class="row">
       <div class="col-12">
-        &#169; 2021 Cyrill Martin - kmapper GmbH - Daten und Code auf
+        &#169; 2021 Cyrill Martin -
+        <a href="https://kmapper.com" target="_blank">kmapper GmbH</a> -
         <a href="https://github.com/cyrill-martin/nationalrat" target="_blank"
           >GitHub</a
         >

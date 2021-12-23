@@ -91,10 +91,6 @@ export default {
           councillor.nrOfConcerns - councillor.nrOfPaidConcerns;
       });
 
-      // const nrOfConcerns = dataset.map((c) => c.nrOfConcerns);
-      // const uMshps = [...new Set(nrOfConcerns)];
-      // console.log(uMshps);
-
       // Prepare the SVG
       ///////////////////////////////////////////////
 
