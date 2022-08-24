@@ -35,7 +35,7 @@
       </section>
       <section class="row" id="chart">
         <div class="col-12">
-          <the-parliament :lang="language"></the-parliament>
+          <the-parliament :lang="language" @changeLanguage="setLanguage"></the-parliament>
         </div>
       </section>
       <section class="row" id="dropdowns">
@@ -131,7 +131,7 @@ export default {
   methods: {
     setLanguage(lang) {
       this.language = lang;
-    },
+    }
   },
 };
 </script>

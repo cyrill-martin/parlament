@@ -20,9 +20,10 @@ import selections from "../data/selections.json";
 
 export default {
   props: ["lang"],
-  mounted() {
-    this.drawParliament();
-    this.language = this.lang;
+  async mounted() {
+    await this.drawParliament();
+    // this.language = this.lang;
+    this.checkUrl();
   },
   data() {
     return {
@@ -37,6 +38,9 @@ export default {
   watch: {
     lang(newLanguage) {
       this.language = newLanguage;
+      const newArrangement = d3.select("#arrangement").node().value;      
+      const newOrder = d3.select("#order").node().value;
+      this.updateUrl(newArrangement, newOrder)
       this.drawParliament();
     },
   },
@@ -45,10 +49,45 @@ export default {
       history.pushState(
         {},
         null,
-        `${this.$route.path}?arr=${arr}&ord=${ord}`
+        `${this.$route.path}?arr=${arr}&ord=${ord}&lang=${this.language}`
       )
     },
-    drawParliament() {
+    async checkUrl() {
+      console.log("Checking the URL parameters");
+
+      try {
+        await this.$router.isReady()
+        // onSuccess
+
+        const params = this.$route.query;
+
+        if (params.lang) {
+          this.$emit("changeLanguage", params.lang)
+        } else {
+          this.language = this.lang;
+        }
+
+        if (params.arr) {
+          this.setDropdownSelection("arrangement", params.arr)
+        }
+
+        if (params.ord) {
+          this.setDropdownSelection("order", params.ord)
+        }
+
+      } catch (err) {
+        // onError
+      }
+
+    },
+    setDropdownSelection(id, option) {
+      const element = document.getElementById(id);
+      console.log(element)
+      element.value = option;
+      element.dispatchEvent(new Event('change'))
+
+    },
+    async drawParliament() {
       d3.select("svg").remove();
       // Add additional data fields to each councillor
       const today = new Date();
@@ -807,6 +846,8 @@ export default {
         yDomain,
         colorScale
       );
+
+      
     },
   },
 };
