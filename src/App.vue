@@ -80,9 +80,10 @@
           <p>
             <b>{{ selections.nrOfPaidConcerns[language] }}</b>: Die über die Schnittstelle bezogenen Daten enthalten die
             Interessenbindungen der Parlamentarier, aber es ist nicht vermerkt,
-            ob es sich um ein bezahltes oder ehrenamtliches Mandat handelt. Die
-            Daten wurden mit den auf <a href="https://www.parlament.ch" target="_blank">parlament.ch</a> entsprechend
-            vorhandenen Angaben pro Parlamentarier:in betreffend Interssenbindungen manuell ergänzt.
+            ob es sich um ein bezahltes oder ehrenamtliches Mandat handelt. Die Daten wurden mit den Angaben im Register
+            der Interssenbindungen des Nationalrats manuell ergänzt (<a
+              href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/interessen-nr.pdf"
+              target="_blank">Dokument</a>).
           </p>
           <p>
             <br />
