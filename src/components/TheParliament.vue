@@ -41,6 +41,13 @@ export default {
     },
   },
   methods: {
+    updateUrl(arr, ord) {
+      history.pushState(
+        {},
+        null,
+        `${this.$route.path}?arr=${arr}&ord=${ord}`
+      )
+    },
     drawParliament() {
       d3.select("svg").remove();
       // Add additional data fields to each councillor
@@ -200,8 +207,7 @@ export default {
           .append("g")
           .attr(
             "transform",
-            `translate(${dimensions.ctrWidth / 2}, ${
-              dimensions.ctrHeight + 28
+            `translate(${dimensions.ctrWidth / 2}, ${dimensions.ctrHeight + 28
             })`
           )
           .attr("id", "x-axis-label")
@@ -305,11 +311,10 @@ export default {
               return `${data[thisArrangement]}`;
             } else {
               if (thisArrangement !== "firstName") {
-                return `${
-                  this.arrangements[thisArrangement][data[thisArrangement]][
-                    this.language
-                  ]
-                }`;
+                return `${this.arrangements[thisArrangement][data[thisArrangement]][
+                  this.language
+                ]
+                  }`;
               } else {
                 return `${this.arrangements.party[data.party][this.language]}`;
               }
@@ -322,13 +327,11 @@ export default {
                 return `${data[thisOrder]}`;
               } else {
                 if (thisOrder !== "firstName") {
-                  return `${
-                    this.arrangements[thisOrder][data[thisOrder]][this.language]
-                  }`;
+                  return `${this.arrangements[thisOrder][data[thisOrder]][this.language]
+                    }`;
                 } else {
-                  return `${
-                    this.arrangements.party[data.party][this.language]
-                  }`;
+                  return `${this.arrangements.party[data.party][this.language]
+                    }`;
                 }
               }
             });
@@ -392,8 +395,7 @@ export default {
             .style("font-size", `${circleRadius * 2}px`)
             .attr(
               "transform",
-              `translate(${dimensions.ctrWidth + 22}, ${
-                dimensions.margins.top
+              `translate(${dimensions.ctrWidth + 22}, ${dimensions.margins.top
               })`
             );
 
@@ -428,8 +430,7 @@ export default {
             .attr(
               "transform",
               (_, i) =>
-                `translate(${circleRadius}, ${
-                  spacingVertical + i * spacingVertical
+                `translate(${circleRadius}, ${spacingVertical + i * spacingVertical
                 })`
             );
 
@@ -552,7 +553,7 @@ export default {
                 } else {
                   return `translate(${+newOuterXScale(
                     this.arrangements[newArrangement][d[newArrangement]][
-                      this.language
+                    this.language
                     ]
                   )}, 0)`;
                 }
@@ -630,6 +631,7 @@ export default {
           event.preventDefault();
           const newArrangement = event.target.value;
           const newOrder = d3.select("#order").node().value;
+          this.updateUrl(newArrangement, newOrder);
           callUpdateFunction(newArrangement, newOrder);
         });
 
@@ -638,6 +640,7 @@ export default {
           event.preventDefault();
           const newOrder = event.target.value;
           const newArrangement = d3.select("#arrangement").node().value;
+          this.updateUrl(newArrangement, newOrder);
           callUpdateFunction(newArrangement, newOrder);
         });
       };
@@ -819,6 +822,7 @@ export default {
   border-radius: 4px;
   padding: 5px;
 }
+
 .name {
   font-weight: bold;
 }

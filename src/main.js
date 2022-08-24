@@ -1,6 +1,10 @@
 import { createApp } from 'vue'
+import router from "./router.js";
 import App from './App.vue'
 
 require("./assets/styles/simplest-grid-nr.css");
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(router);
+
+app.mount("#app");
