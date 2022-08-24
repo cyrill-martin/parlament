@@ -28,7 +28,8 @@ def get_councillors(council):
     for c in councillors:
       if c["council"] == council:
 
-        print(f"Requesting data for {c['firstName']} {c['lastName']}")
+        # print(f"Requesting data for {c['firstName']} {c['lastName']}")
+        print(c["id"])
 
         c_response = requests.get(
           f"{base_url}/councillors/{c['id']}", 

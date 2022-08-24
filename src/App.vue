@@ -7,34 +7,19 @@
             <a href="/"><img :src="logo" alt="The kmapper logo" /></a>
           </div>
           <div class="languages">
-            <button
-              :class="{ isSelected: language === 'de' }"
-              @click="setLanguage('de')"
-            >
+            <button :class="{ isSelected: language === 'de' }" @click="setLanguage('de')">
               DE
             </button>
-            <button
-              :class="{ isSelected: language === 'fr' }"
-              @click="setLanguage('fr')"
-            >
+            <button :class="{ isSelected: language === 'fr' }" @click="setLanguage('fr')">
               FR
             </button>
-            <button
-              :class="{ isSelected: language === 'it' }"
-              @click="setLanguage('it')"
-            >
+            <button :class="{ isSelected: language === 'it' }" @click="setLanguage('it')">
               IT
             </button>
-            <button
-              :class="{ isSelected: language === 'rm' }"
-              @click="setLanguage('rm')"
-            >
+            <button :class="{ isSelected: language === 'rm' }" @click="setLanguage('rm')">
               RM
             </button>
-            <button
-              :class="{ isSelected: language === 'en' }"
-              @click="setLanguage('en')"
-            >
+            <button :class="{ isSelected: language === 'en' }" @click="setLanguage('en')">
               EN
             </button>
           </div>
@@ -65,38 +50,23 @@
         <div class="col-12">
           <h3>* {{ labels.data[language] }}:</h3>
           <p>
-            Der Grossteil der angezeigten Daten wurde Mitte November 2021 direkt
+            Die angezeigten Daten wurden Ende August 2022 direkt
             über die
-            <a href="http://ws-old.parlament.ch" target="_blank"
-              >offene Schnittstelle</a
-            >
+            <a href="http://ws-old.parlament.ch" target="_blank">offene Schnittstelle</a>
             von
             <a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
-            bezogen (<a
-              href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/get_councillors.py"
-              target="_blank"
-              >Script</a
-            >). Daten und Code sind auf
-            <a
-              href="https://github.com/cyrill-martin/nationalrat"
-              target="_blank"
-              >GitHub</a
-            >
+            bezogen (<a href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/get_councillors.py"
+              target="_blank">Script</a>). Daten und Code sind auf
+            <a href="https://github.com/cyrill-martin/nationalrat" target="_blank">GitHub</a>
             verfügbar.
           </p>
           <p>
-            <b>{{ selections.occupationalField[language] }}</b
-            >: Es ist schwierig, die einzelnen Parlamentarier:innen in
+            <b>{{ selections.occupationalField[language] }}</b>: Es ist schwierig, die einzelnen Parlamentarier:innen in
             Berufsgruppen einzuteilen (<a
               href="https://www.srf.ch/news/schweiz/die-jobs-der-neugewaehlten-im-neuen-nationalrat-sitzen-noch-mehr-berufspolitiker"
-              target="_blank"
-              >srf.ch</a
-            >,
-            <a
-              href="https://www.nau.ch/politik/bundeshaus/diese-berufe-dominieren-im-neuen-nationalrat-65602824"
-              target="_blank"
-              >nau.ch</a
-            >). Die Berufsangaben auf parlament.ch sind ungenau, deshalb wurden
+              target="_blank">srf.ch</a>,
+            <a href="https://www.nau.ch/politik/bundeshaus/diese-berufe-dominieren-im-neuen-nationalrat-65602824"
+              target="_blank">nau.ch</a>). Die Berufsangaben auf parlament.ch sind ungenau, deshalb wurden
             alle Parlamentarier:innen ohne Angaben zur Arbeitsstelle als
             Berufspolitiker:innen eingeordnet. Auch solche, die gemäss
             Berufsangaben Inhaber:in oder CEO eines Unternehmens sind, dieses
@@ -108,35 +78,26 @@
             zugewiesen.
           </p>
           <p>
-            <b>{{ selections.nrOfPaidConcerns[language] }}</b
-            >: Die über die Schnittstelle bezogenen Daten enthalten die
+            <b>{{ selections.nrOfPaidConcerns[language] }}</b>: Die über die Schnittstelle bezogenen Daten enthalten die
             Interessenbindungen der Parlamentarier, aber es ist nicht vermerkt,
             ob es sich um ein bezahltes oder ehrenamtliches Mandat handelt. Die
-            Daten wurden mit den Angaben im Register der Interssenbindungen des
-            Nationalrats manuell ergänzt (<a
-              href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/interessen-nr.pdf"
-              target="_blank"
-              >Dokument</a
-            >).
+            Daten wurden mit den auf <a href="https://www.parlament.ch" target="_blank">parlament.ch</a> entsprechend
+            vorhandenen Angaben pro Parlamentarier:in betreffend Interssenbindungen manuell ergänzt.
           </p>
           <p>
             <br />
             <br />
             Cyrill Martin<br />
-            <a href="mailto:cyrill.martin@kmapper.com"
-              >cyrill.martin@kmapper.com</a
-            >
+            <a href="mailto:cyrill.martin@kmapper.com">cyrill.martin@kmapper.com</a>
           </p>
         </div>
       </section>
     </main>
     <footer class="row">
       <div class="col-12">
-        &#169; 2021 Cyrill Martin -
+        &#169; 2022 Cyrill Martin -
         <a href="https://kmapper.com" target="_blank">kmapper GmbH</a> -
-        <a href="https://github.com/cyrill-martin/nationalrat" target="_blank"
-          >GitHub</a
-        >
+        <a href="https://github.com/cyrill-martin/nationalrat" target="_blank">GitHub</a>
       </div>
     </footer>
   </div>
