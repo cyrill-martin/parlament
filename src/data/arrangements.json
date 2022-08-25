@@ -172,6 +172,14 @@
       "rm": "Dunna",
       "en": "Woman"
     },
+    "nb" : {
+      "color": "#17b554",
+      "de": "Nicht-binär",
+      "fr": "nicht-binär",
+      "it": "nicht-binär",
+      "rm": "nicht-binär",
+      "en": "Non-binary"
+    },
     "m": {
       "color": "#495057",
       "de": "Mann",
