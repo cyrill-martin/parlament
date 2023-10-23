@@ -13,8 +13,6 @@
 import d3 from "../d3-importer.js";
 // Load the data
 import dataset from "../data/N_council.json";
-import occupationalFields from "../data/occupationalFields.json";
-import paidConcerns from "../data/paidConcerns.json";
 import arrangements from "../data/arrangements.json";
 import selections from "../data/selections.json";
 
@@ -28,8 +26,6 @@ export default {
   data() {
     return {
       dataset,
-      occupationalFields,
-      paidConcerns,
       arrangements,
       selections,
       language: "de",
@@ -38,7 +34,7 @@ export default {
   watch: {
     lang(newLanguage) {
       this.language = newLanguage;
-      const newArrangement = d3.select("#arrangement").node().value;      
+      const newArrangement = d3.select("#arrangement").node().value;
       const newOrder = d3.select("#order").node().value;
       this.updateUrl(newArrangement, newOrder)
       this.drawParliament();
@@ -110,8 +106,6 @@ export default {
             councillor.ageGroup = group;
           }
         });
-        // Add occupational field
-        councillor.occupationalField = this.occupationalFields[councillor.id];
 
         // Add number of (active) committee memberships
         let nr = 0;
@@ -129,12 +123,6 @@ export default {
         // Add total number of concerns
         councillor.nrOfConcerns = councillor.concerns.length;
 
-        // Add number of paid concerns
-        councillor.nrOfPaidConcerns = this.paidConcerns[councillor.id];
-
-        // Add number of voluntary concerns
-        councillor.nrOfVoluntaryConcerns =
-          councillor.nrOfConcerns - councillor.nrOfPaidConcerns;
       });
 
       // Prepare the SVG
@@ -143,10 +131,10 @@ export default {
       // Set dimensions
       const dimensions = {
         width: 1000,
-        height: 380,
+        height: 400,
         margins: {
           top: 40,
-          right: 170,
+          right: 100,
           bottom: 30,
           left: 15,
         },
@@ -227,7 +215,7 @@ export default {
           .call(xAxis);
 
         // Rotate axis tick labels
-        if (arrangement === "occupationalField" || arrangement === "party") {
+        if (arrangement === "party") {
           xAxisLine
             .selectAll("text")
             .transition()
@@ -416,9 +404,7 @@ export default {
           if (thisOrder === "nrOfConcerns") {
             fct = 0.7;
           } else if (
-            thisOrder === "cantonName" ||
-            thisOrder === "nrOfPaidConcerns" ||
-            thisOrder === "nrOfVoluntaryConcerns"
+            thisOrder === "cantonName"
           ) {
             fct = 0.85;
           }
@@ -541,10 +527,7 @@ export default {
           // Remove the horizontal x-axis line
           x.call((axis) => axis.select(".domain").remove());
 
-          if (
-            newArrangement === "occupationalField" ||
-            newArrangement === "party"
-          ) {
+          if (newArrangement === "party") {
             x.selectAll("text")
               .transition()
               .duration(2000)
@@ -847,7 +830,7 @@ export default {
         colorScale
       );
 
-      
+
     },
   },
 };

@@ -33,8 +33,8 @@
           <p>{{ labels.intro[language] }}<a href="#about">*</a></p>
         </div>
       </section>
-      <section class="row" id="chart">
-        <div class="col-12">
+      <section class="row">
+        <div class="col-12" id="chart">
           <the-parliament :lang="language" @changeLanguage="setLanguage"></the-parliament>
         </div>
       </section>
@@ -61,31 +61,6 @@
             verfügbar.
           </p>
           <p>
-            <b>{{ selections.occupationalField[language] }}</b>: Es ist schwierig, die einzelnen Parlamentarier:innen in
-            Berufsgruppen einzuteilen (<a
-              href="https://www.srf.ch/news/schweiz/die-jobs-der-neugewaehlten-im-neuen-nationalrat-sitzen-noch-mehr-berufspolitiker"
-              target="_blank">srf.ch</a>,
-            <a href="https://www.nau.ch/politik/bundeshaus/diese-berufe-dominieren-im-neuen-nationalrat-65602824"
-              target="_blank">nau.ch</a>). Die Berufsangaben auf parlament.ch sind ungenau, deshalb wurden
-            alle Parlamentarier:innen ohne Angaben zur Arbeitsstelle als
-            Berufspolitiker:innen eingeordnet. Auch solche, die gemäss
-            Berufsangaben Inhaber:in oder CEO eines Unternehmens sind, dieses
-            Unternehmen aber nicht als Arbeitsstelle angegeben haben. Ebenfalls
-            als Berufspolitiker:innen eingeordnet wurden Parlamentarier:innen
-            mit einer Anstellung bei einem Wirtschaftsverband oder einer anderen
-            Interessengemeinschaft.<br />
-            Alle anderen Tätigkeiten wurden einem übergreifenden Berufsfeld
-            zugewiesen.
-          </p>
-          <p>
-            <b>{{ selections.nrOfPaidConcerns[language] }}</b>: Die über die Schnittstelle bezogenen Daten enthalten die
-            Interessenbindungen der Parlamentarier, aber es ist nicht vermerkt,
-            ob es sich um ein bezahltes oder ehrenamtliches Mandat handelt. Die Daten wurden mit den Angaben im Register
-            der Interssenbindungen des Nationalrats manuell ergänzt (<a
-              href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/interessen-nr.pdf"
-              target="_blank">Dokument</a>).
-          </p>
-          <p>
             <br />
             <br />
             Cyrill Martin<br />
@@ -96,7 +71,7 @@
     </main>
     <footer class="row">
       <div class="col-12">
-        &#169; 2022 Cyrill Martin -
+        &#169; 2023 Cyrill Martin -
         <a href="https://kmapper.com" target="_blank">kmapper GmbH</a> -
         <a href="https://github.com/cyrill-martin/nationalrat" target="_blank">GitHub</a>
       </div>
@@ -177,8 +152,11 @@ img {
 }
 
 #chart {
-  border: solid 1px lightgrey;
-  border-radius: 16px;
+  padding: 0
+}
+
+#dropdowns {
+  padding-top: 0;
 }
 
 #about {

@@ -62,13 +62,6 @@
     "rm": "Lingua (lavur)",
     "en": "Working language"
   },
-  "occupationalField": {
-    "de": "Berufsfeld",
-    "fr": "Secteur d'activité",
-    "it": "Settore occupazionale",
-    "rm": "Champ professiunal",
-    "en": "Occupational field"
-  },
   "nrOfCouncilMemberships": {
     "de": "Anzahl Amtszeiten",
     "fr": "Nombre de mandats",
@@ -89,19 +82,5 @@
     "it": "Numero dei relazioni d'interesse",
     "rm": "Uffizis politics (dumber)",
     "en": "Number of interests"
-  },
-  "nrOfPaidConcerns": {
-    "de": "Anzahl bezahlte Interessenbindungen",
-    "fr": "Nombre des liens d'intérêts (payé)",
-    "it": "Numero dei relazioni d'interesse (pagato)",
-    "rm": "Uffizis politics (pajà) (dumber)",
-    "en": "Number of paid interests"
-  },
-  "nrOfVoluntaryConcerns": {
-    "de": "Anzahl ehrenamtliche Interessenbindungen",
-    "fr": "Nombre des liens d'intérêts (bénévole)",
-    "it": "Numero dei relazioni d'interesse (onorario)",
-    "rm": "Uffizis politics (onurar) (dumber)",
-    "en": "Number of voluntary interests"
   }
 }
