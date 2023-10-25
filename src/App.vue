@@ -72,9 +72,9 @@
             <a href="http://ws-old.parlament.ch" target="_blank">offene Schnittstelle</a>
             von
             <a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
-            bezogen (<a href="https://github.com/cyrill-martin/nationalrat/blob/main/extras/get_councillors.py"
+            bezogen (<a href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
               target="_blank">Script</a>). Daten und Code sind auf
-            <a href="https://github.com/cyrill-martin/nationalrat" target="_blank">GitHub</a>
+            <a href="https://github.com/cyrill-martin/parlament" target="_blank">GitHub</a>
             verfügbar.
           </p>
           <p>

@@ -95,6 +95,7 @@ export default {
       const selectedCouncil = d3.select("#council").node().value;
 
       // Check and set selected council
+      this.council = selectedCouncil === "N" ? "N" : "S"
       this.dataset = selectedCouncil === "N" ? datasetN : datasetS
 
       // Set the max number of seats per seating row
@@ -869,8 +870,6 @@ export default {
         yDomain,
         colorScale
       );
-
-
     },
   },
 };
