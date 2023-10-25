@@ -15,16 +15,16 @@
   },
   "councilN": {
     "de": "Der Nationalrat",
-    "fr": "Le Conseil National",
-    "it": "Il Consiglio Nazionale",
-    "rm": "Il Cussegl Naziunal",
+    "fr": "Le Conseil national",
+    "it": "Il Consiglio nazionale",
+    "rm": "Il Cussegl naziunal",
     "en": "The National Council"
   },
   "councilS": {
     "de": "Der Ständerat",
-    "fr": "Le Conseil des États",
-    "it": "Il Consiglio degli Stati",
-    "rm": "Il Cussegl dals Chantuns",
+    "fr": "Le Conseil des états",
+    "it": "Il Consiglio degli stati",
+    "rm": "Il Cussegl dals chantuns",
     "en": "The Council of States"
   },
   "none": {
@@ -63,18 +63,18 @@
     "en": " 46 members"
   },
   "intro3N": {
-    "de": " des Nationalrats",
-    "fr": " du Conseil National",
-    "it": " del Consiglio Nazionale",
-    "rm": " dal Cussegl Naziunal",
-    "en": " of the National Council"
+    "de": " des Schweizer Nationalrats",
+    "fr": " du Conseil national suisse",
+    "it": " del Consiglio nazionale svizzero",
+    "rm": " dal Cussegl naziunal svizra",
+    "en": " of the Swiss National Council"
   },
   "intro3S": {
-    "de": " des Ständerats",
-    "fr": " du Conseil des États",
-    "it": " del Consiglio degli Stati",
-    "rm": " dal Cussegl dals Chantuns",
-    "en": " of the Council of States"
+    "de": " des Schweizer Ständerats",
+    "fr": " du Conseil des états suisse",
+    "it": " del Consiglio degli stati svizzero",
+    "rm": " dal Cussegl dals chantuns svizra",
+    "en": " of the Swiss Council of States"
   },
   "intro4": {
     "de": " in Relation zu einem zusätzlich wählbaren Merkmal",
