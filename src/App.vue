@@ -29,13 +29,30 @@
     <main class="row" id="nationalrat">
       <section class="title row">
         <div class="col-12">
-          <h1>{{ labels.council[language] }}</h1>
-          <p>{{ labels.intro[language] }}<a href="#about">*</a></p>
+          <h1>
+            <select name="council" id="council">
+              <option value="N">{{ labels.councilN[language] }}</option>
+              <option value="S">{{ labels.councilS[language] }}</option>
+            </select>
+          </h1>
+          <p>
+            <span>{{ labels.intro1[language] }}</span>
+
+            <span v-if="council === 'N'">{{ labels.intro2N[language] }}</span>
+            <span v-else>{{ labels.intro2S[language] }}</span>
+            
+            <span v-if="council === 'N'">{{ labels.intro3N[language] }}</span>
+            <span v-else>{{ labels.intro3S[language] }}</span>
+            
+            <span>{{ labels.intro4[language] }}</span>.
+            <span>{{ labels.status[language] }}</span>
+            <a href="#about">*</a>
+          </p>
         </div>
       </section>
       <section class="row">
         <div class="col-12" id="chart">
-          <the-parliament :lang="language" @changeLanguage="setLanguage"></the-parliament>
+          <the-parliament :lang="language" @changeLanguage="setLanguage" @changeCouncil="setCouncil"></the-parliament>
         </div>
       </section>
       <section class="row" id="dropdowns">
@@ -83,7 +100,6 @@
 import TheParliament from "./components/TheParliament.vue";
 import TheDropdown from "./components/TheDropdown.vue";
 import labels from "./data/labels.json";
-import selections from "./data/selections.json";
 
 export default {
   name: "App",
@@ -94,8 +110,8 @@ export default {
   data() {
     return {
       labels,
-      selections,
       language: "de",
+      council: "N"
     };
   },
   computed: {
@@ -106,6 +122,9 @@ export default {
   methods: {
     setLanguage(lang) {
       this.language = lang;
+    },
+    setCouncil(council) {
+      this.council = council;
     }
   },
 };
@@ -144,6 +163,17 @@ header {
 
 img {
   width: 120px;
+}
+
+select {
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #e9e9e9;
 }
 
 #nationalrat {
@@ -187,14 +217,14 @@ footer {
 
   #nationalrat {
     margin: auto;
-    width: 95%;
+    width: 100%;
   }
 
   #about {
     margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 100%;
   }
 }
 </style>

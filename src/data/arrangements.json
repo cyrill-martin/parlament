@@ -111,6 +111,14 @@
       "it": "UDC",
       "rm": "PPS",
       "en": "SPP"
+    },
+    "-": {
+      "color": "#000000",
+      "de": "parteilos",
+      "fr": "sans parti",
+      "it": "senza Partito",
+      "rm": "parteilos",
+      "en": "non-partisan"
     }
   },
   "faction": {

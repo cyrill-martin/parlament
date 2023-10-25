@@ -13,12 +13,19 @@
     "rm": "Caracteristica",
     "en": "Feature"
   },
-  "council": {
+  "councilN": {
     "de": "Der Nationalrat",
     "fr": "Le Conseil National",
     "it": "Il Consiglio Nazionale",
     "rm": "Il Cussegl Naziunal",
     "en": "The National Council"
+  },
+  "councilS": {
+    "de": "Der Ständerat",
+    "fr": "Le Conseil des États",
+    "it": "Il Consiglio degli Stati",
+    "rm": "Il Cussegl dals Chantuns",
+    "en": "The Council of States"
   },
   "none": {
     "de": "keine",
@@ -34,11 +41,53 @@
     "rm": "Datas (en tudestg)",
     "en": "Data (in German)"
   },
-  "intro": {
-    "de": "Die dynamische Visualisierung zeigt die Sitzverteilung der 200 Mitglieder des Nationalrats in Relation zu einem zusätzlich wählbaren Merkmal. Stand August 2022",
-    "fr": "La visualisation dynamique montre la répartition des sièges pour les 200 membres du Conseil National par rapport à une caractéristique supplémentaire. En août 2022",
-    "it": "La visualizzazione dinamica mostra la distribuzione dei seggi per i 200 membri del Consiglio Nazionale in relazione a una caratteristica aggiuntiva. A partire da agosto 2022",
-    "rm": "Visualisaziun dinamica: Ils 200 commembers dal Cussegl Naziunal. November 2021",
-    "en": "The dynamic visualization shows the distribution of seats for the 200 members of the National Council in relation to an additional feature. As of August 2022" 
+  "intro1": {
+    "de": "Die dynamische Visualisierung zeigt die Sitzverteilung der",
+    "fr": "La visualisation dynamique montre la répartition des sièges pour les",
+    "it": "La visualizzazione dinamica mostra la distribuzione dei seggi per i",
+    "rm": "Visualisaziun dinamica: Ils",
+    "en": "The dynamic visualization shows the distribution of seats for the"
+  },
+  "intro2N": {
+    "de": " 200 Mitglieder",
+    "fr": " 200 membres",
+    "it": " 200 membri",
+    "rm": " 200 commembers",
+    "en": " 200 members"
+  },
+  "intro2S": {
+    "de": " 46 Mitglieder",
+    "fr": " 46 membres",
+    "it": " 46 membri",
+    "rm": " 46 commembers",
+    "en": " 46 members"
+  },
+  "intro3N": {
+    "de": " des Nationalrats",
+    "fr": " du Conseil National",
+    "it": " del Consiglio Nazionale",
+    "rm": " dal Cussegl Naziunal",
+    "en": " of the National Council"
+  },
+  "intro3S": {
+    "de": " des Ständerats",
+    "fr": " du Conseil des États",
+    "it": " del Consiglio degli Stati",
+    "rm": " dal Cussegl dals Chantuns",
+    "en": " of the Council of States"
+  },
+  "intro4": {
+    "de": " in Relation zu einem zusätzlich wählbaren Merkmal",
+    "fr": " par rapport à une caractéristique supplémentaire",
+    "it": " in relazione a una caratteristica aggiuntiva",
+    "rm": "",
+    "en": " in relation to an additional feature"
+  },
+  "status": {
+    "de": " Stand August 2022",
+    "fr": " En août 2022",
+    "it": " A partire da agosto 2022",
+    "rm": " Agosto 2022",
+    "en": " As of August 2022"
   }
 }

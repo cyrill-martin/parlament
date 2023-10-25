@@ -54,6 +54,6 @@ select {
   border: none;
   font-size: 0.9rem;
   cursor: pointer;
-  background: #d2dfeb;
+  background: #e9e9e9;
 }
 </style>

@@ -12,7 +12,8 @@
 // import * as d3 from "d3";
 import d3 from "../d3-importer.js";
 // Load the data
-import dataset from "../data/N_council.json";
+import datasetN from "../data/N_council.json";
+import datasetS from "../data/S_council.json";
 import arrangements from "../data/arrangements.json";
 import selections from "../data/selections.json";
 
@@ -20,12 +21,12 @@ export default {
   props: ["lang"],
   async mounted() {
     await this.drawParliament();
-    // this.language = this.lang;
     this.checkUrl();
   },
   data() {
     return {
-      dataset,
+      council: null,
+      dataset: null,
       arrangements,
       selections,
       language: "de",
@@ -36,20 +37,19 @@ export default {
       this.language = newLanguage;
       const newArrangement = d3.select("#arrangement").node().value;
       const newOrder = d3.select("#order").node().value;
-      this.updateUrl(newArrangement, newOrder)
+      this.updateUrl(this.council, newArrangement, newOrder)
       this.drawParliament();
     },
   },
   methods: {
-    updateUrl(arr, ord) {
+    updateUrl(council, arr, ord) {
       history.pushState(
         {},
         null,
-        `${this.$route.path}?arr=${arr}&ord=${ord}&lang=${this.language}`
+        `${this.$route.path}?council=${council}&arr=${arr}&ord=${ord}&lang=${this.language}`
       )
     },
     async checkUrl() {
-      console.log("Checking the URL parameters");
 
       try {
         await this.$router.isReady()
@@ -71,6 +71,11 @@ export default {
           this.setDropdownSelection("order", params.ord)
         }
 
+        if (params.council) {
+          this.$emit("changeCouncil", params.council)
+          this.setDropdownSelection("council", params.council)
+        }
+
       } catch (err) {
         // onError
       }
@@ -78,7 +83,6 @@ export default {
     },
     setDropdownSelection(id, option) {
       const element = document.getElementById(id);
-      console.log(element)
       element.value = option;
       element.dispatchEvent(new Event('change'))
 
@@ -87,6 +91,15 @@ export default {
       d3.select("svg").remove();
       // Add additional data fields to each councillor
       const today = new Date();
+
+      const selectedCouncil = d3.select("#council").node().value;
+
+      // Check and set selected council
+      this.dataset = selectedCouncil === "N" ? datasetN : datasetS
+
+      // Set the max number of seats per seating row
+      const maxSeatsPerRow = selectedCouncil === "N" ? 30 : 15
+
       this.dataset.forEach((councillor) => {
         // Get age
         const birthDate = new Date(councillor.birthDate);
@@ -131,7 +144,7 @@ export default {
       // Set dimensions
       const dimensions = {
         width: 1000,
-        height: 400,
+        height: 450,
         margins: {
           top: 40,
           right: 100,
@@ -143,12 +156,9 @@ export default {
       };
 
       // Create and set inner container width
-      dimensions.ctrWidth =
-        dimensions.width - (dimensions.margins.left + dimensions.margins.right);
+      dimensions.ctrWidth = dimensions.width - (dimensions.margins.left + dimensions.margins.right);
       // Create and set inner container height
-      dimensions.ctrHeight =
-        dimensions.height -
-        (dimensions.margins.top + dimensions.margins.bottom);
+      dimensions.ctrHeight = dimensions.height - (dimensions.margins.top + dimensions.margins.bottom);
 
       // Create SVG element
       const svg = d3
@@ -164,9 +174,6 @@ export default {
           "transform",
           `translate(${dimensions.margins.left}, ${dimensions.margins.top})`
         );
-
-      // Set the max number of seats per seating row
-      const maxSeatsPerRow = 30;
 
       // Get tooltip element from DOM
       const tooltip = d3.select("#tooltip");
@@ -201,7 +208,7 @@ export default {
         const yScale = d3
           .scaleBand()
           .domain(yDomain)
-          .range([0, dimensions.ctrHeight])
+          .range([0, selectedCouncil === "N" ? dimensions.ctrHeight : dimensions.ctrHeight / 2])
           .paddingInner(0.1);
 
         // Create x-axis
@@ -239,7 +246,7 @@ export default {
           )
           .attr("id", "x-axis-label")
           .append("text")
-          .style("font-size", "10px")
+          .style("font-size", "12px")
           .style("font-weight", "bold")
           .attr("text-anchor", "middle")
           .text(() => {
@@ -402,10 +409,6 @@ export default {
           let fct = 1;
 
           if (thisOrder === "nrOfConcerns") {
-            fct = 0.7;
-          } else if (
-            thisOrder === "cantonName"
-          ) {
             fct = 0.85;
           }
 
@@ -512,6 +515,7 @@ export default {
           newYDomain,
           newColorScale
         ) => {
+
           const newOuterXScale = xScaleOuter.domain(newXOuter);
 
           const newInnerXScale = xScaleInner
@@ -648,12 +652,22 @@ export default {
           );
         };
 
+        // Listen to changes on the selected council
+        d3.select("#council").on("change", (event) => {
+          event.preventDefault();
+          const newOrder = d3.select("#order").node().value;
+          const newArrangement = d3.select("#arrangement").node().value;
+          this.updateUrl(event.target.value, newArrangement, newOrder);
+          this.$emit("changeCouncil", event.target.value);
+          this.drawParliament();
+        });
+
         // Listen to changes on the seat arrangement
         d3.select("#arrangement").on("change", (event) => {
           event.preventDefault();
           const newArrangement = event.target.value;
           const newOrder = d3.select("#order").node().value;
-          this.updateUrl(newArrangement, newOrder);
+          this.updateUrl(this.council, newArrangement, newOrder);
           callUpdateFunction(newArrangement, newOrder);
         });
 
@@ -662,7 +676,7 @@ export default {
           event.preventDefault();
           const newOrder = event.target.value;
           const newArrangement = d3.select("#arrangement").node().value;
-          this.updateUrl(newArrangement, newOrder);
+          this.updateUrl(this.council, newArrangement, newOrder);
           callUpdateFunction(newArrangement, newOrder);
         });
       };
