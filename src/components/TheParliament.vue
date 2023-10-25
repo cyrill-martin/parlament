@@ -309,12 +309,15 @@ export default {
             return r;
           })
           .attr("fill", (d) => {
-            if (!this.arrangements[order] && order !== "firstName") {
+            if (!this.arrangements[order] && order !== "firstName" && order !== "age") {
               return colorScale(d[order]);
             } else {
               if (order === "firstName") {
                 return this.arrangements.party[d.party].color;
-              } else {
+              } else if (order === "age") {
+                return this.arrangements.ageGroup[d.ageGroup].color;
+              }
+              else {
                 return this.arrangements[order][d[order]].color;
               }
             }
@@ -818,11 +821,7 @@ export default {
       // Function to get a possible linear color scale
       const getColorScale = (thisOrder) => {
         let colorScale;
-        if (
-          !this.arrangements[thisOrder] &&
-          thisOrder !== "firstName" &&
-          thisOrder !== "age"
-        ) {
+        if (!this.arrangements[thisOrder] && thisOrder !== "firstName" && thisOrder !== "age") {
           // It's numerical
 
           // Get the max of all councillors

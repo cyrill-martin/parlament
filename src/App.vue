@@ -40,10 +40,10 @@
 
             <span v-if="council === 'N'">{{ labels.intro2N[language] }}</span>
             <span v-else>{{ labels.intro2S[language] }}</span>
-            
+
             <span v-if="council === 'N'">{{ labels.intro3N[language] }}</span>
             <span v-else>{{ labels.intro3S[language] }}</span>
-            
+
             <span>{{ labels.intro4[language] }}</span>.
             <span>{{ labels.status[language] }}</span>
             <a href="#about">*</a>
@@ -217,6 +217,10 @@ footer {
 
   .page {
     padding: 0;
+  }
+
+  select {
+    font-size: 16px;
   }
 
   #nationalrat {
