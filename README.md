@@ -1,4 +1,4 @@
-# Der Nationalrat
+# The Swiss Parliament
 
 This repository contains the files for the Swiss National Council visualization available and described at [nationalrat.kmapper.com](http://nationalrat.kmapper.com/).
 
