@@ -176,6 +176,10 @@ select {
   background: #e9e9e9;
 }
 
+option {
+  font-size: 16px;
+}
+
 #nationalrat {
   margin: auto;
   width: 75%;

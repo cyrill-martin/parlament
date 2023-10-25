@@ -144,10 +144,10 @@ export default {
       // Set dimensions
       const dimensions = {
         width: 1000,
-        height: 450,
+        height: 425,
         margins: {
           top: 40,
-          right: 100,
+          right: 118,
           bottom: 30,
           left: 15,
         },
@@ -428,15 +428,41 @@ export default {
             );
 
           // Add legend title
+          const shortenTitle = ["nrOfCouncilMemberships", "nrOfCommittees", "nrOfConcerns"];
+
+          const toRemove = {
+            "nrOfCouncilMemberships": {
+              "de": "Anzahl ",
+              "fr": "Nombre de ",
+              "it": "Numero dei ",
+              "rm": "Dumber ",
+              "en": "Number of "
+            },
+            "nrOfCommittees": {
+              "de": "Anzahl ",
+              "fr": "Nombre de ",
+              "it": "Numero dei ",
+              "rm": " (dumber)",
+              "en": "Number of "
+            },
+            "nrOfConcerns": {
+              "de": "Anzahl ",
+              "fr": "Nombre des ",
+              "it": "Numero dei ",
+              "rm": " (dumber)",
+              "en": "Number of "
+            },
+          };
+
           legendGroup
             .append("g")
             .append("text")
             .style("font-weight", "bold")
             .text(() => {
               if (thisOrder !== "firstName") {
-                if (selections[thisOrder][this.language].startsWith("Anzahl")) {
+                if (shortenTitle.includes(thisOrder)) {
                   let str = selections[thisOrder][this.language].replace(
-                    "Anzahl ",
+                    toRemove[thisOrder][this.language],
                     ""
                   );
                   str = str[0].toUpperCase() + str.slice(1);
@@ -447,7 +473,7 @@ export default {
               } else {
                 return selections.party[this.language];
               }
-            });
+            })
 
           // Add <g> for each legend item
           const legendItems = legendGroup
