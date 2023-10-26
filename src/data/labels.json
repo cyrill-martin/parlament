@@ -56,11 +56,11 @@
     "en": " 200 members"
   },
   "intro2S": {
-    "de": " 46 Mitglieder",
-    "fr": " 46 membres",
-    "it": " 46 membri",
-    "rm": " 46 commembers",
-    "en": " 46 members"
+    "de": " 46 Mitglieder (aktuell nur 45)",
+    "fr": " 46 membres (actuellement seulement 45)",
+    "it": " 46 membri (attualmente solo 45)",
+    "rm": " 46 commembers (actual 45)",
+    "en": " 46 members (currently only 45)"
   },
   "intro3N": {
     "de": " des Schweizer Nationalrats",
@@ -84,10 +84,10 @@
     "en": " in relation to an additional feature"
   },
   "status": {
-    "de": " Stand August 2022",
-    "fr": " En août 2022",
-    "it": " A partire da agosto 2022",
-    "rm": " Agosto 2022",
-    "en": " As of August 2022"
+    "de": " Stand Oktober 2023",
+    "fr": " En octobre 2023",
+    "it": " A partire da ottobre 2023",
+    "rm": " October 2023",
+    "en": " As of October 2023"
   }
 }

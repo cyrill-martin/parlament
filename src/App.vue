@@ -45,7 +45,7 @@
             <span v-else>{{ labels.intro3S[language] }}</span>
 
             <span>{{ labels.intro4[language] }}</span>.
-            <span>{{ labels.status[language] }}</span>
+            <span><b>{{ labels.status[language] }}</b></span>
             <a href="#about">*</a>
           </p>
         </div>
