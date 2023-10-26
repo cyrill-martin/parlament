@@ -159,7 +159,7 @@ export default {
       // Create and set inner container width
       dimensions.ctrWidth = dimensions.width - (dimensions.margins.left + dimensions.margins.right);
       // Create and set inner container height
-      dimensions.ctrHeight = dimensions.height - (dimensions.margins.top + dimensions.margins.bottom);
+      dimensions.ctrHeight = dimensions.height - (dimensions.margins.top + dimensions.margins.bottom * 1.5);
 
       // Create SVG element
       const svg = d3
@@ -215,11 +215,13 @@ export default {
         // Create x-axis
         const xAxis = d3.axisBottom(xScaleOuter).tickSize(0).tickSizeOuter(0);
 
+
         // Draw x-axis
         const xAxisLine = ctr
           .append("g")
           .attr("id", "x-axis")
           .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
+          .style("font-size", arrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
           .call(xAxis);
 
         // Rotate axis tick labels
@@ -242,12 +244,11 @@ export default {
           .append("g")
           .attr(
             "transform",
-            `translate(${dimensions.ctrWidth / 2}, ${dimensions.ctrHeight + 28
-            })`
+            `translate(${dimensions.ctrWidth / 2}, ${dimensions.ctrHeight + dimensions.margins.bottom + 12})`
           )
           .attr("id", "x-axis-label")
           .append("text")
-          .style("font-size", "12px")
+          .style("font-size", "1.2em")
           .style("font-weight", "bold")
           .attr("text-anchor", "middle")
           .text(() => {
@@ -412,11 +413,11 @@ export default {
 
           let fct = 1;
 
-          if (thisOrder === "nrOfConcerns") {
-            fct = 0.85;
+          if (thisOrder === "nrOfConcerns" || thisOrder === "cantonName") {
+            fct = 0.72;
           }
 
-          const spacingVertical = 15 * fct;
+          const spacingVertical = 20 * fct;
           const circleRadius = spacingVertical / 3;
           const spacingHorizontal = spacingVertical / 2;
 
@@ -424,7 +425,7 @@ export default {
           const legendGroup = svg
             .append("g")
             .attr("class", "legend")
-            .style("font-size", `${circleRadius * 2}px`)
+            .style("font-size", `${circleRadius * 2}`)
             .attr(
               "transform",
               `translate(${dimensions.ctrWidth + 22}, ${dimensions.margins.top
@@ -556,8 +557,10 @@ export default {
 
           const x = d3.select("#x-axis");
           x.transition()
+            .style("font-size", newArrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
             .duration(1000)
             .call(d3.axisBottom(newOuterXScale).tickSize(0).tickSizeOuter(0));
+            
           // Remove the horizontal x-axis line
           x.call((axis) => axis.select(".domain").remove());
 
