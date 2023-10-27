@@ -1,6 +1,7 @@
 <template>
   <div id="parliament">
     <div id="tooltip">
+      <div class="headshot"><img /></div>
       <div class="name"></div>
       <div class="arrangement"></div>
       <div class="order"></div>
@@ -345,6 +346,12 @@ export default {
           };
 
           tooltip.select(".name").text(`${data.firstName} ${data.lastName}`);
+
+          tooltip.select(".headshot img")
+            .attr("src", `https://www.parlament.ch/sitecollectionimages/profil/portrait-260/${data.number}.jpg`)
+            .attr("alt", "Description of the image");
+            // .attr("width", 50)
+            // .attr("height", 50)
 
           tooltip.select(".arrangement").text(() => {
             if (
@@ -901,6 +908,16 @@ export default {
   border: solid 1px #333447;
   border-radius: 4px;
   padding: 5px;
+}
+
+.headshot {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  text-align: right;
+  width: 8em;
 }
 
 .name {
