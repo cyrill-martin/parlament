@@ -9,7 +9,6 @@
 </template>
 
 <script>
-// import * as d3 from "d3";
 import d3 from "../d3-importer.js";
 // Load the data
 import datasetN from "../data/N_council.json";
@@ -86,12 +85,6 @@ export default {
       element.value = option;
       element.dispatchEvent(new Event('change'))
 
-    },
-    async fade() {
-      await d3.selectAll(".seat")
-        .transition()
-        .duration(3000)
-        .style("opacity", 0);
     },
     async drawParliament() {
 
@@ -236,7 +229,7 @@ export default {
           xAxisLine
             .selectAll("text")
             .transition()
-            .duration(2000)
+            .duration(1000)
             .style("text-anchor", "start")
             .attr("dy", "-.01em")
             .attr("dx", "-2em")
@@ -330,13 +323,17 @@ export default {
               }
             }
           })
-          .attr("cursor", "pointer")
           .on("mouseover touchstart", (_, datum) => {
             addMouseover(arrangement, order, datum);
           })
           .on("mouseout touchend", () => {
             tooltip.style("display", "none");
-          });
+          })
+          .attr("cursor", "pointer")
+          .attr("opacity", 0)
+          .transition()
+          .duration(2500)
+          .attr("opacity", 1);
 
         const addMouseover = (thisArrangement, thisOrder, data) => {
           tooltip.style("display", "block");
