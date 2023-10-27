@@ -87,7 +87,14 @@ export default {
       element.dispatchEvent(new Event('change'))
 
     },
+    async fade() {
+      await d3.selectAll(".seat")
+        .transition()
+        .duration(3000)
+        .style("opacity", 0);
+    },
     async drawParliament() {
+
       d3.select("svg").remove();
       // Add additional data fields to each councillor
       const today = new Date();
@@ -560,7 +567,7 @@ export default {
             .style("font-size", newArrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
             .duration(1000)
             .call(d3.axisBottom(newOuterXScale).tickSize(0).tickSizeOuter(0));
-            
+
           // Remove the horizontal x-axis line
           x.call((axis) => axis.select(".domain").remove());
 
@@ -685,6 +692,8 @@ export default {
           );
         };
 
+
+        // const myThis = this;
         // Listen to changes on the selected council
         d3.select("#council").on("change", (event) => {
           event.preventDefault();
@@ -692,7 +701,16 @@ export default {
           const newArrangement = d3.select("#arrangement").node().value;
           this.updateUrl(event.target.value, newArrangement, newOrder);
           this.$emit("changeCouncil", event.target.value);
-          this.drawParliament();
+
+          const myThis = this;
+          d3.selectAll(".seat")
+            .transition()
+            .duration(500)
+            .style("opacity", 0)
+            .on("end", function () {
+              myThis.drawParliament();
+            });
+
         });
 
         // Listen to changes on the seat arrangement
