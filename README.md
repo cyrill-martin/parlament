@@ -5,7 +5,7 @@ This repository houses the files for the Swiss Parliament visualization, which i
 
 ## Dependencies
 
-- npm
+- node.js
 - Python 3 if you want to pull new data from parlament.ch.
 
 ## Serve and Develop Locally
