@@ -345,13 +345,10 @@ export default {
               .style("top", e.clientY - 50 + "px");
           };
 
-          tooltip.select(".name").text(`${data.firstName} ${data.lastName}`);
-
           tooltip.select(".headshot img")
-            .attr("src", `https://www.parlament.ch/sitecollectionimages/profil/portrait-260/${data.number}.jpg`)
-            .attr("alt", "Description of the image");
-            // .attr("width", 50)
-            // .attr("height", 50)
+            .attr("src", `https://www.parlament.ch/sitecollectionimages/profil/portrait-260/${data.number}.jpg`);
+
+          tooltip.select(".name").text(`${data.firstName} ${data.lastName}`);
 
           tooltip.select(".arrangement").text(() => {
             if (
@@ -904,9 +901,8 @@ export default {
   display: none;
   position: fixed;
   z-index: 10;
-  background-color: white;
-  border: solid 1px #333447;
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 4px; 
   padding: 5px;
 }
 
