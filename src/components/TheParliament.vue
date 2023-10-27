@@ -898,6 +898,7 @@ export default {
 
 <style scoped>
 #tooltip {
+  text-align: center;
   display: none;
   position: fixed;
   z-index: 10;
@@ -906,13 +907,8 @@ export default {
   padding: 5px;
 }
 
-.headshot {
-  text-align: center;
-}
-
 img {
   border-radius: 50%;
-  text-align: right;
   width: 8em;
 }
 
