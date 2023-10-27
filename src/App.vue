@@ -90,7 +90,7 @@
       <div class="col-12">
         &#169; 2023 Cyrill Martin -
         <a href="https://kmapper.com" target="_blank">kmapper GmbH</a> -
-        <a href="https://github.com/cyrill-martin/nationalrat" target="_blank">GitHub</a>
+        <a href="https://github.com/cyrill-martin/parlament" target="_blank">GitHub</a>
       </div>
     </footer>
   </div>
