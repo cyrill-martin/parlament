@@ -30,23 +30,24 @@ export default {
       arrangements,
       selections,
       language: "de",
+      selectedCouncil: null,
+      selectedArrangement: null,
+      selectedOrder: null,
     };
   },
   watch: {
     lang(newLanguage) {
       this.language = newLanguage;
-      const newArrangement = d3.select("#arrangement").node().value;
-      const newOrder = d3.select("#order").node().value;
-      this.updateUrl(this.council, newArrangement, newOrder)
+      this.updateUrl()
       this.drawParliament();
     },
   },
   methods: {
-    updateUrl(council, arr, ord) {
+    updateUrl() {
       history.pushState(
         {},
         null,
-        `${this.$route.path}?council=${council}&arr=${arr}&ord=${ord}&lang=${this.language}`
+        `${this.$route.path}?council=${this.selectedCouncil}&arr=${this.selectedArrangement}&ord=${this.selectedOrder}&lang=${this.language}`
       )
     },
     async checkUrl() {
@@ -85,22 +86,12 @@ export default {
       const element = document.getElementById(id);
       element.value = option;
       element.dispatchEvent(new Event('change'))
-
     },
-    async drawParliament() {
-
-      d3.select("svg").remove();
+    addMetadata() {
       // Add additional data fields to each councillor
       const today = new Date();
 
-      const selectedCouncil = d3.select("#council").node().value;
-
-      // Check and set selected council
-      this.council = selectedCouncil === "N" ? "N" : "S"
-      this.dataset = selectedCouncil === "N" ? datasetN : datasetS
-
-      // Set the max number of seats per seating row
-      const maxSeatsPerRow = selectedCouncil === "N" ? 30 : 15
+      // Only add 
 
       this.dataset.forEach((councillor) => {
         // Get age
@@ -139,11 +130,35 @@ export default {
         councillor.nrOfConcerns = councillor.concerns.length;
 
       });
+    },
+    async drawParliament() {
+      // This is currently a monster function doing it all, SORRY
+
+      // These are the things happening: 
+      // 1. It calculates extra metadata 
+      // 2. It creates the initial svg canvas
+      // 
+      // 
+
+      // Remove any previously present svg cancas if necessary - the primitive approach
+      d3.select("svg").remove();
+
+      // Get the selected council, arrangement, and order
+      ///////////////////////////////////////////////////
+      this.selectedCouncil = d3.select("#council").node().value;
+      this.selectedArrangement = d3.select("#arrangement").node().value;
+      this.selectedOrder = d3.select("#order").node().value;
+
+      // Check council and set dataset
+      this.dataset = this.selectedCouncil === "N" ? datasetN : datasetS;
+
+      // Add additional data fields to each councillor
+      this.addMetadata();
 
       // Prepare the SVG
       ///////////////////////////////////////////////
 
-      // Set dimensions
+      // Set the dimensions
       const dimensions = {
         width: 1000,
         height: 425,
@@ -162,6 +177,9 @@ export default {
       // Create and set inner container height
       dimensions.ctrHeight = dimensions.height - (dimensions.margins.top + dimensions.margins.bottom * 1.5);
 
+      // Set the max number of seats per seating row (this coorespondes to the number of seats per row without an arrangement)
+      const maxSeatsPerRow = this.selectedCouncil === "N" ? 30 : 15
+
       // Create SVG element
       const svg = d3
         .select("#parliament")
@@ -177,15 +195,11 @@ export default {
           `translate(${dimensions.margins.left}, ${dimensions.margins.top})`
         );
 
-      // Get tooltip element from DOM
-      const tooltip = d3.select("#tooltip");
-
       // Arrange the seating
       ///////////////////////////////////////////////
 
       // Function to create the seating
       const drawArrangement = (
-        arrangement,
         outerXDomain,
         innerXDomain,
         yDomain,
@@ -210,7 +224,7 @@ export default {
         const yScale = d3
           .scaleBand()
           .domain(yDomain)
-          .range([0, selectedCouncil === "N" ? dimensions.ctrHeight : dimensions.ctrHeight / 2])
+          .range([0, this.selectedCouncil === "N" ? dimensions.ctrHeight : dimensions.ctrHeight / 2])
           .paddingInner(0.1);
 
         // Create x-axis
@@ -222,11 +236,11 @@ export default {
           .append("g")
           .attr("id", "x-axis")
           .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
-          .style("font-size", arrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
+          .style("font-size", this.selectedArrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
           .call(xAxis);
 
         // Rotate axis tick labels
-        if (arrangement === "party") {
+        if (this.selectedArrangement === "party") {
           xAxisLine
             .selectAll("text")
             .transition()
@@ -253,14 +267,17 @@ export default {
           .style("font-weight", "bold")
           .attr("text-anchor", "middle")
           .text(() => {
-            if (arrangement !== "firstName") {
-              return selections[arrangement][this.language];
+            if (this.selectedArrangement !== "firstName") {
+              return selections[this.selectedArrangement][this.language];
             } else {
               return "";
             }
           });
 
         const seatsGroup = ctr.append("g").attr("class", "seats");
+
+        // Get tooltip element from DOM
+        const tooltip = d3.select("#tooltip");
 
         seatsGroup
           .selectAll("g")
@@ -269,17 +286,17 @@ export default {
           .attr("class", "seat")
           .attr("transform", (d) => {
             if (
-              !this.arrangements[arrangement] &&
-              arrangement !== "firstName"
+              !this.arrangements[this.selectedArrangement] &&
+              this.selectedArrangement !== "firstName"
             ) {
               // It's numerical
-              return `translate(${+xScaleOuter(d[arrangement])}, 0)`;
+              return `translate(${+xScaleOuter(d[this.selectedArrangement])}, 0)`;
             } else {
-              if (arrangement === "firstName") {
+              if (this.selectedArrangement === "firstName") {
                 return `translate(${+xScaleOuter("")}, 0)`;
               } else {
                 return `translate(${+xScaleOuter(
-                  this.arrangements[arrangement][d[arrangement]][this.language]
+                  this.arrangements[this.selectedArrangement][d[this.selectedArrangement]][this.language]
                 )}, 0)`;
               }
             }
@@ -311,21 +328,21 @@ export default {
             return r;
           })
           .attr("fill", (d) => {
-            if (!this.arrangements[order] && order !== "firstName" && order !== "age") {
-              return colorScale(d[order]);
+            if (!this.arrangements[this.selectedOrder] && this.selectedOrder !== "firstName" && this.selectedOrder !== "age") {
+              return colorScale(d[this.selectedOrder]);
             } else {
-              if (order === "firstName") {
+              if (this.selectedOrder === "firstName") {
                 return this.arrangements.party[d.party].color;
-              } else if (order === "age") {
+              } else if (this.selectedOrder === "age") {
                 return this.arrangements.ageGroup[d.ageGroup].color;
               }
               else {
-                return this.arrangements[order][d[order]].color;
+                return this.arrangements[this.selectedOrder][d[this.selectedOrder]].color;
               }
             }
           })
           .on("mouseover touchstart", (_, datum) => {
-            addMouseover(arrangement, order, datum);
+            addMouseover(datum);
           })
           .on("mouseout touchend", () => {
             tooltip.style("display", "none");
@@ -336,7 +353,8 @@ export default {
           .duration(2500)
           .attr("opacity", 1);
 
-        const addMouseover = (thisArrangement, thisOrder, data) => {
+        const addMouseover = (data) => {
+
           tooltip.style("display", "block");
 
           onmousemove = (e) => {
@@ -352,13 +370,13 @@ export default {
 
           tooltip.select(".arrangement").text(() => {
             if (
-              !this.arrangements[thisArrangement] &&
-              thisArrangement !== "firstName"
+              !this.arrangements[this.selectedArrangement] &&
+              this.selectedArrangement !== "firstName"
             ) {
-              return `${data[thisArrangement]}`;
+              return `${data[this.selectedArrangement]}`;
             } else {
-              if (thisArrangement !== "firstName") {
-                return `${this.arrangements[thisArrangement][data[thisArrangement]][
+              if (this.selectedArrangement !== "firstName") {
+                return `${this.arrangements[this.selectedArrangement][data[this.selectedArrangement]][
                   this.language
                 ]
                   }`;
@@ -368,13 +386,13 @@ export default {
             }
           });
 
-          if (thisArrangement !== thisOrder) {
+          if (this.selectedArrangement !== this.selectedOrder) {
             tooltip.select(".order").text(() => {
-              if (!this.arrangements[thisOrder] && thisOrder !== "firstName") {
-                return `${data[thisOrder]}`;
+              if (!this.arrangements[this.selectedOrder] && this.selectedOrder !== "firstName") {
+                return `${data[this.selectedOrder]}`;
               } else {
-                if (thisOrder !== "firstName") {
-                  return `${this.arrangements[thisOrder][data[thisOrder]][this.language]
+                if (this.selectedOrder !== "firstName") {
+                  return `${this.arrangements[this.selectedOrder][data[this.selectedOrder]][this.language]
                     }`;
                 } else {
                   return `${this.arrangements.party[data.party][this.language]
@@ -389,8 +407,10 @@ export default {
 
         // Add legend
         ///////////////////////////////////////////////
-        const createLegend = (thisOrder, thisColorScale) => {
+        const createLegend = (thisColorScale) => {
           d3.selectAll(".legend").remove();
+
+          let thisOrder = this.selectedOrder !== "firstName" ? this.selectedOrder : "party";
 
           let legendKeys;
 
@@ -410,7 +430,7 @@ export default {
               legendKeys.shift();
             }
           } else {
-            if (thisOrder === "age") {
+            if (this.selectedOrder === "age") {
               thisOrder = "ageGroup";
             }
             // Create legend keys
@@ -535,26 +555,18 @@ export default {
             });
         };
 
-        if (order !== "firstName") {
-          createLegend(order, colorScale);
-        } else {
-          createLegend("party", colorScale);
-        }
+        createLegend(colorScale)
 
         // Update general seat arrangement
         ///////////////////////////////////////////////
 
-        // I hate this approach. Could someone teach me how to do proper
-        // transistioning with the join method !!!
+        // Old approach of updating the chart. I would do it differently now.
         const updateSeatArrangement = (
-          newArrangement,
-          newOrder,
           newXOuter,
           newXInner,
           newYDomain,
           newColorScale
         ) => {
-
           const newOuterXScale = xScaleOuter.domain(newXOuter);
 
           const newInnerXScale = xScaleInner
@@ -565,14 +577,14 @@ export default {
 
           const x = d3.select("#x-axis");
           x.transition()
-            .style("font-size", newArrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
+            .style("font-size", this.selectedArrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
             .duration(1000)
             .call(d3.axisBottom(newOuterXScale).tickSize(0).tickSizeOuter(0));
 
           // Remove the horizontal x-axis line
           x.call((axis) => axis.select(".domain").remove());
 
-          if (newArrangement === "party") {
+          if (this.selectedArrangement === "party") {
             x.selectAll("text")
               .transition()
               .duration(2000)
@@ -580,7 +592,7 @@ export default {
               .attr("dy", "-.05em")
               .attr("dx", "-1.5em")
               .attr("transform", "rotate(-90)");
-          } else if (newArrangement === "faction") {
+          } else if (this.selectedArrangement === "faction") {
             x.selectAll("text")
               .transition()
               .duration(2000)
@@ -596,8 +608,8 @@ export default {
             .transition()
             .duration(2000)
             .text(() => {
-              if (newArrangement !== "firstName") {
-                return selections[newArrangement][this.language];
+              if (this.selectedArrangement !== "firstName") {
+                return selections[this.selectedArrangement][this.language];
               } else {
                 return "";
               }
@@ -609,17 +621,17 @@ export default {
             .duration(2000)
             .attr("transform", (d) => {
               if (
-                !this.arrangements[newArrangement] &&
-                newArrangement !== "firstName"
+                !this.arrangements[this.selectedArrangement] &&
+                this.selectedArrangement !== "firstName"
               ) {
                 // It's numerical
-                return `translate(${+newOuterXScale(d[newArrangement])}, 0)`;
+                return `translate(${+newOuterXScale(d[this.selectedArrangement])}, 0)`;
               } else {
-                if (newArrangement === "firstName") {
+                if (this.selectedArrangement === "firstName") {
                   return `translate(${+newOuterXScale("")}, 0)`;
                 } else {
                   return `translate(${+newOuterXScale(
-                    this.arrangements[newArrangement][d[newArrangement]][
+                    this.arrangements[this.selectedArrangement][d[this.selectedArrangement]][
                     this.language
                     ]
                   )}, 0)`;
@@ -630,7 +642,7 @@ export default {
           d3.selectAll(".councillor")
             .attr("cursor", "pointer")
             .on("mouseover touchstart", (_, datum) => {
-              addMouseover(newArrangement, newOrder, datum);
+              addMouseover(datum);
             })
             .on("mouseout touchend", () => {
               tooltip.style("display", "none");
@@ -655,37 +667,31 @@ export default {
             })
             .attr("fill", (d) => {
               if (
-                !this.arrangements[newOrder] &&
-                newOrder !== "firstName" &&
-                newOrder !== "age"
+                !this.arrangements[this.selectedOrder] &&
+                this.selectedOrder !== "firstName" &&
+                this.selectedOrder !== "age"
               ) {
-                return newColorScale(d[newOrder]);
+                return newColorScale(d[this.selectedOrder]);
               } else {
-                if (newOrder === "firstName") {
+                if (this.selectedOrder === "firstName") {
                   return this.arrangements.party[d.party].color;
-                } else if (newOrder === "age") {
+                } else if (this.selectedOrder === "age") {
                   return this.arrangements.ageGroup[d.ageGroup].color;
                 } else {
-                  return this.arrangements[newOrder][d[newOrder]].color;
+                  return this.arrangements[this.selectedOrder][d[this.selectedOrder]].color;
                 }
               }
             });
-
-          if (newOrder !== "firstName") {
-            createLegend(newOrder, newColorScale);
-          } else {
-            createLegend("party", newColorScale);
-          }
+          
+          createLegend(newColorScale)
         };
 
-        const callUpdateFunction = (arrangement, order) => {
-          const newColorScale = getColorScale(order);
-          const newXOuter = getOuterXDomain(arrangement);
+        const callUpdateFunction = () => {
+          const newColorScale = getColorScale();
+          const newXOuter = getOuterXDomain();
           const newXInner = getInnerXDomain(newXOuter.length);
-          const newYDomain = getYDomain(arrangement, order, newXInner.length);
+          const newYDomain = getYDomain(newXInner.length);
           updateSeatArrangement(
-            arrangement,
-            order,
             newXOuter,
             newXInner,
             newYDomain,
@@ -693,15 +699,15 @@ export default {
           );
         };
 
+        // Listen to changes on the dropdowns
+        /////////////////////////////////////
 
-        // const myThis = this;
         // Listen to changes on the selected council
         d3.select("#council").on("change", (event) => {
           event.preventDefault();
-          const newOrder = d3.select("#order").node().value;
-          const newArrangement = d3.select("#arrangement").node().value;
-          this.updateUrl(event.target.value, newArrangement, newOrder);
-          this.$emit("changeCouncil", event.target.value);
+          this.selectedCouncil = event.target.value;
+          this.updateUrl();
+          this.$emit("changeCouncil", this.selectedCouncil);
 
           const myThis = this;
           d3.selectAll(".seat")
@@ -711,43 +717,40 @@ export default {
             .on("end", function () {
               myThis.drawParliament();
             });
-
         });
 
         // Listen to changes on the seat arrangement
         d3.select("#arrangement").on("change", (event) => {
           event.preventDefault();
-          const newArrangement = event.target.value;
-          const newOrder = d3.select("#order").node().value;
-          this.updateUrl(this.council, newArrangement, newOrder);
-          callUpdateFunction(newArrangement, newOrder);
+          this.selectedArrangement = event.target.value;
+          this.updateUrl();
+          callUpdateFunction(this.selectedArrangement, this.selectedOrder);
         });
 
         // Listen to changes on group order
         d3.select("#order").on("change", (event) => {
           event.preventDefault();
-          const newOrder = event.target.value;
-          const newArrangement = d3.select("#arrangement").node().value;
-          this.updateUrl(this.council, newArrangement, newOrder);
-          callUpdateFunction(newArrangement, newOrder);
+          this.selectedOrder = event.target.value;
+          this.updateUrl();
+          callUpdateFunction(this.selectedArrangement, this.selectedOrder);
         });
       };
 
       // Function to get the get outer x-scale items and domain
-      const getOuterXDomain = (arrangement) => {
+      const getOuterXDomain = () => {
         // Outer x-Scale - depends on the arrangement
         let xOuterItems, xOuterDomain;
 
         // Set the outer x-scale domain
 
-        if (!this.arrangements[arrangement] && arrangement !== "firstName") {
+        if (!this.arrangements[this.selectedArrangement] && this.selectedArrangement !== "firstName") {
           // It's numerical
           // Get the max of all councillors
           const max = d3.max(
             this.dataset,
-            (councillor) => councillor[arrangement]
+            (councillor) => councillor[this.selectedArrangement]
           );
-          if (arrangement === "age") {
+          if (this.selectedArrangement === "age") {
             const min = d3.min(this.dataset, (councillor) => councillor.age);
             xOuterDomain = Array.from(
               { length: max - min + 1 },
@@ -755,20 +758,20 @@ export default {
             );
           } else {
             xOuterDomain = Array.from(Array(max + 1).keys());
-            if (arrangement === "nrOfCouncilMemberships") {
+            if (this.selectedArrangement === "nrOfCouncilMemberships") {
               xOuterDomain.shift();
             }
           }
         } else {
-          if (arrangement === "firstName") {
+          if (this.selectedArrangement === "firstName") {
             // If arranged by name, all councillors belong to the same group
             xOuterItems = [""];
             xOuterDomain = [""];
           } else {
             // Else, the councillors are grouped by the selected arrangement
-            xOuterItems = Object.keys(this.arrangements[arrangement]);
+            xOuterItems = Object.keys(this.arrangements[this.selectedArrangement]);
             xOuterDomain = xOuterItems.map(
-              (item) => this.arrangements[arrangement][item][this.language]
+              (item) => this.arrangements[this.selectedArrangement][item][this.language]
             );
           }
         }
@@ -787,17 +790,17 @@ export default {
 
       // Function to get the y-scale domain
       // ...and to add/change special inner indices !!!
-      const getYDomain = (arrangement, order, nrOfInnerGroups) => {
+      const getYDomain = (nrOfInnerGroups) => {
         // y-Scale - depends on largest group: Number of members / xInnerDomain
         let yScaleDomain;
 
-        if (arrangement === "firstName") {
+        if (this.selectedArrangement === "firstName") {
           yScaleDomain = Array.from(
             Array(Math.ceil(this.dataset.length / maxSeatsPerRow)).keys()
           );
 
           this.dataset.sort((a, b) => {
-            return d3.ascending(a[order], b[order]);
+            return d3.ascending(a[this.selectedOrder], b[this.selectedOrder]);
           });
 
           // Add innerIdx
@@ -806,7 +809,7 @@ export default {
           });
         } else {
           // Group the this.dataset by the selected arrangement
-          const groupedDataset = d3.groups(this.dataset, (d) => d[arrangement]);
+          const groupedDataset = d3.groups(this.dataset, (d) => d[this.selectedArrangement]);
           // E.g. this.dataset = [
           //   [ "VS", [...] ],
           //   [ "S", [...] ],
@@ -816,7 +819,7 @@ export default {
           groupedDataset.forEach((group) => {
             // Sort group according to order
             group[1].sort((a, b) => {
-              return d3.ascending(a[order], b[order]);
+              return d3.ascending(a[this.selectedOrder], b[this.selectedOrder]);
             });
 
             // Add innerIdx to get positioning right later
@@ -841,15 +844,15 @@ export default {
       };
 
       // Function to get a possible linear color scale
-      const getColorScale = (thisOrder) => {
+      const getColorScale = () => {
         let colorScale;
-        if (!this.arrangements[thisOrder] && thisOrder !== "firstName" && thisOrder !== "age") {
+        if (!this.arrangements[this.selectedOrder] && this.selectedOrder !== "firstName" && this.selectedOrder !== "age") {
           // It's numerical
 
           // Get the max of all councillors
           const max = d3.max(
             this.dataset,
-            (councillor) => councillor[thisOrder]
+            (councillor) => councillor[this.selectedOrder]
           );
 
           colorScale = d3
@@ -860,18 +863,13 @@ export default {
         return colorScale;
       };
 
-      // Get the arrangement and order
-      ///////////////////////////////////////////
-      const arrangement = d3.select("#arrangement").node().value;
-      const order = d3.select("#order").node().value;
-
       // Get the color scale (it's undefined or not)
       ///////////////////////////////////////////
-      const colorScale = getColorScale(order);
+      const colorScale = getColorScale();
 
       // Get the actual outer x-scale domain
       ///////////////////////////////////////////
-      const outerXDomain = getOuterXDomain(arrangement);
+      const outerXDomain = getOuterXDomain();
 
       // Get the actual inner x-scale domain
       ///////////////////////////////////////////
@@ -879,13 +877,11 @@ export default {
 
       // Get the actual y-scale domain
       ///////////////////////////////////////////
-      const yDomain = getYDomain(arrangement, order, innerXDomain.length);
+      const yDomain = getYDomain(innerXDomain.length);
 
       // Draw the parliament
       ///////////////////////////////////////////
-
       drawArrangement(
-        arrangement,
         outerXDomain,
         innerXDomain,
         yDomain,
@@ -903,7 +899,7 @@ export default {
   position: fixed;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 4px; 
+  border-radius: 4px;
   padding: 5px;
 }
 
