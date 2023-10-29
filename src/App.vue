@@ -67,7 +67,7 @@
         <div class="col-12">
           <h3>* {{ labels.data[language] }}:</h3>
           <p>
-            Die angezeigten Daten wurden Ende August 2022 direkt
+            Die angezeigten Daten wurden 
             über die
             <a href="http://ws-old.parlament.ch" target="_blank">offene Schnittstelle</a>
             von
