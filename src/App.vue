@@ -29,12 +29,12 @@
     <main class="row" id="nationalrat">
       <section class="title row">
         <div class="col-12">
-          <h1>
+          <div class="select-div title-select">
             <select name="council" id="council">
               <option value="N">{{ labels.councilN[language] }}</option>
               <option value="S">{{ labels.councilS[language] }}</option>
             </select>
-          </h1>
+          </div>
           <p>
             <span>{{ labels.intro1[language] }}</span>
 
@@ -67,7 +67,7 @@
         <div class="col-12">
           <h3>* {{ labels.data[language] }}:</h3>
           <p>
-            Die angezeigten Daten wurden 
+            Die angezeigten Daten wurden
             über die
             <a href="http://ws-old.parlament.ch" target="_blank">offene Schnittstelle</a>
             von
@@ -164,17 +164,6 @@ img {
   width: 120px;
 }
 
-select {
-  width: 100%;
-  border-radius: 4px;
-  padding: 8px;
-  border: none;
-  font-size: 32px;
-  font-weight: bold;
-  cursor: pointer;
-  background: #e9e9e9;
-}
-
 option {
   font-size: 16px;
 }
@@ -198,6 +187,11 @@ option {
   margin-right: auto;
   width: 60%;
   font-size: 0.9rem;
+}
+
+.title-select select {
+  font-size: 32px;
+  font-weight: bold;
 }
 
 footer {
