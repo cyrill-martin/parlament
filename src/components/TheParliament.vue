@@ -183,7 +183,7 @@ export default {
       dimensions.ctrHeight = dimensions.height - (dimensions.margins.top + dimensions.margins.bottom * 1.5);
 
       // Set the max number of seats per seating row (this coorespondes to the number of seats per row without an arrangement)
-      const maxSeatsPerRow = this.selectedCouncil === "N" ? 30 : 15
+      const maxSeatsPerRow = this.selectedCouncil === "N" ? 20 : 15
 
       // Create SVG element
       const svg = d3
