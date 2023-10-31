@@ -145,6 +145,7 @@ export default {
             // 4.3. updateSeatArrangement() updates the current seat arrangement and animates it with .transition()
       
       // All this could be refactored to standalone functions based on the correct selections
+      // Also, the updates of the arrangement could be done with the D3.js join() method
 
       // Remove any previously present svg cancas if necessary - the primitive approach
       d3.select("svg").remove();
