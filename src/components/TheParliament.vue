@@ -91,8 +91,6 @@ export default {
       // Add additional data fields to each councillor
       const today = new Date();
 
-      // Only add 
-
       this.dataset.forEach((councillor) => {
         // Get age
         const birthDate = new Date(councillor.birthDate);
