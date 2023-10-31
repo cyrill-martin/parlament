@@ -132,13 +132,19 @@ export default {
       });
     },
     async drawParliament() {
-      // This is currently a monster function doing it all, SORRY
+      // This is currently a big function doing it all
 
       // These are the things happening: 
-      // 1. It calculates extra metadata 
+      // 1. It calculates extra metadata for the datasets (each time it changes)
       // 2. It creates the initial svg canvas
-      // 
-      // 
+      // 3. The drawArrangement() function draws the actual seats arrangement into the canvas
+            // It needs the outerXDomain, innerXDomain, yDomain, and colorScale for an input
+      // 4. There are nested things happening inside drawArrangement():
+            // 4.1. createLegend() draws the legend for the seating (based on the selected order)
+            // 4.2. .on("change") events listen to changes to the dropdowns and call an updateSeatArrangement() function
+            // 4.3. updateSeatArrangement() updates the current seat arrangement and animates it with .transition()
+      
+      // All this could be refactored to standalone functions based on the correct selections
 
       // Remove any previously present svg cancas if necessary - the primitive approach
       d3.select("svg").remove();
@@ -155,7 +161,7 @@ export default {
       // Add additional data fields to each councillor
       this.addMetadata();
 
-      // Prepare the SVG
+      // Prepare the initial SVG
       ///////////////////////////////////////////////
 
       // Set the dimensions
