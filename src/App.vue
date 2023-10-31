@@ -165,7 +165,7 @@ img {
 }
 
 option {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #nationalrat {
