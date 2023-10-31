@@ -212,8 +212,8 @@ footer {
     padding: 0;
   }
 
-  select {
-    font-size: 16px;
+  .title-select select {
+    font-size: 18px;
   }
 
   #nationalrat {
