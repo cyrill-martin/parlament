@@ -265,7 +265,7 @@ export default {
           )
           .attr("id", "x-axis-label")
           .append("text")
-          .style("font-size", "1.2em")
+          .style("font-size", "1em")
           .style("font-weight", "bold")
           .attr("text-anchor", "middle")
           .text(() => {

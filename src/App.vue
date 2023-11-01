@@ -26,8 +26,8 @@
         </div>
       </div>
     </header>
-    <main class="row" id="nationalrat">
-      <section class="title row">
+    <main class="row" id="parlament">
+      <section class="row">
         <div class="col-12">
           <div class="select-div title-select">
             <select name="council" id="council">
@@ -49,9 +49,6 @@
             <span>{{ labels.status[language] }}</span>
             <a href="#about">*</a>
           </p>
-          <p>
-            {{ labels.intro5[language] }}
-          </p>
         </div>
       </section>
       <section class="row">
@@ -66,59 +63,25 @@
         <div class="col-6">
           <the-dropdown :type="'order'" :lang="language"></the-dropdown>
         </div>
+        <div class="col-12">
+          <p>
+            {{ labels.intro5[language] }}. {{ labels.intro6[language] }}
+          </p>
+        </div>
       </section>
       <section class="row" id="about">
         <div class="col-12">
           <h3>* {{ labels.data[language] }}:</h3>
-          <p v-show="language === 'de'">
-            Die angezeigten Daten wurden
-            über die
-            <a href="http://ws-old.parlament.ch" target="_blank">offene Schnittstelle</a>
-            von
-            <a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
-            bezogen (siehe <a href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
-              target="_blank">Script</a>). Daten und Code sind auf
-            <a href="https://github.com/cyrill-martin/parlament" target="_blank">GitHub</a>
-            verfügbar.
-          </p>
-          <p v-show="language === 'en'">
-            The displayed data was sourced from the
-            <a href="http://ws-old.parlament.ch" target="_blank">open interface</a>
-            of
-            <a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
-            using this <a href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
-              target="_blank">script</a>. The data and code are available on
-            <a href="https://github.com/cyrill-martin/parlament" target="_blank">GitHub</a>.
-          </p>
-          <p v-show="language === 'fr'">
-            Les données affichées proviennent de
-            <a href="http://ws-old.parlament.ch" target="_blank">l'interface ouverte</a>
-            de
-            <a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
-            à l'aide de ce <a href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
-              target="_blank">script</a>. Les données et le code sont disponibles sur
-            <a href="https://github.com/cyrill-martin/parlament" target="_blank">GitHub</a>.
-          </p>
-          <p v-show="language === 'it'">
-            I dati mostrati sono stati ottenuti attraverso
-            <a href="http://ws-old.parlament.ch" target="_blank">l'interfaccia aperta</a>
-            di
-            <a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
-            utilizzando questo <a href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
-              target="_blank">script</a>. Dati e codice sono disponibili su
-            <a href="https://github.com/cyrill-martin/parlament" target="_blank">GitHub</a>.
-          </p>
-          <p v-show="language === 'rm'">
-            Las datas mussadas èn vegnidas retratgadas sur
-            <a href="http://ws-old.parlament.ch" target="_blank">l'interfatscha averta</a>
-            da
-            <a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
-            cun quai <a href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
-              target="_blank">script</a>. Datas e code èn disponibels sin
-            <a href="https://github.com/cyrill-martin/parlament" target="_blank">GitHub</a>.
+          <p>
+            {{ labels.data1[language] }}<a href="http://ws-old.parlament.ch" target="_blank">{{ labels.data2[language]
+            }}</a>
+            {{ labels.data3[language] }}<a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
+            {{ labels.data4[language] }} (<a
+              href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
+              target="_blank">script</a>).<br />
+            {{ labels.data5[language] }}<a href="https://github.com/cyrill-martin/parlament" target="_blank"> GitHub</a>.
           </p>
           <p>
-            <br />
             <br />
             Cyrill Martin<br />
             <a href="mailto:cyrill.martin@kmapper.com">cyrill.martin@kmapper.com</a>
@@ -207,7 +170,7 @@ option {
   font-size: 20px;
 }
 
-#nationalrat {
+#parlament {
   margin: auto;
   width: 75%;
 }

@@ -91,10 +91,52 @@
     "en": " As of October 2023"
   },
   "intro5": {
-    "de": "Jeder Punkt repräsentiert einen:e Parlamentarier:in. Ein Klick darauf führt zur Profilseite auf parlament.ch",
+    "de": "Jeder Punkt repräsentiert einen:e Parlamentarier:in. Ein Klick darauf führt zur Profilseite auf parlament.ch.",
     "fr": "Chaque point représente un(e) parlementaire. En cliquant, vous serez dirigé(e) vers la page de profil correspondante sur parlament.ch.",
     "it": "Ogni punto rappresenta un parlamentare. Cliccando, si verrà indirizzati alla rispettiva pagina del profilo su parlament.ch.",
     "rm": "Cada punct representa in parlamentari. Cun cliccar, vegnais indirizzà a la pagina da profil correspondenta sin parlament.ch.",
     "en": "Each dot represents a parliamentarian. By clicking, you'll be directed to the respective profile page on parlament.ch."
+  },
+  "intro6": {
+    "de": "Sie können den Rat, die Sitzordnung und Reihenfolge mithilfe der Dropdown-Menüs neu anordnen.",
+    "fr": "Vous pouvez réarranger le Conseil, les sièges et l'ordre à l'aide des menus déroulants.",
+    "it": "È possibile riorganizzare il Consiglio, la disposizione dei posti e l'ordine utilizzando i menu a tendina.",
+    "rm": "Vus pudais reorganisar il Cussegl , la disposiziun dals sezs e l'urden cun agid dals menus derulants.",
+    "en": "You can re-arrange the Council, seating and order by means of the dropdowns."
+  }, 
+  "data1": {
+    "de": "Die angezeigten Daten wurden über die ",
+    "fr": "Les données affichées proviennent de ",
+    "it": "I dati mostrati sono stati ottenuti attraverso ",
+    "rm": "Las datas mussadas èn vegnidas retratgadas sur ",
+    "en": "The displayed data was sourced from the "
+  },
+  "data2": {
+    "de": "offene Schnittstelle ",
+    "fr": "l'interface ouverte ",
+    "it": "l'interfaccia aperta ",
+    "rm": "l'interfatscha averta ",
+    "en": "open interface "
+  },
+  "data3": {
+    "de": "von ",
+    "fr": "de ",
+    "it": "di ",
+    "rm": "da ",
+    "en": "of "
+  },
+  "data4": {
+    "de": "bezogen",
+    "fr": "",
+    "it": "",
+    "rm": "",
+    "en": ""
+  },
+  "data5": {
+    "de": "Daten und Code sind auf  ",
+    "fr": "Les données et le code sont disponibles sur ",
+    "it": "Dati e codice sono disponibili su ",
+    "rm": "Datas e code èn disponibels sin ",
+    "en": "The data and code are available on "
   }
 }
