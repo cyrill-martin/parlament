@@ -36,10 +36,10 @@
   },
   "data": {
     "de": "Daten",
-    "fr": "Données (en allemand)",
-    "it": "Dati (in tedesco)",
-    "rm": "Datas (en tudestg)",
-    "en": "Data (in German)"
+    "fr": "Données",
+    "it": "Dati",
+    "rm": "Datas",
+    "en": "Data"
   },
   "intro1": {
     "de": "Die dynamische Visualisierung zeigt die Sitzverteilung der",
