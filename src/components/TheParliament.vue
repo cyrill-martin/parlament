@@ -20,8 +20,8 @@ import selections from "../data/selections.json";
 export default {
   props: ["lang"],
   async mounted() {
+    await this.checkUrl();
     await this.drawParliament();
-    this.checkUrl();
   },
   data() {
     return {
@@ -59,33 +59,30 @@ export default {
         const params = this.$route.query;
 
         if (params.lang) {
-          this.$emit("changeLanguage", params.lang)
+          this.$emit("changeLanguage", params.lang);
         } else {
           this.language = this.lang;
         }
 
         if (params.arr) {
-          this.setDropdownSelection("arrangement", params.arr)
+          this.setDropdownSelection("arrangement", params.arr);
         }
 
         if (params.ord) {
-          this.setDropdownSelection("order", params.ord)
+          this.setDropdownSelection("order", params.ord);
         }
 
         if (params.council) {
-          this.$emit("changeCouncil", params.council)
-          this.setDropdownSelection("council", params.council)
+          this.$emit("changeCouncil", params.council);
+          this.setDropdownSelection("council", params.council);
         }
 
       } catch (err) {
         // onError
       }
-
     },
     setDropdownSelection(id, option) {
-      const element = document.getElementById(id);
-      element.value = option;
-      element.dispatchEvent(new Event('change'))
+      document.getElementById(id).value = option;
     },
     addMetadata() {
       // Add additional data fields to each councillor
@@ -136,12 +133,12 @@ export default {
       // 1. It calculates extra metadata for the datasets (each time it changes)
       // 2. It creates the initial svg canvas
       // 3. The drawArrangement() function draws the actual seats arrangement into the canvas
-            // It needs the outerXDomain, innerXDomain, yDomain, and colorScale for an input
+      // It needs the outerXDomain, innerXDomain, yDomain, and colorScale for an input
       // 4. There are nested things happening inside drawArrangement():
-            // 4.1. createLegend() draws the legend for the seating (based on the selected order)
-            // 4.2. .on("change") events listen to changes to the dropdowns and call an updateSeatArrangement() function
-            // 4.3. updateSeatArrangement() updates the current seat arrangement and animates it with .transition()
-      
+      // 4.1. createLegend() draws the legend for the seating (based on the selected order)
+      // 4.2. .on("change") events listen to changes to the dropdowns and call an updateSeatArrangement() function
+      // 4.3. updateSeatArrangement() updates the current seat arrangement and animates it with .transition()
+
       // All this could be refactored to standalone functions based on the correct selections
       // Also, the updates of the arrangement could be done with the D3.js join() method
 
@@ -687,7 +684,7 @@ export default {
                 }
               }
             });
-          
+
           createLegend(newColorScale)
         };
 
