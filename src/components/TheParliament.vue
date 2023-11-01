@@ -22,6 +22,7 @@ export default {
   async mounted() {
     await this.checkUrl();
     await this.drawParliament();
+    this.updateUrl();
   },
   data() {
     return {
