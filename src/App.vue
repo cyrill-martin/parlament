@@ -218,7 +218,7 @@ footer {
     font-size: 18px;
   }
 
-  #nationalrat {
+  #parlament {
     margin: auto;
     width: 100%;
   }
