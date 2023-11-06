@@ -44,10 +44,8 @@
             <span v-if="council === 'N'">{{ labels.intro3N[language] }}</span>
             <span v-else>{{ labels.intro3S[language] }}</span>
 
-            <span>{{ labels.intro4[language] }}</span>.
-            <br>
-            <span>{{ labels.status[language] }}</span>
-            <a href="#about">*</a>
+            <span>{{ labels.intro4[language] }}</span>. 
+            <span>{{ labels.status[language] }}</span><a href="#about"><b>*</b></a>.
           </p>
         </div>
       </section>
@@ -65,7 +63,7 @@
         </div>
         <div class="col-12">
           <p>
-            {{ labels.intro5[language] }}. {{ labels.intro6[language] }}
+            {{ labels.intro5[language] }}. {{ labels.intro6[language] }}.
           </p>
         </div>
       </section>
@@ -78,8 +76,7 @@
             {{ labels.data3[language] }}<a href="https://www.parlament.ch" target="_blank">parlament.ch</a>
             {{ labels.data4[language] }} (<a
               href="https://github.com/cyrill-martin/parlament/blob/main/extras/get_councillors.py"
-              target="_blank">script</a>).<br />
-            {{ labels.data5[language] }}<a href="https://github.com/cyrill-martin/parlament" target="_blank"> GitHub</a>.
+              target="_blank">script</a>). {{ labels.data5[language] }}<a href="https://github.com/cyrill-martin/parlament" target="_blank"> GitHub</a>.
           </p>
           <p>
             <br />

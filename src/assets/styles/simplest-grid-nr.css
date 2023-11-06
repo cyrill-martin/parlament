@@ -22,18 +22,12 @@ body {
   padding: 0;
   left: 0;
   top: 0;
-  font-size: 100%;
+  font-size: 0.9rem;
 }
 
 a {
-  color: #4C81AF;
+  color: #4c81af;
   text-decoration: none;
-}
-
-h1 {
-  font-size: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 footer {
@@ -89,8 +83,9 @@ select {
 @media only screen and (min-width: 45em) {
   /* 720px */
 
-  h1 {
-    font-size: 2rem;
+  html,
+  body {
+    font-size: 1rem;
   }
 
   .col-1 {

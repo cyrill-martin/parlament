@@ -309,7 +309,7 @@ export default {
           .attr(
             "xlink:href",
             (d) =>
-              `https://www.parlament.ch/${this.language}/biografie/${d.firstName}-${d.lastName}/${d.id}`
+              `https://www.parlament.ch/${this.language}/biografie/${d.firstName.toLowerCase()}-${d.lastName.toLowerCase()}/${d.id}`
           )
           .attr("target", "_blank")
           .append("circle")
