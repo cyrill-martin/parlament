@@ -861,7 +861,7 @@ export default {
           colorScale = d3
             .scaleLinear()
             .domain([0, max])
-            .range(["lightgrey", "black"]);
+            .range(["#fee0d2", "#de2d26"]);
         }
         return colorScale;
       };

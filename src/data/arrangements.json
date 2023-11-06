@@ -9,7 +9,7 @@
       "en": "BastA"
     },
     "EàG": {
-      "color": "#6a0f5a",
+      "color": "#e09900",
       "de": "EàG",
       "fr": "EàG",
       "it": "EàG",
@@ -17,7 +17,7 @@
       "en": "EàG"
     },
     "SP": {
-      "color": "#e4022d",
+      "color": "#E4002B",
       "de": "SP",
       "fr": "PS",
       "it": "PS",
@@ -73,7 +73,7 @@
       "en": "The Centre"
     },
     "LDP": {
-      "color": "#0251a0",
+      "color": "#00519e",
       "de": "LDP",
       "fr": "LDP",
       "it": "LDP",
@@ -81,7 +81,7 @@
       "en": "LDP"
     },
     "EVP": {
-      "color": "#ffdd00",
+      "color": "#FFDD00",
       "de": "EVP",
       "fr": "EVP",
       "it": "EVP",
@@ -97,7 +97,7 @@
       "en": "EDU"
     },
     "Lega": {
-      "color": "#0a2f42",
+      "color": "#4065B9",
       "de": "Lega",
       "fr": "Lega",
       "it": "Lega",
@@ -105,7 +105,7 @@
       "en": "Lega"
     },
     "SVP": {
-      "color": "#2f880e",
+      "color": "#009F4E",
       "de": "SVP",
       "fr": "UDC",
       "it": "UDC",
@@ -113,7 +113,7 @@
       "en": "SPP"
     },
     "-": {
-      "color": "#000000",
+      "color": "#969696",
       "de": "parteilos",
       "fr": "sans parti",
       "it": "senza Partito",
@@ -123,7 +123,7 @@
   },
   "faction": {
     "S": {
-      "color": "#e4022d",
+      "color": "#E4002B",
       "de": "SP",
       "fr": "PS",
       "it": "PS",
@@ -163,7 +163,7 @@
       "en": "The Centre Group"
     },
     "V": {
-      "color": "#2f880e",
+      "color": "#009F4E",
       "de": "SVP",
       "fr": "UDC",
       "it": "UDC",
@@ -173,7 +173,7 @@
   },
   "gender": {
     "f": {
-      "color": "#DEE2E6",
+      "color": "#fc8d59",
       "de": "Frau",
       "fr": "Femme",
       "it": "Donna",
@@ -181,7 +181,7 @@
       "en": "Woman"
     },
     "nb": {
-      "color": "#17b554",
+      "color": "#ffffbf",
       "de": "Nicht-binär",
       "fr": "Non binaire",
       "it": "Non binario",
@@ -189,7 +189,7 @@
       "en": "Non-binary"
     },
     "m": {
-      "color": "#495057",
+      "color": "#91bfdb",
       "de": "Mann",
       "fr": "Homme",
       "it": "Uomo",
@@ -199,7 +199,7 @@
   },
   "ageGroup": {
     "18-19": {
-      "color": "#F8F9FA",
+      "color": "#fff5f0",
       "de": "18-19",
       "fr": "18-19",
       "it": "18-19",
@@ -207,7 +207,7 @@
       "en": "18-19"
     },
     "20-29": {
-      "color": "#E9ECEF",
+      "color": "#fee0d2",
       "de": "20-29",
       "fr": "20-29",
       "it": "20-29",
@@ -215,7 +215,7 @@
       "en": "20-29"
     },
     "30-39": {
-      "color": "#DEE2E6",
+      "color": "#fcbba1",
       "de": "30-39",
       "fr": "30-39",
       "it": "30-39",
@@ -223,7 +223,7 @@
       "en": "30-39"
     },
     "40-49": {
-      "color": "#CED4DA",
+      "color": "#fc9272",
       "de": "40-49",
       "fr": "40-49",
       "it": "40-49",
@@ -231,7 +231,7 @@
       "en": "40-49"
     },
     "50-59": {
-      "color": "#ADB5BD",
+      "color": "#fb6a4a",
       "de": "50-59",
       "fr": "50-59",
       "it": "50-59",
@@ -239,7 +239,7 @@
       "en": "50-59"
     },
     "60-69": {
-      "color": "#6C757D",
+      "color": "#ef3b2c",
       "de": "60-69",
       "fr": "60-69",
       "it": "60-69",
@@ -247,7 +247,7 @@
       "en": "60-69"
     },
     "70-79": {
-      "color": "#495057",
+      "color": "#cb181d",
       "de": "70-79",
       "fr": "70-79",
       "it": "70-79",
@@ -255,7 +255,7 @@
       "en": "70-79"
     },
     "80-89": {
-      "color": "#343A40",
+      "color": "#a50f15",
       "de": "80-89",
       "fr": "80-89",
       "it": "80-89",
@@ -263,7 +263,7 @@
       "en": "80-89"
     },
     "90-99": {
-      "color": "#212529",
+      "color": "#67000d",
       "de": "90-99",
       "fr": "90-99",
       "it": "90-99",
@@ -273,7 +273,7 @@
   },
   "cantonName": {
     "AG": {
-      "color": "#666666",
+      "color": "#007aff",
       "de": "AG",
       "fr": "AG",
       "it": "AG",
@@ -281,7 +281,7 @@
       "en": "AG"
     },
     "AI": {
-      "color": "#4d4d4d",
+      "color": "#000000",
       "de": "AI",
       "fr": "AI",
       "it": "AI",
@@ -289,7 +289,7 @@
       "en": "AI"
     },
     "AR": {
-      "color": "#333333",
+      "color": "#000000",
       "de": "AR",
       "fr": "AR",
       "it": "AR",
@@ -297,7 +297,7 @@
       "en": "AR"
     },
     "BE": {
-      "color": "#fff0b3",
+      "color": "#ffd730",
       "de": "BE",
       "fr": "BE",
       "it": "BE",
@@ -305,7 +305,7 @@
       "en": "BE"
     },
     "BL": {
-      "color": "#ef7876",
+      "color": "#ff0000",
       "de": "BL",
       "fr": "BL",
       "it": "BL",
@@ -313,7 +313,7 @@
       "en": "BL"
     },
     "BS": {
-      "color": "#1a1a1a",
+      "color": "#000000",
       "de": "BS",
       "fr": "BS",
       "it": "BS",
@@ -329,7 +329,7 @@
       "en": "FR"
     },
     "GE": {
-      "color": "#ffe680",
+      "color": "#FFD511",
       "de": "GE",
       "fr": "GE",
       "it": "GE",
@@ -337,7 +337,7 @@
       "en": "GE"
     },
     "GL": {
-      "color": "#ec625f",
+      "color": "#e3000b",
       "de": "GL",
       "fr": "GL",
       "it": "GL",
@@ -345,7 +345,7 @@
       "en": "GL"
     },
     "GR": {
-      "color": "#bedff4",
+      "color": "#0069b4",
       "de": "GR",
       "fr": "GR",
       "it": "GR",
@@ -353,7 +353,7 @@
       "en": "GR"
     },
     "JU": {
-      "color": "#ea4b48",
+      "color": "#9e2c18",
       "de": "JU",
       "fr": "JU",
       "it": "JU",
@@ -361,7 +361,7 @@
       "en": "JU"
     },
     "LU": {
-      "color": "#93caec",
+      "color": "#009fe3",
       "de": "LU",
       "fr": "LU",
       "it": "LU",
@@ -369,7 +369,7 @@
       "en": "LU"
     },
     "NE": {
-      "color": "#61ea96",
+      "color": "#146056",
       "de": "NE",
       "fr": "NE",
       "it": "NE",
@@ -377,7 +377,7 @@
       "en": "NE"
     },
     "NW": {
-      "color": "#e8423f",
+      "color": "#d63a29",
       "de": "NW",
       "fr": "NW",
       "it": "NW",
@@ -385,7 +385,7 @@
       "en": "NW"
     },
     "OW": {
-      "color": "#e73532",
+      "color": "#d8232a",
       "de": "OW",
       "fr": "OW",
       "it": "OW",
@@ -393,7 +393,7 @@
       "en": "OW"
     },
     "SG": {
-      "color": "#34e578",
+      "color": "#008334",
       "de": "SG",
       "fr": "SG",
       "it": "SG",
@@ -401,7 +401,7 @@
       "en": "SG"
     },
     "SH": {
-      "color": "#ffdb4d",
+      "color": "#FFAA00",
       "de": "SH",
       "fr": "SH",
       "it": "SH",
@@ -409,7 +409,7 @@
       "en": "SH"
     },
     "SO": {
-      "color": "#e41e1b",
+      "color": "#CC0000",
       "de": "SO",
       "fr": "SO",
       "it": "SO",
@@ -417,7 +417,7 @@
       "en": "SO"
     },
     "SZ": {
-      "color": "#cd1b18",
+      "color": "#e2001a",
       "de": "SZ",
       "fr": "SZ",
       "it": "SZ",
@@ -425,7 +425,7 @@
       "en": "SZ"
     },
     "TG": {
-      "color": "#1acb5e",
+      "color": "#367d32",
       "de": "TG",
       "fr": "TG",
       "it": "TG",
@@ -433,7 +433,7 @@
       "en": "TG"
     },
     "TI": {
-      "color": "#67b4e4",
+      "color": "#FF0000",
       "de": "TI",
       "fr": "TI",
       "it": "TI",
@@ -441,7 +441,7 @@
       "en": "TI"
     },
     "UR": {
-      "color": "#ffd730",
+      "color": "#ffd401",
       "de": "UR",
       "fr": "UR",
       "it": "UR",
@@ -449,7 +449,7 @@
       "en": "UR"
     },
     "VD": {
-      "color": "#16a74e",
+      "color": "#3a862d",
       "de": "VD",
       "fr": "VD",
       "it": "VD",
@@ -457,7 +457,7 @@
       "en": "VD"
     },
     "VS": {
-      "color": "#b71815",
+      "color": "#c20e1a",
       "de": "VS",
       "fr": "VS",
       "it": "VS",
@@ -465,7 +465,7 @@
       "en": "VS"
     },
     "ZG": {
-      "color": "#3c9fdd",
+      "color": "#3f74b0",
       "de": "ZG",
       "fr": "ZG",
       "it": "ZG",
@@ -473,7 +473,7 @@
       "en": "ZG"
     },
     "ZH": {
-      "color": "#248bcc",
+      "color": "#0070b4",
       "de": "ZH",
       "fr": "ZH",
       "it": "ZH",
@@ -483,7 +483,7 @@
   },
   "language": {
     "de": {
-      "color": "#495057",
+      "color": "#d53e4f",
       "de": "Deutsch",
       "fr": "Allemand ",
       "it": "Tedesco",
@@ -491,7 +491,7 @@
       "en": "German"
     },
     "fr": {
-      "color": "#DEE2E6",
+      "color": "#3288bd",
       "de": "Französisch",
       "fr": "Français",
       "it": "Francese ",
@@ -499,7 +499,7 @@
       "en": "French"
     },
     "it": {
-      "color": "#ADB5BD",
+      "color": "#99d594",
       "de": "Italienisch",
       "fr": "Italien ",
       "it": "Italiano",
@@ -507,7 +507,7 @@
       "en": "Italian"
     },
     "rm": {
-      "color": "#12873f",
+      "color": "#fc8d59",
       "de": "Rätoromanisch",
       "fr": "Rhéto-roman",
       "it": "Romanico",
@@ -515,7 +515,7 @@
       "en": "Romansh"
     },
     "sk": {
-      "color": "#17b554",
+      "color": "#fee08b",
       "de": "Slowakisch",
       "fr": "Slovaque",
       "it": "Slovacco",
@@ -523,7 +523,7 @@
       "en": "Slovak"
     },
     "tr": {
-      "color": "#34e578",
+      "color": "#e6f598",
       "de": "Türkisch",
       "fr": "Turc",
       "it": "Turco",
@@ -533,7 +533,7 @@
   },
   "workLanguage": {
     "de": {
-      "color": "#495057",
+      "color": "#d53e4f",
       "de": "Deutsch",
       "fr": "Allemand ",
       "it": "Tedesco",
@@ -541,7 +541,7 @@
       "en": "German"
     },
     "fr": {
-      "color": "#DEE2E6",
+      "color": "#3288bd",
       "de": "Französisch",
       "fr": "Français",
       "it": "Francese ",
