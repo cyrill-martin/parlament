@@ -173,7 +173,7 @@
   },
   "gender": {
     "f": {
-      "color": "#fc8d59",
+      "color": "#7570b3",
       "de": "Frau",
       "fr": "Femme",
       "it": "Donna",
@@ -181,7 +181,7 @@
       "en": "Woman"
     },
     "nb": {
-      "color": "#ffffbf",
+      "color": "#d95f02",
       "de": "Nicht-binär",
       "fr": "Non binaire",
       "it": "Non binario",
@@ -189,7 +189,7 @@
       "en": "Non-binary"
     },
     "m": {
-      "color": "#91bfdb",
+      "color": "#1b9e77",
       "de": "Mann",
       "fr": "Homme",
       "it": "Uomo",
@@ -483,7 +483,7 @@
   },
   "language": {
     "de": {
-      "color": "#d53e4f",
+      "color": "#1b9e77",
       "de": "Deutsch",
       "fr": "Allemand ",
       "it": "Tedesco",
@@ -491,7 +491,7 @@
       "en": "German"
     },
     "fr": {
-      "color": "#3288bd",
+      "color": "#d95f02",
       "de": "Französisch",
       "fr": "Français",
       "it": "Francese ",
@@ -499,7 +499,7 @@
       "en": "French"
     },
     "it": {
-      "color": "#99d594",
+      "color": "#7570b3",
       "de": "Italienisch",
       "fr": "Italien ",
       "it": "Italiano",
@@ -507,7 +507,7 @@
       "en": "Italian"
     },
     "rm": {
-      "color": "#fc8d59",
+      "color": "#e7298a",
       "de": "Rätoromanisch",
       "fr": "Rhéto-roman",
       "it": "Romanico",
@@ -515,7 +515,7 @@
       "en": "Romansh"
     },
     "sk": {
-      "color": "#fee08b",
+      "color": "#66a61e",
       "de": "Slowakisch",
       "fr": "Slovaque",
       "it": "Slovacco",
@@ -523,7 +523,7 @@
       "en": "Slovak"
     },
     "tr": {
-      "color": "#e6f598",
+      "color": "#e6ab02",
       "de": "Türkisch",
       "fr": "Turc",
       "it": "Turco",
@@ -533,7 +533,7 @@
   },
   "workLanguage": {
     "de": {
-      "color": "#d53e4f",
+      "color": "#1b9e77",
       "de": "Deutsch",
       "fr": "Allemand ",
       "it": "Tedesco",
@@ -541,7 +541,7 @@
       "en": "German"
     },
     "fr": {
-      "color": "#3288bd",
+      "color": "#d95f02",
       "de": "Französisch",
       "fr": "Français",
       "it": "Francese ",
