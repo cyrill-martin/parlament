@@ -84,11 +84,18 @@
     "en": " in relation to an additional feature"
   },
   "status": {
-    "de": " Stand Oktober 2023",
-    "fr": " En octobre 2023",
-    "it": " A partire da ottobre 2023",
-    "rm": " Stadi October 2023",
-    "en": " As of October 2023"
+    "de": " Stand der Daten: ",
+    "fr": " Date des données : ",
+    "it": " Data dello stato: ",
+    "rm": " Stadi dals datas: ",
+    "en": " Data status: "
+  },
+  "date": {
+    "de": "25. Oktober 2023",
+    "fr": "25 octobre 2023",
+    "it": "25 ottobre 2023",
+    "rm": "25 d'october 2023",
+    "en": "October 25, 2023"
   },
   "intro5": {
     "de": "Jeder Punkt repräsentiert einen:e Parlamentarier:in. Ein Klick darauf führt zur Profilseite auf parlament.ch",
@@ -103,7 +110,14 @@
     "it": "È possibile riorganizzare il Consiglio, la disposizione dei posti e l'ordine utilizzando i menu a tendina",
     "rm": "Vus pudais reorganisar il Cussegl , la disposiziun dals sezs e l'urden cun agid dals menus derulants",
     "en": "You can re-arrange the Council, seating and order by means of the dropdowns"
-  }, 
+  },
+  "intro7": {
+    "de": "Dies ist keine amtliche Veröffentlichung",
+    "fr": "Ceci n'est pas une publication officielle",
+    "it": "Questa non è una pubblicazione ufficiale",
+    "rm": "Quai n'è betg ina publicaziun uffiziala",
+    "en": "This is not an official publication"
+  },
   "data1": {
     "de": "Die angezeigten Daten wurden über die ",
     "fr": "Les données affichées proviennent de ",
@@ -119,11 +133,18 @@
     "en": "open interface "
   },
   "data3": {
-    "de": "von ",
-    "fr": "de ",
-    "it": "di ",
-    "rm": "da ",
-    "en": "of "
+    "de": "der ",
+    "fr": "de: ",
+    "it": "di: ",
+    "rm": "da: ",
+    "en": "of: "
+  },
+  "data3a": {
+    "de": "«Parlamentsdienste der Bundesversammlung, Bern» ",
+    "fr": "«Services du Parlement de l'Assemblée fédérale, Berne» ",
+    "it": "«Servizi del Parlamento dell'Assemblea federale, Berna» ",
+    "rm": "«Parlamentsdienste der Bundesversammlung, Bern» ",
+    "en": "«Parlamentsdienste der Bundesversammlung, Bern» "
   },
   "data4": {
     "de": "bezogen",
