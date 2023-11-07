@@ -142,12 +142,15 @@ export default {
 
       // All this could be refactored to standalone functions based on the correct selections
       // Also, the updates of the arrangement could be done with the D3.js join() method
+      //////////////////////////////////////////////////////////////////////////////////
+
 
       // Remove any previously present svg cancas if necessary - the primitive approach
-      d3.select("svg").remove();
+      d3.select("svg").remove(); // If the visualiazation is not just updated
 
       // Get the selected council, arrangement, and order
-      ///////////////////////////////////////////////////
+      // This could be refactored by binding the values to data
+      /////////////////////////////////////////////////////////
       this.selectedCouncil = d3.select("#council").node().value;
       this.selectedArrangement = d3.select("#arrangement").node().value;
       this.selectedOrder = d3.select("#order").node().value;
@@ -309,7 +312,8 @@ export default {
           .attr(
             "xlink:href",
             (d) =>
-              `https://www.parlament.ch/${this.language}/biografie/${d.firstName.toLowerCase()}-${d.lastName.toLowerCase()}/${d.id}`
+              `https://www.parlament.ch/${this.language}/biografie/?CouncillorId=${d.id}`
+              // https://www.parlament.ch/de/biografie?CouncillorId=4053
           )
           .attr("target", "_blank")
           .append("circle")
@@ -703,7 +707,8 @@ export default {
         };
 
         // Listen to changes on the dropdowns
-        /////////////////////////////////////
+        // These could be refactored to vue watchers
+        ////////////////////////////////////////////
 
         // Listen to changes on the selected council
         d3.select("#council").on("change", (event) => {
