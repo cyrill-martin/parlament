@@ -8,7 +8,7 @@
     <div class="col-12">
       <div class="select-div">
         <select :name="type" :id="type">
-          <option v-for="(selection, index) in selectionKeys" :value="selection" :key="index">
+          <option v-for="(selection, index) in selectionKeys" :value="selection" :key="index" :selected="isSelected(selection)">
             <span v-if="type === 'arrangement' && selection === 'firstName'">{{ labels.none[lang] }}</span>
             <span v-else>{{ selections[selection][lang] }}</span>
           </option>
@@ -33,8 +33,17 @@ export default {
   computed: {
     selectionKeys() {
       return Object.keys(selections);
-    },
+    }
   },
+  methods: {
+    isSelected(selection) {
+      if (this.type === "arrangement") {
+        return selection === "faction" ? true : false
+      } else {
+        return selection === "party" ? true : false
+      }
+    }
+  }
 };
 </script>
 
