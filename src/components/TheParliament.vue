@@ -39,7 +39,7 @@ export default {
   watch: {
     lang(newLanguage) {
       this.language = newLanguage;
-      this.updateUrl()
+      this.updateUrl();
       this.drawParliament();
     },
   },
@@ -49,12 +49,11 @@ export default {
         {},
         null,
         `${this.$route.path}?council=${this.selectedCouncil}&arr=${this.selectedArrangement}&ord=${this.selectedOrder}&lang=${this.language}`
-      )
+      );
     },
     async checkUrl() {
-
       try {
-        await this.$router.isReady()
+        await this.$router.isReady();
         // onSuccess
 
         const params = this.$route.query;
@@ -77,7 +76,6 @@ export default {
           this.$emit("changeCouncil", params.council);
           this.setDropdownSelection("council", params.council);
         }
-
       } catch (err) {
         // onError
       }
@@ -125,12 +123,21 @@ export default {
         // Add total number of concerns
         councillor.nrOfConcerns = councillor.concerns.length;
 
+        // Checka and add language
+        if (!councillor.language) {
+          councillor.language = "unknown";
+        }
+
+        // Checka and add party
+        if (!councillor.party) {
+          councillor.party = "unknown";
+        }
       });
     },
     async drawParliament() {
       // This is currently a big function doing it all
 
-      // These are the things happening: 
+      // These are the things happening:
       // 1. It calculates extra metadata for the datasets (each time it changes)
       // 2. It creates the initial svg canvas
       // 3. The drawArrangement() function draws the actual seats arrangement into the canvas
@@ -143,7 +150,6 @@ export default {
       // All this could be refactored to standalone functions based on the correct selections
       // Also, the updates of the arrangement could be done with the D3.js join() method
       //////////////////////////////////////////////////////////////////////////////////
-
 
       // Remove any previously present svg cancas if necessary - the primitive approach
       d3.select("svg").remove(); // If the visualiazation is not just updated
@@ -179,12 +185,15 @@ export default {
       };
 
       // Create and set inner container width
-      dimensions.ctrWidth = dimensions.width - (dimensions.margins.left + dimensions.margins.right);
+      dimensions.ctrWidth =
+        dimensions.width - (dimensions.margins.left + dimensions.margins.right);
       // Create and set inner container height
-      dimensions.ctrHeight = dimensions.height - (dimensions.margins.top + dimensions.margins.bottom * 1.5);
+      dimensions.ctrHeight =
+        dimensions.height -
+        (dimensions.margins.top + dimensions.margins.bottom * 1.5);
 
       // Set the max number of seats per seating row (this coorespondes to the number of seats per row without an arrangement)
-      const maxSeatsPerRow = this.selectedCouncil === "N" ? 20 : 15
+      const maxSeatsPerRow = this.selectedCouncil === "N" ? 20 : 10;
 
       // Create SVG element
       const svg = d3
@@ -230,19 +239,26 @@ export default {
         const yScale = d3
           .scaleBand()
           .domain(yDomain)
-          .range([0, this.selectedCouncil === "N" ? dimensions.ctrHeight : dimensions.ctrHeight / 2])
+          .range([
+            0,
+            this.selectedCouncil === "N"
+              ? dimensions.ctrHeight
+              : dimensions.ctrHeight / 2,
+          ])
           .paddingInner(0.1);
 
         // Create x-axis
         const xAxis = d3.axisBottom(xScaleOuter).tickSize(0).tickSizeOuter(0);
-
 
         // Draw x-axis
         const xAxisLine = ctr
           .append("g")
           .attr("id", "x-axis")
           .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
-          .style("font-size", this.selectedArrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
+          .style(
+            "font-size",
+            this.selectedArrangement === "nrOfConcerns" ? "0.6em" : "0.9em"
+          )
           .call(xAxis);
 
         // Rotate axis tick labels
@@ -265,7 +281,9 @@ export default {
           .append("g")
           .attr(
             "transform",
-            `translate(${dimensions.ctrWidth / 2}, ${dimensions.ctrHeight + dimensions.margins.bottom + 12})`
+            `translate(${dimensions.ctrWidth / 2}, ${
+              dimensions.ctrHeight + dimensions.margins.bottom + 12
+            })`
           )
           .attr("id", "x-axis-label")
           .append("text")
@@ -296,13 +314,17 @@ export default {
               this.selectedArrangement !== "firstName"
             ) {
               // It's numerical
-              return `translate(${+xScaleOuter(d[this.selectedArrangement])}, 0)`;
+              return `translate(${+xScaleOuter(
+                d[this.selectedArrangement]
+              )}, 0)`;
             } else {
               if (this.selectedArrangement === "firstName") {
                 return `translate(${+xScaleOuter("")}, 0)`;
               } else {
                 return `translate(${+xScaleOuter(
-                  this.arrangements[this.selectedArrangement][d[this.selectedArrangement]][this.language]
+                  this.arrangements[this.selectedArrangement][
+                    d[this.selectedArrangement]
+                  ][this.language]
                 )}, 0)`;
               }
             }
@@ -313,7 +335,7 @@ export default {
             "xlink:href",
             (d) =>
               `https://www.parlament.ch/${this.language}/biografie/?CouncillorId=${d.id}`
-              // https://www.parlament.ch/de/biografie?CouncillorId=4053
+            // https://www.parlament.ch/de/biografie?CouncillorId=4053
           )
           .attr("target", "_blank")
           .append("circle")
@@ -335,16 +357,21 @@ export default {
             return r;
           })
           .attr("fill", (d) => {
-            if (!this.arrangements[this.selectedOrder] && this.selectedOrder !== "firstName" && this.selectedOrder !== "age") {
+            if (
+              !this.arrangements[this.selectedOrder] &&
+              this.selectedOrder !== "firstName" &&
+              this.selectedOrder !== "age"
+            ) {
               return colorScale(d[this.selectedOrder]);
             } else {
               if (this.selectedOrder === "firstName") {
                 return this.arrangements.party[d.party].color;
               } else if (this.selectedOrder === "age") {
                 return this.arrangements.ageGroup[d.ageGroup].color;
-              }
-              else {
-                return this.arrangements[this.selectedOrder][d[this.selectedOrder]].color;
+              } else {
+                return this.arrangements[this.selectedOrder][
+                  d[this.selectedOrder]
+                ].color;
               }
             }
           })
@@ -361,7 +388,6 @@ export default {
           .attr("opacity", 1);
 
         const addMouseover = (data) => {
-
           tooltip.style("display", "block");
 
           onmousemove = (e) => {
@@ -370,8 +396,12 @@ export default {
               .style("top", e.clientY - 50 + "px");
           };
 
-          tooltip.select(".headshot img")
-            .attr("src", `https://www.parlament.ch/sitecollectionimages/profil/portrait-260/${data.number}.jpg`);
+          tooltip
+            .select(".headshot img")
+            .attr(
+              "src",
+              `https://www.parlament.ch/sitecollectionimages/profil/portrait-260/${data.number}.jpg`
+            );
 
           tooltip.select(".name").text(`${data.firstName} ${data.lastName}`);
 
@@ -383,10 +413,11 @@ export default {
               return `${data[this.selectedArrangement]}`;
             } else {
               if (this.selectedArrangement !== "firstName") {
-                return `${this.arrangements[this.selectedArrangement][data[this.selectedArrangement]][
-                  this.language
-                ]
-                  }`;
+                return `${
+                  this.arrangements[this.selectedArrangement][
+                    data[this.selectedArrangement]
+                  ][this.language]
+                }`;
               } else {
                 return `${this.arrangements.party[data.party][this.language]}`;
               }
@@ -395,15 +426,22 @@ export default {
 
           if (this.selectedArrangement !== this.selectedOrder) {
             tooltip.select(".order").text(() => {
-              if (!this.arrangements[this.selectedOrder] && this.selectedOrder !== "firstName") {
+              if (
+                !this.arrangements[this.selectedOrder] &&
+                this.selectedOrder !== "firstName"
+              ) {
                 return `${data[this.selectedOrder]}`;
               } else {
                 if (this.selectedOrder !== "firstName") {
-                  return `${this.arrangements[this.selectedOrder][data[this.selectedOrder]][this.language]
-                    }`;
+                  return `${
+                    this.arrangements[this.selectedOrder][
+                      data[this.selectedOrder]
+                    ][this.language]
+                  }`;
                 } else {
-                  return `${this.arrangements.party[data.party][this.language]
-                    }`;
+                  return `${
+                    this.arrangements.party[data.party][this.language]
+                  }`;
                 }
               }
             });
@@ -417,7 +455,8 @@ export default {
         const createLegend = (thisColorScale) => {
           d3.selectAll(".legend").remove();
 
-          let thisOrder = this.selectedOrder !== "firstName" ? this.selectedOrder : "party";
+          let thisOrder =
+            this.selectedOrder !== "firstName" ? this.selectedOrder : "party";
 
           let legendKeys;
 
@@ -446,10 +485,27 @@ export default {
             );
           }
 
+          console.log("legend", legendKeys);
+
+          if (
+            this.selectedCouncil === "N" &&
+            this.selectedOrder === "faction"
+          ) {
+            legendKeys = legendKeys.filter((item) => item !== "FRAKTIONSLOS");
+          }
+
+          if (this.selectedCouncil === "N" && this.selectedOrder === "party") {
+            legendKeys = legendKeys.filter((item) => item !== "unknown");
+          }
+
           let fct = 1;
 
-          if (thisOrder === "nrOfConcerns" || thisOrder === "cantonName") {
+          if (thisOrder === "cantonName") {
             fct = 0.72;
+          }
+
+          if (thisOrder === "nrOfConcerns") {
+            fct = 0.67;
           }
 
           const spacingVertical = 20 * fct;
@@ -463,34 +519,39 @@ export default {
             .style("font-size", `${circleRadius * 2}`)
             .attr(
               "transform",
-              `translate(${dimensions.ctrWidth + 22}, ${dimensions.margins.top
+              `translate(${dimensions.ctrWidth + 22}, ${
+                dimensions.margins.top
               })`
             );
 
           // Add legend title
-          const shortenTitle = ["nrOfCouncilMemberships", "nrOfCommittees", "nrOfConcerns"];
+          const shortenTitle = [
+            "nrOfCouncilMemberships",
+            "nrOfCommittees",
+            "nrOfConcerns",
+          ];
 
           const toRemove = {
-            "nrOfCouncilMemberships": {
-              "de": "Anzahl ",
-              "fr": "Nombre de ",
-              "it": "Numero dei ",
-              "rm": "Dumber ",
-              "en": "Number of "
+            nrOfCouncilMemberships: {
+              de: "Anzahl ",
+              fr: "Nombre de ",
+              it: "Numero dei ",
+              rm: "Dumber ",
+              en: "Number of ",
             },
-            "nrOfCommittees": {
-              "de": "Anzahl ",
-              "fr": "Nombre de ",
-              "it": "Numero dei ",
-              "rm": " (dumber)",
-              "en": "Number of "
+            nrOfCommittees: {
+              de: "Anzahl ",
+              fr: "Nombre de ",
+              it: "Numero dei ",
+              rm: " (dumber)",
+              en: "Number of ",
             },
-            "nrOfConcerns": {
-              "de": "Anzahl ",
-              "fr": "Nombre des ",
-              "it": "Numero dei ",
-              "rm": " (dumber)",
-              "en": "Number of "
+            nrOfConcerns: {
+              de: "Anzahl ",
+              fr: "Nombre des ",
+              it: "Numero dei ",
+              rm: " (dumber)",
+              en: "Number of ",
             },
           };
 
@@ -513,7 +574,7 @@ export default {
               } else {
                 return selections.party[this.language];
               }
-            })
+            });
 
           // Add <g> for each legend item
           const legendItems = legendGroup
@@ -524,7 +585,8 @@ export default {
             .attr(
               "transform",
               (_, i) =>
-                `translate(${circleRadius}, ${spacingVertical + i * spacingVertical
+                `translate(${circleRadius}, ${
+                  spacingVertical + i * spacingVertical
                 })`
             );
 
@@ -562,7 +624,7 @@ export default {
             });
         };
 
-        createLegend(colorScale)
+        createLegend(colorScale);
 
         // Update general seat arrangement
         ///////////////////////////////////////////////
@@ -584,7 +646,10 @@ export default {
 
           const x = d3.select("#x-axis");
           x.transition()
-            .style("font-size", this.selectedArrangement === "nrOfConcerns" ? "0.6em" : "0.9em")
+            .style(
+              "font-size",
+              this.selectedArrangement === "nrOfConcerns" ? "0.6em" : "0.9em"
+            )
             .duration(1000)
             .call(d3.axisBottom(newOuterXScale).tickSize(0).tickSizeOuter(0));
 
@@ -632,15 +697,17 @@ export default {
                 this.selectedArrangement !== "firstName"
               ) {
                 // It's numerical
-                return `translate(${+newOuterXScale(d[this.selectedArrangement])}, 0)`;
+                return `translate(${+newOuterXScale(
+                  d[this.selectedArrangement]
+                )}, 0)`;
               } else {
                 if (this.selectedArrangement === "firstName") {
                   return `translate(${+newOuterXScale("")}, 0)`;
                 } else {
                   return `translate(${+newOuterXScale(
-                    this.arrangements[this.selectedArrangement][d[this.selectedArrangement]][
-                    this.language
-                    ]
+                    this.arrangements[this.selectedArrangement][
+                      d[this.selectedArrangement]
+                    ][this.language]
                   )}, 0)`;
                 }
               }
@@ -685,12 +752,14 @@ export default {
                 } else if (this.selectedOrder === "age") {
                   return this.arrangements.ageGroup[d.ageGroup].color;
                 } else {
-                  return this.arrangements[this.selectedOrder][d[this.selectedOrder]].color;
+                  return this.arrangements[this.selectedOrder][
+                    d[this.selectedOrder]
+                  ].color;
                 }
               }
             });
 
-          createLegend(newColorScale)
+          createLegend(newColorScale);
         };
 
         const callUpdateFunction = () => {
@@ -718,12 +787,19 @@ export default {
           this.$emit("changeCouncil", this.selectedCouncil);
 
           const myThis = this;
-          d3.selectAll(".seat")
+          const seats = d3.selectAll(".seat");
+          const totalSeats = seats.size();
+          let completedTransitions = 0;
+
+          seats
             .transition()
             .duration(500)
             .style("opacity", 0)
             .on("end", function () {
-              myThis.drawParliament();
+              completedTransitions++;
+              if (completedTransitions === totalSeats) {
+                myThis.drawParliament();
+              }
             });
         });
 
@@ -744,14 +820,17 @@ export default {
         });
       };
 
-      // Function to get the get outer x-scale items and domain
+      // Function to get the outer x-scale items and domain
       const getOuterXDomain = () => {
         // Outer x-Scale - depends on the arrangement
         let xOuterItems, xOuterDomain;
 
         // Set the outer x-scale domain
 
-        if (!this.arrangements[this.selectedArrangement] && this.selectedArrangement !== "firstName") {
+        if (
+          !this.arrangements[this.selectedArrangement] &&
+          this.selectedArrangement !== "firstName"
+        ) {
           // It's numerical
           // Get the max of all councillors
           const max = d3.max(
@@ -777,12 +856,38 @@ export default {
             xOuterDomain = [""];
           } else {
             // Else, the councillors are grouped by the selected arrangement
-            xOuterItems = Object.keys(this.arrangements[this.selectedArrangement]);
+            xOuterItems = Object.keys(
+              this.arrangements[this.selectedArrangement]
+            );
+
             xOuterDomain = xOuterItems.map(
-              (item) => this.arrangements[this.selectedArrangement][item][this.language]
+              (item) =>
+                this.arrangements[this.selectedArrangement][item][this.language]
             );
           }
         }
+
+        if (
+          this.selectedCouncil === "N" &&
+          this.selectedArrangement === "faction"
+        ) {
+          xOuterDomain = xOuterDomain.filter(
+            (item) =>
+              item !==
+              this.arrangements["faction"]["FRAKTIONSLOS"][this.language]
+          );
+        }
+
+        if (
+          this.selectedCouncil === "N" &&
+          this.selectedArrangement === "party"
+        ) {
+          xOuterDomain = xOuterDomain.filter(
+            (item) =>
+              item !== this.arrangements["party"]["unknown"][this.language]
+          );
+        }
+
         return xOuterDomain;
       };
 
@@ -817,7 +922,10 @@ export default {
           });
         } else {
           // Group the this.dataset by the selected arrangement
-          const groupedDataset = d3.groups(this.dataset, (d) => d[this.selectedArrangement]);
+          const groupedDataset = d3.groups(
+            this.dataset,
+            (d) => d[this.selectedArrangement]
+          );
           // E.g. this.dataset = [
           //   [ "VS", [...] ],
           //   [ "S", [...] ],
@@ -854,7 +962,11 @@ export default {
       // Function to get a possible linear color scale
       const getColorScale = () => {
         let colorScale;
-        if (!this.arrangements[this.selectedOrder] && this.selectedOrder !== "firstName" && this.selectedOrder !== "age") {
+        if (
+          !this.arrangements[this.selectedOrder] &&
+          this.selectedOrder !== "firstName" &&
+          this.selectedOrder !== "age"
+        ) {
           // It's numerical
 
           // Get the max of all councillors
@@ -889,12 +1001,7 @@ export default {
 
       // Draw the parliament
       ///////////////////////////////////////////
-      drawArrangement(
-        outerXDomain,
-        innerXDomain,
-        yDomain,
-        colorScale
-      );
+      drawArrangement(outerXDomain, innerXDomain, yDomain, colorScale);
     },
   },
 };

@@ -112,13 +112,21 @@
       "rm": "PPS",
       "en": "SPP"
     },
-    "-": {
+    "MCG": {
+      "color": "#FE0E10",
+      "de": "MCG",
+      "fr": "MCG",
+      "it": "MCG",
+      "rm": "MCG",
+      "en": "MCG"
+    },
+    "unknown": {
       "color": "#969696",
-      "de": "parteilos",
-      "fr": "sans parti",
-      "it": "senza Partito",
-      "rm": "parteilos",
-      "en": "non-partisan"
+      "de": "unbekannt",
+      "fr": "inconnu",
+      "it": "sconosciuto",
+      "rm": "nunenconuschent",
+      "en": "unknown"
     }
   },
   "faction": {
@@ -169,6 +177,14 @@
       "it": "UDC",
       "rm": "PPS",
       "en": "SPP"
+    },
+    "FRAKTIONSLOS": {
+      "color": "#969696",
+      "de": "fraktionslos",
+      "fr": "non inscrit",
+      "it": "non inscritto",
+      "rm": "sensa fracziun",
+      "en": "non inscrit"
     }
   },
   "gender": {
@@ -182,11 +198,11 @@
     },
     "nb": {
       "color": "#d95f02",
-      "de": "Nicht-binär",
-      "fr": "Non binaire",
-      "it": "Non binario",
-      "rm": "Non binario",
-      "en": "Non-binary"
+      "de": "nicht-binär",
+      "fr": "non binaire",
+      "it": "non binario",
+      "rm": "non binario",
+      "en": "non-binary"
     },
     "m": {
       "color": "#1b9e77",
@@ -514,14 +530,6 @@
       "rm": "Rumantsch",
       "en": "Romansh"
     },
-    "sk": {
-      "color": "#66a61e",
-      "de": "Slowakisch",
-      "fr": "Slovaque",
-      "it": "Slovacco",
-      "rm": "Slovac",
-      "en": "Slovak"
-    },
     "tr": {
       "color": "#e6ab02",
       "de": "Türkisch",
@@ -529,6 +537,14 @@
       "it": "Turco",
       "rm": "Tirc",
       "en": "Turkish"
+    },
+    "unknown": {
+      "color": "#969696",
+      "de": "unbekannt",
+      "fr": "inconnu",
+      "it": "sconosciuto",
+      "rm": "nunenconuschent",
+      "en": "unknown"
     }
   },
   "workLanguage": {
