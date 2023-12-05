@@ -64,7 +64,7 @@
         </div>
         <div class="col-12">
           <p>
-            {{ labels.intro5[language] }}. {{ labels.intro6[language] }}. {{ labels.intro7[language] }}.
+            {{ labels.intro5[language] }}. {{ labels.intro6[language] }}.
           </p>
         </div>
       </section>
@@ -72,6 +72,7 @@
         <div class="col-12">
           <h3>* {{ labels.data[language] }}:</h3>
           <p>
+            {{ labels.data0[language] }}. 
             {{ labels.data1[language] }}<a href="http://ws-old.parlament.ch" target="_blank">{{ labels.data2[language]
             }}</a>
             {{ labels.data3[language] }}<a href="https://www.parlament.ch" target="_blank">{{ labels.data3a[language] }}</a>
