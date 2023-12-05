@@ -494,7 +494,7 @@ export default {
             legendKeys = legendKeys.filter((item) => item !== "FRAKTIONSLOS");
           }
 
-          if (this.selectedCouncil === "N" && this.selectedOrder === "party") {
+          if (this.selectedCouncil === "N" && (this.selectedOrder === "party" || this.selectedOrder === "firstName")) {
             legendKeys = legendKeys.filter((item) => item !== "unknown");
           }
 
