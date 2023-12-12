@@ -1,7 +1,7 @@
 [
     {
         "id": 4259,
-        "updated": "2023-12-04T03:08:30Z",
+        "updated": "2023-12-08T19:02:37Z",
         "canton": "Tessin",
         "cantonName": "TI",
         "council": "N",
@@ -24,7 +24,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:08:30Z",
+                "updated": "2023-12-08T19:02:37Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47,7 +47,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:08:30Z",
+                "updated": "2023-12-08T19:02:37Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 2,
@@ -162,7 +162,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:08:30Z",
+                "updated": "2023-12-08T19:02:37Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "TI",
@@ -178,7 +178,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:08:30Z",
+                "updated": "2023-12-08T19:02:37Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "TI",
                 "cantonName": "Tessin",
@@ -208,7 +208,7 @@
             }
         ],
         "language": "it",
-        "mandate": "Membro della direzione del PLR Svizzero dal 2020; Sindaco del comune di Comano: dal 2016; Membro del comitato direttore; Membro del Gran Consiglio ticinese: dal 2015 al 2019",
+        "mandate": "PLR Svizzero; Sindaco del comune di Comano; Membro del Gran Consiglio ticinese",
         "maritalStatus": "ledig",
         "militaryGrade": "Gefreiter",
         "officialDenomination": "Farinelli",
@@ -279,7 +279,7 @@
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -302,7 +302,7 @@
                 "leavingDate": "2015-12-09T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -325,7 +325,7 @@
                 "leavingDate": "2017-11-26T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -348,7 +348,7 @@
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -371,7 +371,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -393,7 +393,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -1673,7 +1673,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -1695,7 +1695,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -2609,7 +2609,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": "andreas.meier@weingut-sternen.ch",
+            "emailWork": "andreas.meier@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -2740,7 +2740,7 @@
                 "leavingDate": "2022-06-12T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -4346,7 +4346,7 @@
     },
     {
         "id": 4287,
-        "updated": "2023-12-04T03:09:29Z",
+        "updated": "2023-12-10T03:00:15Z",
         "canton": "Zürich",
         "cantonName": "ZH",
         "council": "N",
@@ -4369,7 +4369,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:09:29Z",
+                "updated": "2023-12-10T03:00:16Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -4392,7 +4392,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:09:29Z",
+                "updated": "2023-12-10T03:00:16Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 9,
@@ -4528,7 +4528,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:09:29Z",
+                "updated": "2023-12-10T03:00:15Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "ZH",
@@ -4544,7 +4544,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:09:29Z",
+                "updated": "2023-12-10T03:00:16Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "ZH",
                 "cantonName": "Zürich",
@@ -5181,7 +5181,7 @@
     },
     {
         "id": 4059,
-        "updated": "2023-12-04T15:10:42Z",
+        "updated": "2023-12-06T08:36:33Z",
         "canton": "Aargau",
         "cantonName": "AG",
         "council": "N",
@@ -5204,7 +5204,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2011-12-15T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "committee": {
@@ -5227,7 +5227,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2011-12-15T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "committee": {
@@ -5250,7 +5250,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -5273,7 +5273,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -5296,7 +5296,7 @@
             },
             {
                 "id": 6,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -5319,7 +5319,7 @@
             },
             {
                 "id": 7,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -5342,7 +5342,7 @@
             },
             {
                 "id": 8,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2021-11-28T00:00:00Z",
                 "committee": {
@@ -5365,7 +5365,7 @@
             },
             {
                 "id": 9,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2021-11-29T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -5388,7 +5388,7 @@
             },
             {
                 "id": 10,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 12,
@@ -5410,7 +5410,7 @@
             },
             {
                 "id": 11,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 29,
@@ -5432,7 +5432,7 @@
             },
             {
                 "id": 12,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 7,
@@ -5454,7 +5454,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2011-12-15T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "committee": {
@@ -5477,7 +5477,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2015-12-09T00:00:00Z",
                 "committee": {
@@ -5495,6 +5495,28 @@
                         "type": "B"
                     },
                     "name": "Gerichtskommission"
+                },
+                "function": null
+            },
+            {
+                "id": 13,
+                "updated": "2023-12-06T08:36:33Z",
+                "entryDate": "2023-12-04T00:00:00Z",
+                "committee": {
+                    "id": 1135,
+                    "updated": "2023-08-10T20:00:18Z",
+                    "abbreviation": "PUK",
+                    "code": "KOM_1135_",
+                    "committeeNumber": 1135,
+                    "council": {
+                        "id": 3,
+                        "updated": "2010-12-26T13:07:49Z",
+                        "abbreviation": "V",
+                        "code": "RAT_3_",
+                        "name": "Vereinigte Bundesversammlung",
+                        "type": "B"
+                    },
+                    "name": "Parlamentarische Untersuchungskommission (PUK)-V"
                 },
                 "function": null
             }
@@ -5579,7 +5601,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2011-12-05T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "canton": "AG",
@@ -5595,7 +5617,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "canton": "AG",
@@ -5611,7 +5633,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "AG",
@@ -5627,7 +5649,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T15:10:42Z",
+                "updated": "2023-12-06T08:36:33Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "AG",
                 "cantonName": "Aargau",
@@ -6968,7 +6990,7 @@
     },
     {
         "id": 10804,
-        "updated": "2023-12-04T06:14:28Z",
+        "updated": "2023-12-12T09:36:32Z",
         "canton": "Zürich",
         "cantonName": "ZH",
         "council": "N",
@@ -6996,6 +7018,13 @@
                 "agency": "F",
                 "function": "M",
                 "name": "FMH",
+                "organizationType": "-",
+                "type": "Ve."
+            },
+            {
+                "agency": "F",
+                "function": "M",
+                "name": "IG Biomedizin",
                 "organizationType": "-",
                 "type": "Ve."
             },
@@ -7043,7 +7072,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:14:28Z",
+                "updated": "2023-12-12T09:36:32Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "ZH",
                 "cantonName": "Zürich",
@@ -7090,7 +7119,7 @@
     },
     {
         "id": 10825,
-        "updated": "2023-12-05T16:36:22Z",
+        "updated": "2023-12-08T16:27:20Z",
         "canton": "Waadt",
         "cantonName": "VD",
         "council": "N",
@@ -7109,7 +7138,7 @@
         "concerns": [],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "brenda.tuosto@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -7122,7 +7151,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T16:36:22Z",
+                "updated": "2023-12-08T16:27:20Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "VD",
                 "cantonName": "Waadt",
@@ -7156,6 +7185,12 @@
         "militaryGrade": "-",
         "officialDenomination": "Tuosto",
         "partyId": 12,
+        "postalAddress": {
+            "canton": null,
+            "city": null,
+            "addressLine": null,
+            "zip": "0"
+        },
         "professions": [
             "Verwaltungsratspräsident/in"
         ],
@@ -8295,7 +8330,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -8363,7 +8398,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -9017,7 +9052,7 @@
                 "leavingDate": "2011-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -11361,14 +11396,14 @@
     },
     {
         "id": 4267,
-        "updated": "2023-12-04T03:09:02Z",
+        "updated": "2023-12-12T17:03:10Z",
         "canton": "Zürich",
         "cantonName": "ZH",
         "council": "N",
         "faction": "GL",
         "factionName": "Grünliberale Fraktion",
         "firstName": "Corina",
-        "function": "Mitglied",
+        "function": "Präsident/in",
         "lastName": "Gredig",
         "number": 3159,
         "party": "glp",
@@ -11384,7 +11419,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:09:02Z",
+                "updated": "2023-12-12T17:03:10Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -11407,12 +11442,12 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:09:02Z",
+                "updated": "2023-12-12T17:03:10Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -11430,7 +11465,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T03:09:02Z",
+                "updated": "2023-12-12T17:03:10Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 11,
@@ -11452,11 +11487,11 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T03:09:02Z",
+                "updated": "2023-12-12T17:03:10Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -11471,6 +11506,28 @@
                     "name": "Geschäftsprüfungskommission NR"
                 },
                 "function": null
+            },
+            {
+                "id": 4,
+                "updated": "2023-12-12T17:03:10Z",
+                "entryDate": "2023-12-07T00:00:00Z",
+                "committee": {
+                    "id": 1,
+                    "updated": "2020-07-15T11:59:55Z",
+                    "abbreviation": "Bü",
+                    "code": "KOM_1_",
+                    "committeeNumber": 1,
+                    "council": {
+                        "id": 1,
+                        "updated": "2010-12-26T13:07:49Z",
+                        "abbreviation": "NR",
+                        "code": "RAT_1_",
+                        "name": "Nationalrat",
+                        "type": "N"
+                    },
+                    "name": "Büro NR"
+                },
+                "function": "Fraktionspräsident/in"
             }
         ],
         "concerns": [
@@ -11539,7 +11596,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:09:02Z",
+                "updated": "2023-12-12T17:03:10Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "ZH",
@@ -11555,7 +11612,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:09:02Z",
+                "updated": "2023-12-12T17:03:10Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "ZH",
                 "cantonName": "Zürich",
@@ -11604,7 +11661,7 @@
     },
     {
         "id": 10803,
-        "updated": "2023-12-04T06:14:02Z",
+        "updated": "2023-12-12T17:04:42Z",
         "canton": "Genf",
         "cantonName": "GE",
         "council": "N",
@@ -11659,7 +11716,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "cyril.aellen@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -11672,7 +11729,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:14:02Z",
+                "updated": "2023-12-12T17:04:42Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "GE",
                 "cantonName": "Genf",
@@ -11703,14 +11760,15 @@
         ],
         "language": "fr",
         "mandate": "PLR Genève",
-        "militaryGrade": "Soldat",
+        "militaryGrade": "-",
         "officialDenomination": "Aellen",
         "partyId": 15,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Genève",
+            "addressLine": "Rue du Rhône 118",
+            "company": "AAA Avocats SA",
+            "zip": "1204"
         },
         "professions": [
             "Advokat/in"
@@ -11818,7 +11876,7 @@
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -11864,7 +11922,7 @@
                 "leavingDate": "2019-12-11T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -13621,7 +13679,7 @@
     },
     {
         "id": 4329,
-        "updated": "2023-12-04T08:59:36Z",
+        "updated": "2023-12-12T03:00:28Z",
         "canton": "Waadt",
         "cantonName": "VD",
         "council": "N",
@@ -13643,7 +13701,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T08:59:36Z",
+                "updated": "2023-12-12T03:00:28Z",
                 "entryDate": "2022-06-13T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -13731,7 +13789,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T08:59:36Z",
+                "updated": "2023-12-12T03:00:28Z",
                 "entryDate": "2022-06-13T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "VD",
@@ -13747,7 +13805,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T08:59:36Z",
+                "updated": "2023-12-12T03:00:28Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "VD",
                 "cantonName": "Waadt",
@@ -13797,7 +13855,7 @@
     },
     {
         "id": 11404,
-        "updated": "2023-12-04T17:14:36Z",
+        "updated": "2023-12-12T03:00:30Z",
         "canton": "Genf",
         "cantonName": "GE",
         "council": "N",
@@ -13815,7 +13873,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T17:14:36Z",
+                "updated": "2023-12-12T03:00:30Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 1,
@@ -13867,7 +13925,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T17:14:36Z",
+                "updated": "2023-12-12T03:00:30Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "GE",
                 "cantonName": "Genf",
@@ -14120,7 +14178,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -14142,7 +14200,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -14713,7 +14771,7 @@
     },
     {
         "id": 4179,
-        "updated": "2023-11-15T15:36:07Z",
+        "updated": "2023-12-07T11:13:43Z",
         "canton": "Appenzell A.-Rh.",
         "cantonName": "AR",
         "council": "N",
@@ -14736,7 +14794,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -14759,7 +14817,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -14782,7 +14840,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 8,
@@ -14804,7 +14862,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2019-01-01T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -14827,7 +14885,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -14850,7 +14908,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 712,
@@ -14916,7 +14974,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "canton": "AR",
@@ -14932,7 +14990,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "AR",
@@ -14948,7 +15006,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-11-15T15:36:07Z",
+                "updated": "2023-12-07T11:13:43Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "AR",
                 "cantonName": "Appenzell A.-Rh.",
@@ -14963,6 +15021,12 @@
             }
         ],
         "displayLanguage": "de",
+        "domicile": {
+            "canton": null,
+            "city": "Herisau",
+            "addressLine": "Dreilindenweg 9",
+            "zip": "9100"
+        },
         "factionId": 4,
         "gender": "m",
         "homePlaces": [
@@ -15288,7 +15352,7 @@
                 "leavingDate": "2018-12-31T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -15618,7 +15682,7 @@
     },
     {
         "id": 10816,
-        "updated": "2023-12-04T06:12:34Z",
+        "updated": "2023-12-06T09:15:35Z",
         "canton": "Schwyz",
         "cantonName": "SZ",
         "council": "N",
@@ -15694,7 +15758,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": "politik@dominik-blunschy.ch",
+            "emailWork": "dominik.blunschy@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -15707,7 +15771,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:12:34Z",
+                "updated": "2023-12-06T09:15:35Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "SZ",
                 "cantonName": "Schwyz",
@@ -15748,7 +15812,7 @@
             "zip": "0"
         },
         "professions": [
-            "Software-Entwickler/in"
+            "Leitende/r Ingenieur/in"
         ],
         "salutationLetter": "Herr Nationalrat",
         "salutationTitle": null,
@@ -17022,7 +17086,7 @@
                 "entryDate": "2021-11-29T00:00:00Z",
                 "committee": {
                     "id": 27,
-                    "updated": "2020-07-15T11:59:55Z",
+                    "updated": "2023-12-07T12:45:42Z",
                     "abbreviation": "VD",
                     "code": "KOM_27_",
                     "committeeNumber": 27,
@@ -17388,7 +17452,7 @@
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -17434,7 +17498,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -17501,7 +17565,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -17843,7 +17907,7 @@
     },
     {
         "id": 10838,
-        "updated": "2023-12-04T06:15:06Z",
+        "updated": "2023-12-12T17:15:25Z",
         "canton": "Zürich",
         "cantonName": "ZH",
         "council": "N",
@@ -17866,6 +17930,13 @@
                 "name": "Verein Zusammenschluss Oberlandstrasse",
                 "organizationType": "V",
                 "type": "Ve."
+            },
+            {
+                "agency": "F",
+                "function": "M",
+                "name": "Parlamentarische Gruppe Schweiz - Israel",
+                "organizationType": "-",
+                "type": "-"
             }
         ],
         "contact": {
@@ -17883,7 +17954,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:15:06Z",
+                "updated": "2023-12-12T17:15:25Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "ZH",
                 "cantonName": "Zürich",
@@ -18257,7 +18328,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -18301,7 +18372,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -18818,7 +18889,7 @@
     },
     {
         "id": 4299,
-        "updated": "2023-12-04T03:09:55Z",
+        "updated": "2023-12-11T12:57:26Z",
         "canton": "Solothurn",
         "cantonName": "SO",
         "council": "N",
@@ -18841,7 +18912,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:09:55Z",
+                "updated": "2023-12-11T12:57:26Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -18864,7 +18935,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:09:55Z",
+                "updated": "2023-12-11T12:57:26Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -18887,7 +18958,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T03:09:55Z",
+                "updated": "2023-12-11T12:57:26Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 2,
@@ -18909,7 +18980,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T03:09:55Z",
+                "updated": "2023-12-11T12:57:26Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 30,
@@ -18989,7 +19060,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:09:55Z",
+                "updated": "2023-12-11T12:57:26Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "SO",
@@ -19005,7 +19076,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:09:55Z",
+                "updated": "2023-12-11T12:57:26Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "SO",
                 "cantonName": "Solothurn",
@@ -21621,7 +21692,7 @@
     },
     {
         "id": 11505,
-        "updated": "2023-12-05T15:18:33Z",
+        "updated": "2023-12-11T09:40:44Z",
         "canton": "Tessin",
         "cantonName": "TI",
         "council": "N",
@@ -21647,6 +21718,13 @@
             },
             {
                 "agency": "F",
+                "function": "M",
+                "name": "Commissione paritetica (CPaSUPSI)",
+                "organizationType": "A",
+                "type": "Komm."
+            },
+            {
+                "agency": "F",
                 "function": "Sekr.",
                 "name": "Commissione paritetica degli Istituti Ospedalieri dell'EOC",
                 "organizationType": "A",
@@ -21661,8 +21739,22 @@
             },
             {
                 "agency": "F",
+                "function": "Sekr.",
+                "name": "Commissione paritetica delle Istituzioni Sociali",
+                "organizationType": "A",
+                "type": "Komm."
+            },
+            {
+                "agency": "F",
                 "function": "P",
                 "name": "Commissione paritetica Fox Town",
+                "organizationType": "A",
+                "type": "Komm."
+            },
+            {
+                "agency": "F",
+                "function": "M",
+                "name": "Commissione paritetica USI",
                 "organizationType": "A",
                 "type": "Komm."
             },
@@ -21683,7 +21775,28 @@
             {
                 "agency": "F",
                 "function": "M",
+                "name": "Commissione Paritetica cantonale commercio al dettaglio",
+                "organizationType": "A",
+                "type": "Ve."
+            },
+            {
+                "agency": "F",
+                "function": "M",
                 "name": "Commissione paritetica cantonale dell'edilizia e del genio civile del Cantone Ticino",
+                "organizationType": "A",
+                "type": "Ve."
+            },
+            {
+                "agency": "F",
+                "function": "M",
+                "name": "Commissione professionale paritetica cantonale per gli ingegneri, gli architetti e professioni affini",
+                "organizationType": "A",
+                "type": "Ve."
+            },
+            {
+                "agency": "F",
+                "function": "M",
+                "name": "Commissione professionale paritetica nel ramo delle Installazioni Elettriche Ticinesi",
                 "organizationType": "A",
                 "type": "Ve."
             },
@@ -21697,7 +21810,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "giorgio.fonio@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -21710,7 +21823,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T15:18:33Z",
+                "updated": "2023-12-11T09:40:44Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "TI",
                 "cantonName": "Tessin",
@@ -21744,6 +21857,13 @@
         "maritalStatus": "verheiratet",
         "officialDenomination": "Fonio",
         "partyId": 1586,
+        "postalAddress": {
+            "canton": null,
+            "city": "Mendrisio",
+            "addressLine": "Lanz 25",
+            "company": "OCST",
+            "zip": "6850"
+        },
         "professions": [
             "Gewerkschaftssekretär/in"
         ],
@@ -23334,7 +23454,7 @@
                 "leavingDate": "2022-11-28T00:00:00Z",
                 "committee": {
                     "id": 27,
-                    "updated": "2020-07-15T11:59:55Z",
+                    "updated": "2023-12-07T12:45:42Z",
                     "abbreviation": "VD",
                     "code": "KOM_27_",
                     "committeeNumber": 27,
@@ -24266,7 +24386,7 @@
                 "leavingDate": "2017-11-26T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -24768,7 +24888,7 @@
     },
     {
         "id": 10827,
-        "updated": "2023-12-04T06:19:06Z",
+        "updated": "2023-12-08T10:46:42Z",
         "canton": "Waadt",
         "cantonName": "VD",
         "council": "N",
@@ -24822,7 +24942,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:19:06Z",
+                "updated": "2023-12-08T10:46:42Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "VD",
                 "cantonName": "Waadt",
@@ -24845,9 +24965,13 @@
         },
         "factionId": 2,
         "gender": "m",
-        "homePlaces": [],
+        "homePlaces": [
+            {
+                "canton": null,
+                "city": "Leukerbad"
+            }
+        ],
         "language": "fr",
-        "mandate": "Député au Grand Conseil VD; Groupe socialiste au Grand Conseil VD; Conseiller communal Lausanne",
         "maritalStatus": "verheiratet",
         "militaryGrade": "-",
         "numberOfChildren": 2,
@@ -24860,7 +24984,7 @@
             "zip": "0"
         },
         "professions": [
-            "Bereichsleiter/in"
+            "Responsable juridique"
         ],
         "salutationLetter": "Herr Nationalrat",
         "salutationTitle": null,
@@ -24869,7 +24993,7 @@
     },
     {
         "id": 4154,
-        "updated": "2023-12-04T03:06:39Z",
+        "updated": "2023-12-07T16:04:24Z",
         "canton": "Wallis",
         "cantonName": "VS",
         "council": "N",
@@ -24892,7 +25016,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -24915,7 +25039,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2022-02-27T00:00:00Z",
                 "committee": {
@@ -24938,7 +25062,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -24961,7 +25085,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2022-01-01T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -24984,7 +25108,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 12,
@@ -25006,7 +25130,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 8,
@@ -25086,7 +25210,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "canton": "VS",
@@ -25102,7 +25226,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "VS",
@@ -25118,7 +25242,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T03:06:39Z",
+                "updated": "2023-12-07T16:04:24Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "VS",
                 "cantonName": "Wallis",
@@ -25176,7 +25300,7 @@
     },
     {
         "id": 10820,
-        "updated": "2023-12-05T15:06:49Z",
+        "updated": "2023-12-08T16:24:59Z",
         "canton": "Waadt",
         "cantonName": "VD",
         "council": "N",
@@ -25217,7 +25341,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "jessica.jaccoud@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -25230,7 +25354,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T15:06:49Z",
+                "updated": "2023-12-08T16:24:59Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "VD",
                 "cantonName": "Waadt",
@@ -25259,6 +25383,14 @@
         "militaryGrade": "-",
         "officialDenomination": "Jaccoud",
         "partyId": 12,
+        "postalAddress": {
+            "canton": null,
+            "city": "Vevey",
+            "addressLine": "Rue de la Madeleine 35",
+            "company": "Mattenberger, Jaccoud & Ducret Avocats",
+            "extraAddressLine": "CP 763",
+            "zip": "1800"
+        },
         "professions": [
             "Advokat/in"
         ],
@@ -25861,7 +25993,7 @@
     },
     {
         "id": 3999,
-        "updated": "2023-12-05T13:10:40Z",
+        "updated": "2023-12-07T13:29:46Z",
         "canton": "Zürich",
         "cantonName": "ZH",
         "council": "N",
@@ -25874,7 +26006,7 @@
         "party": "GRÜNE",
         "partyName": "GRÜNE Schweiz",
         "active": true,
-        "additionalActivity": "Mitglied bei den Parlamentarischen Gruppen: Arbeit; Bildung, Forschung, Innovation; Kinder- und Jugendmedizin; BVG; Schweiz-Afrika; Sexuelle Gesundheit; Swiss Committee on Reparations for Slavery; Menschenrechte; Weiterbildung; Kindes- und Erwachsenenschutz; Weiterbildung; Musik; Rock/Pop im Bundeshaus; Psychische Gesundheit; Familienpolitik; für Behindertenfragen; Migration; Solidarité internationale; gegen Rassismus und Fremdenfeindlichkeit; Altersfragen; Mehrsprachigkeit; Komplementärmedizin; Schweiz - Vereinte Nationen; Beirat Jugendparlament; Kunst; Gebärdensprache; NCD; Tibet; LGBTI; Gutes Hören; Schweiz-Free Iran; Care Leaving; PG Film; Mitglied VPOD",
+        "additionalActivity": "Mitglied bei den Parlamentarischen Gruppen: Arbeit; Bildung, Forschung, Innovation; Kinder- und Jugendmedizin; BVG; Schweiz-Afrika; Sexuelle Gesundheit; Swiss Committee on Reparations for Slavery; Menschenrechte; Weiterbildung; Kindes- und Erwachsenenschutz; Weiterbildung; Musik; Rock/Pop im Bundeshaus; Psychische Gesundheit; Familienpolitik; für Behindertenfragen; Migration; Solidarité internationale; gegen Rassismus und Fremdenfeindlichkeit; Altersfragen; Mehrsprachigkeit; Komplementärmedizin; Schweiz - Vereinte Nationen; Beirat Jugendparlament; Kunst; Gebärdensprache; NCD; Tibet; LGBTI; Gutes Hören; Schweiz-Free Iran; Care Leaving; PG Film; Mitglied VPOD; Parl. Gruppe Rotes Kreuz",
         "birthDate": "1959-10-12T00:00:00Z",
         "birthPlace": {
             "canton": "BE",
@@ -25884,7 +26016,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2008-09-15T00:00:00Z",
                 "leavingDate": "2011-12-04T00:00:00Z",
                 "committee": {
@@ -25907,7 +26039,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2009-04-01T00:00:00Z",
                 "leavingDate": "2011-12-04T00:00:00Z",
                 "committee": {
@@ -25930,7 +26062,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -25953,12 +26085,12 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -25976,7 +26108,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 6,
@@ -25998,11 +26130,11 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -26078,7 +26210,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2008-09-15T00:00:00Z",
                 "leavingDate": "2011-12-04T00:00:00Z",
                 "canton": "ZH",
@@ -26094,7 +26226,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "ZH",
@@ -26110,7 +26242,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T13:10:40Z",
+                "updated": "2023-12-07T13:29:46Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "ZH",
                 "cantonName": "Zürich",
@@ -26604,7 +26736,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -26649,7 +26781,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -28020,7 +28152,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -28064,7 +28196,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -31235,7 +31367,7 @@
                 "entryDate": "2022-11-29T00:00:00Z",
                 "committee": {
                     "id": 27,
-                    "updated": "2020-07-15T11:59:55Z",
+                    "updated": "2023-12-07T12:45:42Z",
                     "abbreviation": "VD",
                     "code": "KOM_27_",
                     "committeeNumber": 27,
@@ -31869,7 +32001,7 @@
                 "leavingDate": "2020-05-08T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -32236,7 +32368,7 @@
                 "leavingDate": "2021-11-28T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -32282,7 +32414,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -32326,7 +32458,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -34222,7 +34354,7 @@
     },
     {
         "id": 10841,
-        "updated": "2023-12-04T06:17:05Z",
+        "updated": "2023-12-08T16:26:56Z",
         "canton": "Glarus",
         "cantonName": "GL",
         "council": "N",
@@ -34290,7 +34422,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:17:05Z",
+                "updated": "2023-12-08T16:26:56Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "GL",
                 "cantonName": "Glarus",
@@ -34321,9 +34453,10 @@
         "partyId": 13,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Netstal",
+            "addressLine": "Bühl 2",
+            "company": "Schnyder VST Immobilien AG",
+            "zip": "8754"
         },
         "professions": [
             "Immobilienschätzer/in"
@@ -34904,7 +35037,7 @@
     },
     {
         "id": 4070,
-        "updated": "2023-12-05T10:57:29Z",
+        "updated": "2023-12-07T12:50:50Z",
         "canton": "Graubünden",
         "cantonName": "GR",
         "council": "N",
@@ -34927,7 +35060,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2011-12-15T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "committee": {
@@ -34950,7 +35083,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -34973,12 +35106,12 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -34996,7 +35129,7 @@
             },
             {
                 "id": 7,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -35019,7 +35152,7 @@
             },
             {
                 "id": 8,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -35042,12 +35175,12 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2019-12-11T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -35065,7 +35198,7 @@
             },
             {
                 "id": 11,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2020-12-01T00:00:00Z",
                 "leavingDate": "2021-11-29T00:00:00Z",
                 "committee": {
@@ -35088,7 +35221,7 @@
             },
             {
                 "id": 12,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2021-11-29T00:00:00Z",
                 "leavingDate": "2022-11-28T00:00:00Z",
                 "committee": {
@@ -35111,7 +35244,7 @@
             },
             {
                 "id": 13,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2022-11-29T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -35134,7 +35267,7 @@
             },
             {
                 "id": 15,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2023-12-03T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -35156,8 +35289,8 @@
                 "function": "Präsident/in"
             },
             {
-                "id": 18,
-                "updated": "2023-12-05T10:57:29Z",
+                "id": 19,
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 9,
@@ -35178,8 +35311,8 @@
                 "function": null
             },
             {
-                "id": 19,
-                "updated": "2023-12-05T10:57:29Z",
+                "id": 20,
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 8,
@@ -35201,7 +35334,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2016-01-29T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -35224,7 +35357,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2017-07-05T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -35247,7 +35380,7 @@
             },
             {
                 "id": 6,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2020-01-27T00:00:00Z",
                 "committee": {
@@ -35270,7 +35403,7 @@
             },
             {
                 "id": 9,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2020-12-01T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -35293,11 +35426,12 @@
             },
             {
                 "id": 10,
-                "updated": "2022-11-28T20:32:58Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2020-12-01T00:00:00Z",
+                "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 27,
-                    "updated": "2020-07-15T11:59:55Z",
+                    "updated": "2023-12-07T12:45:42Z",
                     "abbreviation": "VD",
                     "code": "KOM_27_",
                     "committeeNumber": 27,
@@ -35315,7 +35449,7 @@
             },
             {
                 "id": 14,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2023-07-20T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -35338,7 +35472,7 @@
             },
             {
                 "id": 16,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2023-12-03T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -35361,7 +35495,30 @@
             },
             {
                 "id": 17,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
+                "entryDate": "2023-12-04T00:00:00Z",
+                "leavingDate": "2023-12-06T00:00:00Z",
+                "committee": {
+                    "id": 27,
+                    "updated": "2023-12-07T12:45:42Z",
+                    "abbreviation": "VD",
+                    "code": "KOM_27_",
+                    "committeeNumber": 27,
+                    "council": {
+                        "id": 3,
+                        "updated": "2010-12-26T13:07:49Z",
+                        "abbreviation": "V",
+                        "code": "RAT_3_",
+                        "name": "Vereinigte Bundesversammlung",
+                        "type": "B"
+                    },
+                    "name": "Verwaltungsdelegation"
+                },
+                "function": "Vizepräsident/in"
+            },
+            {
+                "id": 18,
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "leavingDate": "2023-12-04T00:00:00Z",
                 "committee": {
@@ -35505,7 +35662,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2011-12-05T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "canton": "GR",
@@ -35521,7 +35678,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "canton": "GR",
@@ -35537,7 +35694,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "GR",
@@ -35553,7 +35710,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-05T10:57:29Z",
+                "updated": "2023-12-07T12:50:50Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "GR",
                 "cantonName": "Graubünden",
@@ -37942,7 +38099,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -37987,7 +38144,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -39667,7 +39824,7 @@
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -39713,7 +39870,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -39758,7 +39915,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -40605,7 +40762,7 @@
     },
     {
         "id": 4197,
-        "updated": "2023-12-04T14:53:10Z",
+        "updated": "2023-12-11T18:28:09Z",
         "canton": "Zürich",
         "cantonName": "ZH",
         "council": "N",
@@ -40628,7 +40785,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2018-05-30T00:00:00Z",
                 "committee": {
@@ -40651,7 +40808,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2018-05-31T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -40674,7 +40831,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -40697,7 +40854,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -40720,7 +40877,7 @@
             },
             {
                 "id": 6,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 12,
@@ -40742,7 +40899,7 @@
             },
             {
                 "id": 8,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 8,
@@ -40764,7 +40921,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2016-06-14T00:00:00Z",
                 "committee": {
@@ -40787,7 +40944,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -40810,7 +40967,7 @@
             },
             {
                 "id": 7,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 1068,
@@ -40862,13 +41019,6 @@
             },
             {
                 "agency": "F",
-                "function": "M",
-                "name": "IG Seepärke",
-                "organizationType": "V",
-                "type": "Ve."
-            },
-            {
-                "agency": "F",
                 "function": "VP",
                 "name": "Verband Medien mit Zukunft",
                 "organizationType": "V",
@@ -40890,7 +41040,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "canton": "ZH",
@@ -40906,7 +41056,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "ZH",
@@ -40922,7 +41072,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T14:53:10Z",
+                "updated": "2023-12-11T18:28:09Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "ZH",
                 "cantonName": "Zürich",
@@ -41154,7 +41304,7 @@
     },
     {
         "id": 10809,
-        "updated": "2023-12-04T06:08:17Z",
+        "updated": "2023-12-12T16:54:43Z",
         "canton": "Freiburg",
         "cantonName": "FR",
         "council": "N",
@@ -41202,7 +41352,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "nadine.gobet@fpe-ciga.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -41215,7 +41365,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:08:17Z",
+                "updated": "2023-12-12T16:54:43Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "FR",
                 "cantonName": "Freiburg",
@@ -41245,9 +41395,10 @@
         "partyId": 15,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Bulle",
+            "addressLine": "Rue Condémine 56",
+            "company": "Fédération Patronale et Economique",
+            "zip": "1630"
         },
         "professions": [
             "Direktor/in"
@@ -41934,7 +42085,7 @@
     },
     {
         "id": 10836,
-        "updated": "2023-12-04T08:30:42Z",
+        "updated": "2023-12-12T16:52:20Z",
         "canton": "Freiburg",
         "cantonName": "FR",
         "council": "N",
@@ -41961,7 +42112,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "nicolas.kolly@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -41974,7 +42125,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T08:30:42Z",
+                "updated": "2023-12-12T16:52:20Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "FR",
                 "cantonName": "Freiburg",
@@ -42011,9 +42162,11 @@
         "partyId": 13,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Fribourg",
+            "addressLine": "Route du Comptoir 11",
+            "company": "Avocats Associés Fribourg SA",
+            "extraAddressLine": "case postale 455",
+            "zip": "1701"
         },
         "professions": [
             "Advokat/in"
@@ -42025,7 +42178,7 @@
     },
     {
         "id": 4297,
-        "updated": "2023-12-04T14:53:40Z",
+        "updated": "2023-12-11T14:33:53Z",
         "canton": "Genf",
         "cantonName": "GE",
         "council": "N",
@@ -42048,7 +42201,7 @@
         "committeeMemberships": [
             {
                 "id": 2,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -42071,7 +42224,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -42094,7 +42247,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 12,
@@ -42116,7 +42269,7 @@
             },
             {
                 "id": 6,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 4,
@@ -42138,7 +42291,7 @@
             },
             {
                 "id": 0,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2021-12-17T00:00:00Z",
                 "committee": {
@@ -42161,7 +42314,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -42184,7 +42337,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2021-12-18T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -42207,7 +42360,7 @@
             },
             {
                 "id": 7,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 34,
@@ -42229,7 +42382,7 @@
             },
             {
                 "id": 8,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 32,
@@ -42309,7 +42462,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "GE",
@@ -42325,7 +42478,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T14:53:40Z",
+                "updated": "2023-12-11T14:33:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "GE",
                 "cantonName": "Genf",
@@ -42573,7 +42726,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -42618,7 +42771,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -43592,7 +43745,7 @@
     },
     {
         "id": 4077,
-        "updated": "2023-12-04T03:05:39Z",
+        "updated": "2023-12-07T16:10:07Z",
         "canton": "Waadt",
         "cantonName": "VD",
         "council": "N",
@@ -43615,7 +43768,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2011-12-15T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "committee": {
@@ -43638,7 +43791,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2015-12-09T00:00:00Z",
                 "committee": {
@@ -43661,7 +43814,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -43684,7 +43837,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2019-12-11T00:00:00Z",
                 "committee": {
@@ -43707,7 +43860,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2021-11-29T00:00:00Z",
                 "committee": {
@@ -43730,7 +43883,7 @@
             },
             {
                 "id": 6,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2021-11-29T00:00:00Z",
                 "leavingDate": "2021-12-31T00:00:00Z",
                 "committee": {
@@ -43753,7 +43906,7 @@
             },
             {
                 "id": 7,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2022-01-01T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -43776,7 +43929,7 @@
             },
             {
                 "id": 8,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2022-06-13T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -43799,7 +43952,7 @@
             },
             {
                 "id": 9,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 10,
@@ -43821,7 +43974,7 @@
             },
             {
                 "id": 10,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 9,
@@ -43843,7 +43996,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2016-06-14T00:00:00Z",
                 "committee": {
@@ -43936,7 +44089,7 @@
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
-            "homepageWork": null,
+            "homepageWork": "www.olivierfeller.ch",
             "phoneMobilePrivate": null,
             "phoneMobileWork": null,
             "phonePrivate": null,
@@ -43945,7 +44098,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2011-12-05T00:00:00Z",
                 "leavingDate": "2015-11-29T00:00:00Z",
                 "canton": "VD",
@@ -43961,7 +44114,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "canton": "VD",
@@ -43977,7 +44130,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "VD",
@@ -43993,7 +44146,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T03:05:39Z",
+                "updated": "2023-12-07T16:10:07Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "VD",
                 "cantonName": "Waadt",
@@ -44033,9 +44186,9 @@
         "partyId": 15,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Lausanne ",
+            "addressLine": "Case postale 671",
+            "zip": "1001"
         },
         "professions": [
             "Directeur de la Chambre vaudoise immobilière",
@@ -44048,7 +44201,7 @@
     },
     {
         "id": 10842,
-        "updated": "2023-12-04T06:08:20Z",
+        "updated": "2023-12-08T16:25:53Z",
         "canton": "Tessin",
         "cantonName": "TI",
         "council": "N",
@@ -44075,7 +44228,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "paolo.pamini@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -44088,7 +44241,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:08:20Z",
+                "updated": "2023-12-08T16:25:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "TI",
                 "cantonName": "Tessin",
@@ -44126,9 +44279,10 @@
         "partyId": 13,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Lugano",
+            "addressLine": "Piazza Indipendenza 1",
+            "company": "PricewaterhouseCoopers SA",
+            "zip": "6900"
         },
         "professions": [
             "Berater/in",
@@ -44141,7 +44295,7 @@
     },
     {
         "id": 10843,
-        "updated": "2023-12-04T06:09:01Z",
+        "updated": "2023-12-08T16:26:19Z",
         "canton": "Thurgau",
         "cantonName": "TG",
         "council": "N",
@@ -44258,7 +44412,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:09:01Z",
+                "updated": "2023-12-08T16:26:19Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "TG",
                 "cantonName": "Thurgau",
@@ -44302,9 +44456,11 @@
         "partyId": 13,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Weinfelden",
+            "addressLine": "Sangenstrasse 3",
+            "company": "Muri Partner Rechtsanwälte AG",
+            "extraAddressLine": "Postfach",
+            "zip": "8570"
         },
         "professions": [
             "Partner/in Firma"
@@ -46051,7 +46207,7 @@
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -46143,7 +46299,7 @@
                 "leavingDate": "2021-12-31T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -46405,7 +46561,7 @@
     },
     {
         "id": 4311,
-        "updated": "2023-12-04T16:48:47Z",
+        "updated": "2023-12-11T10:57:57Z",
         "canton": "Tessin",
         "cantonName": "TI",
         "council": "N",
@@ -46427,7 +46583,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -46450,7 +46606,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -46473,7 +46629,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 11,
@@ -46495,7 +46651,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 30,
@@ -46517,7 +46673,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -46540,7 +46696,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 711,
@@ -46573,6 +46729,13 @@
                 "agency": "F",
                 "function": "Dir.",
                 "name": "Enzo Bianchi Sagl",
+                "organizationType": "D",
+                "type": "GmbH"
+            },
+            {
+                "agency": "F",
+                "function": "P",
+                "name": "Marchesi-Pro Sagl",
                 "organizationType": "D",
                 "type": "GmbH"
             },
@@ -46613,7 +46776,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "TI",
@@ -46629,7 +46792,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-04T16:48:47Z",
+                "updated": "2023-12-11T10:57:57Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "TI",
                 "cantonName": "Tessin",
@@ -46661,6 +46824,7 @@
         "language": "it",
         "mandate": "Membro di direzione UDC Svizzera e Presidente Sezione Ticino; Sindaco del Comune di Tresa, 6988 Ponte Tresa",
         "maritalStatus": "verheiratet",
+        "militaryGrade": "-",
         "numberOfChildren": 1,
         "officialDenomination": "Marchesi",
         "partyId": 13,
@@ -46672,7 +46836,6 @@
             "zip": "6988"
         },
         "professions": [
-            "Delegierte/r",
             "Unternehmer/in"
         ],
         "salutationLetter": "Herr Nationalrat",
@@ -47340,7 +47503,7 @@
     },
     {
         "id": 4169,
-        "updated": "2023-12-05T10:57:57Z",
+        "updated": "2023-12-07T13:02:18Z",
         "canton": "Freiburg",
         "cantonName": "FR",
         "council": "N",
@@ -47363,7 +47526,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2015-12-10T00:00:00Z",
                 "leavingDate": "2016-02-28T00:00:00Z",
                 "committee": {
@@ -47386,7 +47549,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2016-02-12T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
@@ -47409,7 +47572,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47432,7 +47595,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47455,7 +47618,7 @@
             },
             {
                 "id": 10,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-06-01T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47478,7 +47641,7 @@
             },
             {
                 "id": 12,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 29,
@@ -47500,7 +47663,7 @@
             },
             {
                 "id": 13,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 4,
@@ -47522,7 +47685,7 @@
             },
             {
                 "id": 15,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 7,
@@ -47544,7 +47707,7 @@
             },
             {
                 "id": 20,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 1,
@@ -47566,7 +47729,7 @@
             },
             {
                 "id": 4,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2021-12-14T00:00:00Z",
                 "committee": {
@@ -47589,7 +47752,7 @@
             },
             {
                 "id": 5,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2021-11-28T00:00:00Z",
                 "committee": {
@@ -47612,7 +47775,7 @@
             },
             {
                 "id": 6,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47635,7 +47798,7 @@
             },
             {
                 "id": 7,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2021-11-29T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47658,7 +47821,7 @@
             },
             {
                 "id": 8,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2021-12-15T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47681,7 +47844,7 @@
             },
             {
                 "id": 9,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-06-01T00:00:00Z",
                 "leavingDate": "2023-08-15T00:00:00Z",
                 "committee": {
@@ -47704,7 +47867,7 @@
             },
             {
                 "id": 11,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-08-16T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -47727,7 +47890,7 @@
             },
             {
                 "id": 14,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 34,
@@ -47749,7 +47912,7 @@
             },
             {
                 "id": 16,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 708,
@@ -47771,7 +47934,7 @@
             },
             {
                 "id": 17,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 10003,
@@ -47793,7 +47956,7 @@
             },
             {
                 "id": 18,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 940,
@@ -47815,7 +47978,7 @@
             },
             {
                 "id": 19,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 1111,
@@ -47837,7 +48000,7 @@
             },
             {
                 "id": 21,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 710,
@@ -47854,6 +48017,28 @@
                         "type": "B"
                     },
                     "name": "Delegation für die Beziehungen zum Französischen Parlament"
+                },
+                "function": null
+            },
+            {
+                "id": 22,
+                "updated": "2023-12-07T13:02:18Z",
+                "entryDate": "2023-12-07T00:00:00Z",
+                "committee": {
+                    "id": 27,
+                    "updated": "2023-12-07T12:45:42Z",
+                    "abbreviation": "VD",
+                    "code": "KOM_27_",
+                    "committeeNumber": 27,
+                    "council": {
+                        "id": 3,
+                        "updated": "2010-12-26T13:07:49Z",
+                        "abbreviation": "V",
+                        "code": "RAT_3_",
+                        "name": "Vereinigte Bundesversammlung",
+                        "type": "B"
+                    },
+                    "name": "Verwaltungsdelegation"
                 },
                 "function": null
             }
@@ -47910,7 +48095,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2015-11-30T00:00:00Z",
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "canton": "FR",
@@ -47926,7 +48111,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "FR",
@@ -47942,7 +48127,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T10:57:57Z",
+                "updated": "2023-12-07T13:02:18Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "FR",
                 "cantonName": "Freiburg",
@@ -48215,7 +48400,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -48260,7 +48445,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -48857,7 +49042,7 @@
     },
     {
         "id": 10815,
-        "updated": "2023-12-04T17:14:55Z",
+        "updated": "2023-12-12T14:56:22Z",
         "canton": "Nidwalden",
         "cantonName": "NW",
         "council": "N",
@@ -48875,7 +49060,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T17:14:55Z",
+                "updated": "2023-12-12T14:56:22Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 1,
@@ -48920,7 +49105,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T17:14:55Z",
+                "updated": "2023-12-12T14:56:22Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "NW",
                 "cantonName": "Nidwalden",
@@ -49107,13 +49292,6 @@
                 "agency": "F",
                 "function": "M",
                 "name": "Stiftung GREATER ZÜRICH AREA Standortmarketing, Zürich",
-                "organizationType": "Sr.",
-                "type": "Stift."
-            },
-            {
-                "agency": "F",
-                "function": "M",
-                "name": "Stiftung Technopark Zürich, Zürich",
                 "organizationType": "Sr.",
                 "type": "Stift."
             },
@@ -49368,7 +49546,7 @@
     },
     {
         "id": 4137,
-        "updated": "2023-12-05T09:57:56Z",
+        "updated": "2023-12-07T16:05:36Z",
         "canton": "Genf",
         "cantonName": "GE",
         "council": "N",
@@ -49460,7 +49638,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-05T09:57:56Z",
+                "updated": "2023-12-07T16:05:36Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 1,
@@ -49529,7 +49707,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T09:57:56Z",
+                "updated": "2023-12-07T16:05:36Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "GE",
                 "cantonName": "Genf",
@@ -51249,7 +51427,7 @@
     },
     {
         "id": 10846,
-        "updated": "2023-12-04T06:11:11Z",
+        "updated": "2023-12-08T16:27:46Z",
         "canton": "Solothurn",
         "cantonName": "SO",
         "council": "N",
@@ -51289,7 +51467,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:11:11Z",
+                "updated": "2023-12-08T16:27:46Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "SO",
                 "cantonName": "Solothurn",
@@ -51318,9 +51496,10 @@
         "partyId": 13,
         "postalAddress": {
             "canton": null,
-            "city": null,
-            "addressLine": null,
-            "zip": "0"
+            "city": "Oensingen ",
+            "addressLine": "Schachenstrasse 34b",
+            "company": "Wyssmann und Partner",
+            "zip": "4702"
         },
         "professions": [
             "Anwalt/Anwältin"
@@ -53956,7 +54135,7 @@
     },
     {
         "id": 10807,
-        "updated": "2023-12-04T06:16:27Z",
+        "updated": "2023-12-11T20:48:39Z",
         "canton": "Tessin",
         "cantonName": "TI",
         "council": "N",
@@ -54039,7 +54218,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": null,
+            "emailWork": "simone.gianini@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -54052,7 +54231,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-04T06:16:27Z",
+                "updated": "2023-12-11T20:48:39Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "TI",
                 "cantonName": "Tessin",
@@ -54082,7 +54261,7 @@
             }
         ],
         "language": "it",
-        "mandate": "Vicesindaco della Città di Bellinzona; Municipale della Città di Bellinzona; Commissione regionale dei trasporti del Bellinzonese",
+        "mandate": "Vicesindaco della Città di Bellinzona; Presidente della Commissione regionale dei trasporti del Bellinzonese (CRTB)",
         "maritalStatus": "verheiratet",
         "militaryGrade": "Oberleutnant",
         "numberOfChildren": 3,
@@ -54097,11 +54276,11 @@
             "zip": "6901"
         },
         "professions": [
-            "Advokat/in"
+            "Rechtsanwalt/anwältin und Notar/in"
         ],
         "salutationLetter": "Herr Nationalrat",
         "salutationTitle": null,
-        "title": "Avvocato",
+        "title": "lic. iur.",
         "workLanguage": "de"
     },
     {
@@ -54536,7 +54715,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -54603,7 +54782,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -55605,7 +55784,7 @@
     },
     {
         "id": 4262,
-        "updated": "2023-12-05T10:58:47Z",
+        "updated": "2023-12-12T09:49:53Z",
         "canton": "Bern",
         "cantonName": "BE",
         "council": "N",
@@ -55627,7 +55806,7 @@
         "committeeMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T10:58:47Z",
+                "updated": "2023-12-12T09:49:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -55650,7 +55829,7 @@
             },
             {
                 "id": 2,
-                "updated": "2023-12-05T10:58:47Z",
+                "updated": "2023-12-12T09:49:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 12,
@@ -55672,7 +55851,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T10:58:47Z",
+                "updated": "2023-12-12T09:49:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
@@ -55695,7 +55874,7 @@
             },
             {
                 "id": 3,
-                "updated": "2023-12-05T10:58:47Z",
+                "updated": "2023-12-12T09:49:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 1111,
@@ -55768,7 +55947,7 @@
         "councilMemberships": [
             {
                 "id": 0,
-                "updated": "2023-12-05T10:58:47Z",
+                "updated": "2023-12-12T09:49:53Z",
                 "entryDate": "2019-12-02T00:00:00Z",
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "canton": "BE",
@@ -55784,7 +55963,7 @@
             },
             {
                 "id": 1,
-                "updated": "2023-12-05T10:58:47Z",
+                "updated": "2023-12-12T09:49:53Z",
                 "entryDate": "2023-12-04T00:00:00Z",
                 "canton": "BE",
                 "cantonName": "Bern",
@@ -55815,6 +55994,7 @@
         ],
         "language": "de",
         "mandate": "Vizepräsidentin SP Schweiz; Legislative des Kantons Bern: von März 2018 bis November 2019; Legislative der Stadt Bern: von Januar 2017 bis Mai 2018; Präsidentin Juso Schweiz: von Juni 2016 bis August 2019; Co-Präsidentin SP Frauen Schweiz: seit März 2020",
+        "militaryGrade": "-",
         "officialDenomination": "Funiciello",
         "partyId": 12,
         "postalAddress": {
@@ -56661,7 +56841,7 @@
         ],
         "contact": {
             "emailPrivate": null,
-            "emailWork": "tblaesi@bluewin.ch",
+            "emailWork": "thomas.blaesi@parl.ch",
             "faxPrivate": null,
             "faxWork": null,
             "homepagePrivate": null,
@@ -57090,7 +57270,7 @@
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -57182,7 +57362,7 @@
                 "leavingDate": "2023-12-03T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -57226,7 +57406,7 @@
                 "entryDate": "2023-12-04T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -59352,7 +59532,7 @@
                 "leavingDate": "2013-03-06T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -59444,7 +59624,7 @@
                 "leavingDate": "2019-12-01T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,
@@ -59536,7 +59716,7 @@
                 "leavingDate": "2019-12-11T00:00:00Z",
                 "committee": {
                     "id": 3,
-                    "updated": "2023-09-30T10:55:15Z",
+                    "updated": "2023-12-11T15:04:26Z",
                     "abbreviation": "GPK",
                     "code": "KOM_3_",
                     "committeeNumber": 3,

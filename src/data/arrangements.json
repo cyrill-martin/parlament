@@ -103,14 +103,6 @@
       "it": "MCG",
       "rm": "MCG",
       "en": "MCG"
-    },
-    "unknown": {
-      "color": "#969696",
-      "de": "unbekannt",
-      "fr": "inconnu",
-      "it": "sconosciuto",
-      "rm": "nunenconuschent",
-      "en": "unknown"
     }
   },
   "faction": {
@@ -161,14 +153,6 @@
       "it": "UDC",
       "rm": "PPS",
       "en": "SPP"
-    },
-    "FRAKTIONSLOS": {
-      "color": "#969696",
-      "de": "fraktionslos",
-      "fr": "non inscrit",
-      "it": "non inscritto",
-      "rm": "sensa fracziun",
-      "en": "non inscrit"
     }
   },
   "gender": {

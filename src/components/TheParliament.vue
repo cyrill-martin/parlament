@@ -124,14 +124,14 @@ export default {
         councillor.nrOfConcerns = councillor.concerns.length;
 
         // Checka and add language
-        if (!councillor.language) {
-          councillor.language = "unknown";
-        }
+        // if (!councillor.language) {
+        //   councillor.language = "unknown";
+        // }
 
         // Checka and add party
-        if (!councillor.party) {
-          councillor.party = "unknown";
-        }
+        // if (!councillor.party) {
+        //   councillor.party = "unknown";
+        // }
       });
     },
     async drawParliament() {
@@ -485,18 +485,16 @@ export default {
             );
           }
 
-          console.log("legend", legendKeys);
+          // if (
+          //   this.selectedCouncil === "N" &&
+          //   this.selectedOrder === "faction"
+          // ) {
+          //   legendKeys = legendKeys.filter((item) => item !== "FRAKTIONSLOS");
+          // }
 
-          if (
-            this.selectedCouncil === "N" &&
-            this.selectedOrder === "faction"
-          ) {
-            legendKeys = legendKeys.filter((item) => item !== "FRAKTIONSLOS");
-          }
-
-          if (this.selectedCouncil === "N" && (this.selectedOrder === "party" || this.selectedOrder === "firstName")) {
-            legendKeys = legendKeys.filter((item) => item !== "unknown");
-          }
+          // if (this.selectedCouncil === "N" && (this.selectedOrder === "party" || this.selectedOrder === "firstName")) {
+          //   legendKeys = legendKeys.filter((item) => item !== "unknown");
+          // }
 
           let fct = 1;
 
@@ -867,26 +865,26 @@ export default {
           }
         }
 
-        if (
-          this.selectedCouncil === "N" &&
-          this.selectedArrangement === "faction"
-        ) {
-          xOuterDomain = xOuterDomain.filter(
-            (item) =>
-              item !==
-              this.arrangements["faction"]["FRAKTIONSLOS"][this.language]
-          );
-        }
+        // if (
+        //   this.selectedCouncil === "N" &&
+        //   this.selectedArrangement === "faction"
+        // ) {
+        //   xOuterDomain = xOuterDomain.filter(
+        //     (item) =>
+        //       item !==
+        //       this.arrangements["faction"]["FRAKTIONSLOS"][this.language]
+        //   );
+        // }
 
-        if (
-          this.selectedCouncil === "N" &&
-          this.selectedArrangement === "party"
-        ) {
-          xOuterDomain = xOuterDomain.filter(
-            (item) =>
-              item !== this.arrangements["party"]["unknown"][this.language]
-          );
-        }
+        // if (
+        //   this.selectedCouncil === "N" &&
+        //   this.selectedArrangement === "party"
+        // ) {
+        //   xOuterDomain = xOuterDomain.filter(
+        //     (item) =>
+        //       item !== this.arrangements["party"]["unknown"][this.language]
+        //   );
+        // }
 
         return xOuterDomain;
       };
