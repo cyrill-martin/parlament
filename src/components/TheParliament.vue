@@ -124,9 +124,9 @@ export default {
         councillor.nrOfConcerns = councillor.concerns.length;
 
         // Checka and add language
-        // if (!councillor.language) {
-        //   councillor.language = "unknown";
-        // }
+        if (!councillor.language) {
+          councillor.language = "unknown";
+        }
 
         // Checka and add party
         // if (!councillor.party) {
