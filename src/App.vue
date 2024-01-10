@@ -90,7 +90,7 @@
     </main>
     <footer class="row">
       <div class="col-12">
-        &#169; 2023 <a href="https://kmapper.com" target="_blank">kmapper GmbH</a>
+        &#169; 2024 <a href="https://kmapper.com" target="_blank">kmapper GmbH</a>
       </div>
     </footer>
   </div>
